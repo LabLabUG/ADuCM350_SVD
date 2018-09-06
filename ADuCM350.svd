@@ -91,7 +91,7 @@ In the event that Third Party Software has only been provided to you in object c
 	<!-- the resetMask = 0 specifies that by default no register of this device has a defined reset value -->
 	<peripherals>
 		<peripheral>
-			<name>REG_TMR0</name>
+			<name>ADI_GPT0</name>
 			<description>General Purpose Timer 0</description>
 			<groupName>GP Timers</groupName>
 			<baseAddress>0x40000000</baseAddress>
@@ -508,7 +508,7 @@ In the event that Third Party Software has only been provided to you in object c
 			</registers>
 		</peripheral>
 		<peripheral>
-			<name>TMR1</name>
+			<name>ADI_GPT1</name>
 			<description>General Purpose Timer1</description>
 			<groupName>Timer1</groupName>
 			<baseAddress>0x40000400</baseAddress>
@@ -929,7 +929,7 @@ In the event that Third Party Software has only been provided to you in object c
 			</registers>
 		</peripheral>
 		<peripheral>
-			<name>TMR2</name>
+			<name>ADI_GPT2</name>
 			<description>General Purpose Timer2 </description>
 			<groupName>T2</groupName>
 			<baseAddress>0x40000800</baseAddress>
@@ -939,7 +939,7 @@ In the event that Third Party Software has only been provided to you in object c
 				<usage>registers</usage>
 			</addressBlock>
 		<interrupt>
-			<name>TMR2</name>
+			<name>TIMER2</name>
 			<description>TIMER 2 interrupt</description>
 			<value>40</value>
 		</interrupt>	
@@ -1351,7 +1351,7 @@ In the event that Third Party Software has only been provided to you in object c
 			</registers>
 		</peripheral>
 		<peripheral>
-		<name>PWR</name>
+		<name>ADI_PWR</name>
 		<description>Power Management Unit</description>
 		<groupName>PWRCTL</groupName>
 		<baseAddress>0x40002400</baseAddress>
@@ -1522,7 +1522,7 @@ In the event that Third Party Software has only been provided to you in object c
 		</registers>
 	</peripheral>
 	<peripheral>
-		<name>REG_EI</name>
+		<name>ADI_EI</name>
 		<description>External Interrupts</description>
 		<groupName>PWRCTL</groupName>
 		<baseAddress>0x40002420</baseAddress>
@@ -1532,39 +1532,39 @@ In the event that Third Party Software has only been provided to you in object c
 			<usage>registers</usage>
 		</addressBlock>
 			<interrupt>
-				<name>EXTERNAL_0</name>
+				<name>EINT0</name>
 				<value>1</value>
 			</interrupt>		
 			<interrupt>
-				<name>EXTERNAL_1</name>
+				<name>EINT1</name>
 				<value>2</value>
 			</interrupt>		
 			<interrupt>
-				<name>EXTERNAL_2</name>
+				<name>EINT2</name>
 				<value>3</value>
 			</interrupt>		
 			<interrupt>
-				<name>EXTERNAL_3</name>
+				<name>EINT3</name>
 				<value>4</value>
 			</interrupt>	
 			<interrupt>
-				<name>EXTERNAL_4</name>
+				<name>EINT4</name>
 				<value>5</value>
 			</interrupt>		
 			<interrupt>
-				<name>EXTERNAL_5</name>
+				<name>EINT5</name>
 				<value>6</value>
 			</interrupt>		
 			<interrupt>
-				<name>EXTERNAL_6</name>
+				<name>EINT6</name>
 				<value>7</value>
 			</interrupt>		
 			<interrupt>
-				<name>EXTERNAL_7</name>
+				<name>EINT7</name>
 				<value>8</value>
 			</interrupt>
 			<interrupt>
-				<name>EXTERNAL_8</name>
+				<name>EINT8</name>
 				<value>9</value>
 			</interrupt>
 			<registers>		
@@ -1897,7 +1897,7 @@ In the event that Third Party Software has only been provided to you in object c
 		</registers>
 	</peripheral>
 	<peripheral>
-		<name>REG_PWRVCC</name>
+		<name>ADI_PWRVCC</name>
 		<description>Power</description>
 		<groupName>PWRCTL</groupName>
 		<baseAddress>0x40002480</baseAddress>
@@ -1976,7 +1976,7 @@ In the event that Third Party Software has only been provided to you in object c
 	</registers>
 </peripheral>
 		<peripheral>
-			<name>WUT</name>
+			<name>ADI_WUT</name>
 			<description>Wake-up timer</description>
 			<groupName>WUT</groupName>
 			<baseAddress>0x40002500</baseAddress>
@@ -2365,7 +2365,7 @@ In the event that Third Party Software has only been provided to you in object c
 			</registers>
 		</peripheral>
 		<peripheral>
-			<name>WDT</name>
+			<name>ADI_WDT</name>
 			<description>WatchDog Timer</description>
 			<groupName>WDT</groupName>
 			<baseAddress>0x40002580</baseAddress>
@@ -2508,7 +2508,7 @@ In the event that Third Party Software has only been provided to you in object c
 		</peripheral>
 		
 		<peripheral>
-		<name>RTC</name>
+		<name>ADI_RTC</name>
 		<description>RealTimeClock</description>
 	<groupName>RTC</groupName>
 	<baseAddress>0x40002600</baseAddress>
@@ -2851,7 +2851,7 @@ In the event that Third Party Software has only been provided to you in object c
 		</registers>
 	</peripheral>
 		<peripheral>
-			<name>I2C</name>
+			<name>ADI_I2C</name>
 			
 			<description>I2C Master/Slave</description>
 			<groupName>I2C</groupName>
@@ -2865,12 +2865,12 @@ In the event that Third Party Software has only been provided to you in object c
 			</addressBlock>
 
 			<interrupt>
-				<name>I2C0_SLAVE</name>
+				<name>I2CS</name>
 				<description>I2C 0 slave interrupt</description>
 				<value>17</value>
 			</interrupt>
 			<interrupt>
-				<name>I2C0_MASTER</name>
+				<name>I2CM</name>
 				<description>I2C 0 master interrupt</description>
 				<value>18</value>
 			</interrupt>			
@@ -3568,7 +3568,7 @@ In the event that Third Party Software has only been provided to you in object c
 		</peripheral>
 
 		<peripheral>
-			<name>SPI0</name>
+			<name>ADI_SPI0</name>
 			
 			<description>SPI0 Maste/Slave</description>
 			<groupName>SPI0</groupName>
@@ -3881,7 +3881,7 @@ In the event that Third Party Software has only been provided to you in object c
 		</peripheral>
 		
 		<peripheral>
-			<name>SPI1</name>
+			<name>ADI_SPI1</name>
 			
 			<description>SPI1 Master/Slave</description>
 			<groupName>SPI1</groupName>
@@ -4188,7 +4188,7 @@ In the event that Third Party Software has only been provided to you in object c
 	</peripheral>
 		
 		<peripheral>
-			<name>UART</name>
+			<name>ADI_UART</name>
 			
 			<description>Uart</description>
 			<groupName>UART</groupName>
@@ -4202,7 +4202,7 @@ In the event that Third Party Software has only been provided to you in object c
 			</addressBlock>
 
 			<interrupt>
-				<name>Uart</name>
+				<name>UART</name>
 				<description>interrupt</description>
 				<value>14</value>
 			</interrupt>
@@ -4552,7 +4552,7 @@ In the event that Third Party Software has only been provided to you in object c
 	</peripheral>
 
 	<peripheral>
-		<name>I2S</name>
+		<name>ADI_I2S</name>
 		
 		<description>I2S Master/Slave</description>
 		<groupName>I2S</groupName>
@@ -4700,7 +4700,7 @@ In the event that Third Party Software has only been provided to you in object c
 	</peripheral>
 	
 		<peripheral>
-			<name>BEEP</name>
+			<name>ADI_BEEP</name>
 			
 			<description>Beeper</description>
 			<groupName>BEEP</groupName>
@@ -4714,7 +4714,7 @@ In the event that Third Party Software has only been provided to you in object c
 			</addressBlock>
 
 			<interrupt>
-				<name>Beep</name>
+				<name>BEEP</name>
 				<description>Beep interrupt</description>
 				<value>45</value>
 			</interrupt>
@@ -4779,7 +4779,7 @@ In the event that Third Party Software has only been provided to you in object c
 	</peripheral>
 	
 		<peripheral>
-			<name>RNG</name>
+			<name>ADI_RNG</name>
 			
 			<description>Random Bit Generator</description>
 			<groupName>RBG</groupName>
@@ -4793,7 +4793,7 @@ In the event that Third Party Software has only been provided to you in object c
 			</addressBlock>
 
 			<interrupt>
-				<name>RBG</name>
+				<name>RAND</name>
 				<description>Random Bit Generator interrupt</description>
 				<value>58</value>
 			</interrupt>
@@ -4910,7 +4910,7 @@ In the event that Third Party Software has only been provided to you in object c
 		</peripheral>
 	
 		<peripheral>
-			<name>LCD</name>
+			<name>ADI_LCD</name>
 			<description>LCD Controller</description>
 			<groupName>LCD</groupName>
 			<baseAddress>0x40008000</baseAddress>
@@ -5312,7 +5312,7 @@ In the event that Third Party Software has only been provided to you in object c
 		</peripheral>
 		
 	<peripheral>
-		<name>DMA</name>
+		<name>ADI_DMA</name>
 		<description>DMA</description>
 		<groupName>DMAC</groupName>
 		<baseAddress>0x40010000</baseAddress>
@@ -5330,82 +5330,82 @@ In the event that Third Party Software has only been provided to you in object c
 			<value>19</value>
 		</interrupt>
 		<interrupt>
-			<name>DMA_CH0_DONE</name>
+			<name>DMA_SPIH_TX</name>
 			<description>DMA Ch 0 interrupt</description>
 			<value>20</value>
 		</interrupt>
 		<interrupt>
-			<name>DMA_CH1_DONE</name>
+			<name>DMA_SPIH_RX</name>
 			<description>DMA Ch 1 interrupt</description>
 			<value>21</value>
 		</interrupt>
 		<interrupt>
-			<name>DMA_CH2_DONE</name>
+			<name>DMA_SPI0_TX</name>
 			<description>DMA Ch 2 interrupt</description>
 			<value>22</value>
 		</interrupt>
 		<interrupt>
-			<name>DMA_CH3_DONE</name>
+			<name>DMA_SPI0_RX</name>
 			<description>DMA Ch 3 interrupt</description>
 			<value>23</value>
 		</interrupt>
 		<interrupt>
-			<name>DMA_CH4_DONE_DONE</name>
+			<name>DMA_SPI1_TX</name>
 			<description>DMA Ch 4 interrupt</description>
 			<value>24</value>
 		</interrupt>
 		<interrupt>
-			<name>DMA_CH5_DONE_DONE</name>
+			<name>DMA_SPI1_RX</name>
 			<description>DMA Ch 5 interrupt</description>
 			<value>25</value>
 		</interrupt>
 		<interrupt>
-			<name>DMA_CH6_DONE</name>
+			<name>DMA_UART_TX</name>
 			<description>DMA Ch 6 interrupt</description>
 			<value>26</value>
 		</interrupt>
 		<interrupt>
-			<name>DMA_CH7_DONE</name>
+			<name>DMA_UART_RX</name>
 			<description>DMA Ch 7 interrupt</description>
 			<value>27</value>
 		</interrupt>
 		<interrupt>
-			<name>DMA_CH8_DONE</name>
+			<name>DMA_I2CS_TX</name>
 			<description>DMA Ch 8 interrupt</description>
 			<value>28</value>
 		</interrupt>
 		<interrupt>
-			<name>DMA_CH9_DONE</name>
+			<name>DMA_I2CS_RX</name>
 			<description>DMA Ch 9 interrupt</description>
 			<value>29</value>
 		</interrupt>
 		<interrupt>
-			<name>DMA_CH10_DONE</name>
+			<name>DMA_I2CM</name>
 			<description>DMA Ch 10 interrupt</description>
 			<value>30</value>
 		</interrupt>
 		<interrupt>
-			<name>DMA_CH11_DONE</name>
+			<name>DMA_AFE_TX</name>
 			<description>DMA Ch 11 interrupt</description>
 			<value>31</value>
 		</interrupt>
 		<interrupt>
-			<name>DMA_CH12_DONE_DONE</name>
+			<name>DMA_AFE_RX</name>
 			<description>DMA Ch 12 interrupt</description>
 			<value>32</value>
 		</interrupt>
 		<interrupt>
-			<name>DMA_CH13_DONE_DONE</name>
+			<name>DMA_CRC</name>
 			<description>DMA Ch 13 interrupt</description>
 			<value>33</value>
 		</interrupt>
 		<interrupt>
-			<name>DMA_CH14_DONE</name>
+			<name>DMA_PDI</name>
 			<description>DMA Ch 14 interrupt</description>
 			<value>34</value>
 		</interrupt>
 		<interrupt>
-			<name>DMA_CH15_DONE</name>
+			<name>DMA_I2S</name>
 			<description>DMA Ch 15 interrupt</description>
 			<value>35</value>
 		</interrupt>		
@@ -5767,7 +5767,7 @@ In the event that Third Party Software has only been provided to you in object c
 		</peripheral>
 		
 	<peripheral>
-	<name>FEE0</name>
+	<name>ADI_FEE0</name>
 	
 	<description>Instruction Flash Controller</description>
 	<groupName>IFC</groupName>
@@ -5780,11 +5780,11 @@ In the event that Third Party Software has only been provided to you in object c
 	<usage>registers</usage>
 	</addressBlock>
 	<interrupt>
-		<name>FLASH_CTL0</name>
+		<name>FLASH0</name>
 		<value>13</value>
 	</interrupt>
 	<interrupt>
-	<name>Flash_EEprom</name>
+	<name>GP_FLASH</name>
 	<description>Flash EEPROM interrupt</description>
 	<value>55</value>
 	</interrupt>
@@ -6073,7 +6073,7 @@ In the event that Third Party Software has only been provided to you in object c
 	</peripheral>
 	
 	<peripheral>
-	<name>GPF</name>
+	<name>ADI_GPF</name>
 	
 	<description>General Purpose Flash Controller</description>
 	<groupName>GPFC</groupName>
@@ -6287,7 +6287,7 @@ In the event that Third Party Software has only been provided to you in object c
 	</peripheral>
 	
 	<peripheral>
-	<name>GPIO0</name>
+	<name>ADI_GPIO0</name>
 	
 	<description>GPIO</description>
 	<groupName>GPIO</groupName>
@@ -6301,12 +6301,12 @@ In the event that Third Party Software has only been provided to you in object c
 	</addressBlock>
 
 	<interrupt>
-	<name>GPIO_IntA</name>
+	<name>GPIOA</name>
 	<description>interrupt</description>
 	<value>47</value>
 	</interrupt>
 	<interrupt>
-	<name>GPIO_IntB</name>
+	<name>GPIOB</name>
 	<description>interrupt</description>
 	<value>48</value>
 	</interrupt>	
@@ -6495,9 +6495,24 @@ In the event that Third Party Software has only been provided to you in object c
 	</register>
 	</registers>
 	</peripheral>
-	
+	<peripheral derivedFrom=ADI_GPIO0>
+	<name>ADI_GPIO1</name>
+	<baseAddress>0x40020040</baseAddress>
+	</peripheral>
+	<peripheral derivedFrom=ADI_GPIO0>
+	<name>ADI_GPIO2</name>
+	<baseAddress>0x40020090</baseAddress>
+	</peripheral>	
+	<peripheral derivedFrom=ADI_GPIO0>
+	<name>ADI_GPIO3</name>
+	<baseAddress>0x400200C0</baseAddress>
+	</peripheral>
+	<peripheral derivedFrom=ADI_GPIO0>
+	<name>ADI_GPIO4</name>
+	<baseAddress>0x40020100</baseAddress>
+	</peripheral>
 	<peripheral>
-	<name>SPIH</name>
+	<name>ADI_SPIH</name>
 	<description>SPIH Master/Slave</description>
 	<groupName>SPIH</groupName>
 	<baseAddress>0x40024000</baseAddress>
@@ -6618,7 +6633,7 @@ In the event that Third Party Software has only been provided to you in object c
 	</peripheral>
 
 	<peripheral>
-	<name>CRC</name>
+	<name>ADI_CRC</name>
 	
 	<description>CRC Engine</description>
 	<groupName>CRCENG</groupName>
@@ -6678,7 +6693,7 @@ In the event that Third Party Software has only been provided to you in object c
 	</peripheral>
 	
 	<peripheral>
-	<name>PDI</name>
+	<name>ADI_PDI</name>
 	
 	<description>Parallel Display Interface</description>
 	<groupName>PDIC</groupName>
@@ -6814,7 +6829,7 @@ In the event that Third Party Software has only been provided to you in object c
 	</peripheral>
 	
 	<peripheral>
-	<name>AFE</name>
+	<name>ADI_AFE</name>
 	
 	<description>Analog Front End</description>
 	<groupName>Analog Front End</groupName>
@@ -6833,17 +6848,17 @@ In the event that Third Party Software has only been provided to you in object c
 	<value>50</value>
 	</interrupt>
 	<interrupt>
-	<name>AFE_GENERATION</name>
+	<name>AFE_GENERATE</name>
 	<description>Analog Front End Generation interrupt</description>
 	<value>51</value>
 	</interrupt>
 	<interrupt>
-	<name>AFE_FIFO_CMD</name>
+	<name>AFE_CMD_FIFO</name>
 	<description>Analog Front End FIFO CMD interrupt</description>
 	<value>52</value>
 	</interrupt>
 	<interrupt>
-	<name>AFE_FIFO_DATA</name>
+	<name>AFE_DATA_FIFO</name>
 	<description>Analog Front End FIFO DATA interrupt</description>
 	<value>53</value>
 	</interrupt>	
@@ -7720,7 +7735,7 @@ In the event that Third Party Software has only been provided to you in object c
 	</peripheral>
 	
 	<peripheral>
-		<name>USB0</name>
+		<name>ADI_USB</name>
 		
 		<description>USB Controller</description>
 		<groupName>USB</groupName>
@@ -7733,12 +7748,12 @@ In the event that Third Party Software has only been provided to you in object c
 			<usage>registers</usage>
 		</addressBlock>
 		<interrupt>
-			<name>USB_WAKE</name>
+			<name>USB_WAKEUP</name>
 			<description>USB Wakeup interrupt</description>
 			<value>36</value>
 		</interrupt>
 		<interrupt>
-			<name>USB_CTL</name>
+			<name>USB_CNTL</name>
 			<description>USB Controller interrupt</description>
 			<value>37</value>
 		</interrupt>
