@@ -4913,7 +4913,7 @@ In the event that Third Party Software has only been provided to you in object c
 			<registers>
 
 				<register>
-					<name>CFG</name>
+					<name>BEEP_CFG</name>
 					<description>BEEP Beeper configuration</description>
 					<addressOffset>0x00</addressOffset>
 					<size>16</size>
@@ -8037,7 +8037,76 @@ In the event that Third Party Software has only been provided to you in object c
 	</register>
 	</registers>
 	</peripheral>
-	
+	<peripheral>
+		<name>ADI_CT</name>
+		
+		<description>Cap Touch Controller</description>
+		<groupName>CT</groupName>
+		<baseAddress>0x40084000</baseAddress>
+		<size>32</size>
+
+		<addressBlock>
+		<offset>0</offset>
+		<size>0x12c</size>
+		<usage>registers</usage>
+		</addressBlock>		
+	<registers>
+	<register>
+		<name>CDC_PWR</name>
+		<description>Cap Touch </description>
+		<addressOffset>0x0</addressOffset>
+		<size>32</size>
+		<fields>
+						<field>
+							<name>VALUE</name>
+							<bitOffset>0</bitOffset>
+							<bitWidth>32</bitWidth>
+						</field>
+		</fields>
+	</register>
+	<register>
+		<name>CFG1</name>
+		<description>Cap Touch Config Register 1</description>
+		<addressOffset>0x4</addressOffset>
+		<size>32</size>
+		<fields>
+						<field>
+							<name>VALUE</name>
+							<bitOffset>0</bitOffset>
+							<bitWidth>32</bitWidth>
+						</field>
+		</fields>
+	</register>
+	<register>
+		<name>CFG2</name>
+		<description>Cap Touch Config Register 2</description>
+		<addressOffset>0x8</addressOffset>
+		<size>32</size>
+		<fields>
+						<field>
+							<name>VALUE</name>
+							<bitOffset>0</bitOffset>
+							<bitWidth>32</bitWidth>
+						</field>
+		</fields>
+	</register>	
+	<register>
+		<name>CFG3</name>
+		<description>Cap Touch Config Register 3</description>
+		<addressOffset>0xc</addressOffset>
+		<size>32</size>
+		<fields>
+						<field>
+							<name>VALUE</name>
+							<bitOffset>0</bitOffset>
+							<bitWidth>32</bitWidth>
+						</field>
+		</fields>
+	</register>
+	</registers>
+		
+	</peripheral>
+		
 	<peripheral>
 		<name>ADI_USB</name>
 		
