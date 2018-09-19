@@ -1288,10 +1288,12 @@ In the event that Third Party Software has only been provided to you in object c
 							<bitWidth>1</bitWidth>
 							<enumeratedValues>
 								<enumeratedValue>
+									<description>Update occuring in Timer clock domain</description>							
 									<name>TRUE</name>
 									<value>1</value>
 								</enumeratedValue>
 								<enumeratedValue>
+									<description>Interrupt cleared </description>								
 									<name>FALSE</name>
 									<value>0</value>
 								</enumeratedValue>								
@@ -1304,10 +1306,12 @@ In the event that Third Party Software has only been provided to you in object c
 							<bitWidth>1</bitWidth>
 							<enumeratedValues>
 								<enumeratedValue>
+									<description>Not Ready</description>
 									<name>TRUE</name>
 									<value>1</value>
 								</enumeratedValue>
 								<enumeratedValue>
+									<description>Ready for Commands</description>
 									<name>FALSE</name>
 									<value>0</value>
 								</enumeratedValue>								
@@ -1320,10 +1324,12 @@ In the event that Third Party Software has only been provided to you in object c
 							<bitWidth>1</bitWidth>
 							<enumeratedValues>
 								<enumeratedValue>
+									<description>Capture Pending</description>
 									<name>TRUE</name>
 									<value>1</value>
 								</enumeratedValue>
 								<enumeratedValue>
+									<description>No Capture</description>
 									<name>FALSE</name>
 									<value>0</value>
 								</enumeratedValue>								
@@ -1336,10 +1342,12 @@ In the event that Third Party Software has only been provided to you in object c
 							<bitWidth>1</bitWidth>
 							<enumeratedValues>
 								<enumeratedValue>
+									<description>Timeout occured</description>
 									<name>TRUE</name>
 									<value>1</value>
 								</enumeratedValue>
 								<enumeratedValue>
+									<description>No Timeout</description>								
 									<name>FALSE</name>
 									<value>0</value>
 								</enumeratedValue>								
@@ -1360,11 +1368,13 @@ In the event that Third Party Software has only been provided to you in object c
 							<bitWidth>1</bitWidth>
 							<enumeratedValues>
 								<enumeratedValue>
-									<name>TRUE</name>
+								    <description>Idle High</description>
+									<name>IDLE_HIGH</name>
 									<value>1</value>
 								</enumeratedValue>
 								<enumeratedValue>
-									<name>FALSE</name>
+								    <description>Idle Low</description>
+									<name>IDLE LOW</name>
 									<value>0</value>
 								</enumeratedValue>								
 							</enumeratedValues>	
@@ -1376,11 +1386,13 @@ In the event that Third Party Software has only been provided to you in object c
 							<bitWidth>1</bitWidth>
 							<enumeratedValues>
 								<enumeratedValue>
-									<name>TRUE</name>
+									<description>PWM Match mode</description>
+									<name>MATCH</name>
 									<value>1</value>
 								</enumeratedValue>
 								<enumeratedValue>
-									<name>FALSE</name>
+									<description>PWM Toggle mode</description>								
+									<name>TOGGLE</name>
 									<value>0</value>
 								</enumeratedValue>								
 							</enumeratedValues>	
@@ -1455,18 +1467,22 @@ In the event that Third Party Software has only been provided to you in object c
 					<bitWidth>2</bitWidth>
 					<enumeratedValues>
 						<enumeratedValue>
+							<description>Full Active mode</description>
 							<name>FULLACTIVE</name>
 							<value>0</value>
 						</enumeratedValue>
 						<enumeratedValue>
+							<description>Core power down</description>
 							<name>CORESLEEP</name>
 							<value>1</value>
 						</enumeratedValue>
 						<enumeratedValue>
+							<description>Sleep power down</description>
 							<name>SYSSLEEP</name>
 							<value>2</value>
 						</enumeratedValue>
 						<enumeratedValue>
+							<description>Hibernate power down</description>
 							<name>HIBERNATE</name>
 							<value>3</value>
 						</enumeratedValue>
@@ -1490,10 +1506,12 @@ In the event that Third Party Software has only been provided to you in object c
 					</writeConstraint>
 					<enumeratedValues>
 							<enumeratedValue>
+								<description>Magic Key 1</description>
 								<name>KEY1</name>
 								<value>0x4859</value>
 							</enumeratedValue>
 							<enumeratedValue>
+								<description>Magic Key 2</description>
 								<name>KEY2</name>
 								<value>0xf27b</value>
 							</enumeratedValue>
@@ -1561,6 +1579,7 @@ In the event that Third Party Software has only been provided to you in object c
 					</writeConstraint>
 					<enumeratedValues>
 						<enumeratedValue>
+							<description>Magic Key</description>
 							<name>KEY</name>
 							<value>0xCB14</value>
 						</enumeratedValue>
@@ -4504,6 +4523,7 @@ In the event that Third Party Software has only been provided to you in object c
 				<size>16</size>
 				<fields>
 						<field>
+							<description>I2S Ch1 lsb</description>
 							<name>OUT1_LSB</name>
 							<bitOffset>8</bitOffset>
 							<bitWidth>8</bitWidth>
@@ -4518,6 +4538,7 @@ In the event that Third Party Software has only been provided to you in object c
 				<size>16</size>
 				<fields>
 						<field>
+							<description>I2S Ch1 msb</description>
 							<name>OUT1_MSB</name>
 							<bitOffset>8</bitOffset>
 							<bitWidth>8</bitWidth>
@@ -4532,6 +4553,7 @@ In the event that Third Party Software has only been provided to you in object c
 				<size>16</size>
 				<fields>
 						<field>
+							<description>I2S Ch2 lsb</description>
 							<name>OUT2_LSB</name>
 							<bitOffset>8</bitOffset>
 							<bitWidth>8</bitWidth>
@@ -4545,6 +4567,7 @@ In the event that Third Party Software has only been provided to you in object c
 				<size>16</size>
 				<fields>
 						<field>
+							<description>I2S Ch2 msb</description>
 							<name>OUT2_MSB</name>
 							<bitOffset>8</bitOffset>
 							<bitWidth>8</bitWidth>
@@ -5578,10 +5601,12 @@ In the event that Third Party Software has only been provided to you in object c
 					</writeConstraint>
 					<enumeratedValues>
 							<enumeratedValue>
+								<description>Magic Key 1</description>
 								<name>KEY1</name>
 								<value>0xF456</value>
 							</enumeratedValue>
 							<enumeratedValue>
+								<description>Magic Key 2</description>							
 								<name>KEY2</name>
 								<value>0xF123</value>
 							</enumeratedValue>
