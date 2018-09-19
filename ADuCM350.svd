@@ -337,7 +337,6 @@ In the event that Third Party Software has only been provided to you in object c
 							<bitWidth>2</bitWidth>
 							<enumeratedValues>
 								<enumeratedValue>
-									<description></description>
 									<name>DIV1</name>
 									<value>0</value>
 								</enumeratedValue>
@@ -1484,8 +1483,11 @@ In the event that Third Party Software has only been provided to you in object c
 					<name>KEY</name>
 					<description>Lock for PWRMOD</description>
 					<bitOffset>0</bitOffset>		
-					<bitWidth>16</bitWidth>					
-						<enumeratedValues>
+					<bitWidth>16</bitWidth>	
+					<writeConstraint>
+					<useEnumeratedValues>true</useEnumeratedValues>
+					</writeConstraint>
+					<enumeratedValues>
 							<enumeratedValue>
 								<name>KEY1</name>
 								<value>0x4859</value>
@@ -1551,8 +1553,11 @@ In the event that Third Party Software has only been provided to you in object c
 				<field>
 					<name>VALUE</name>
 					<description>Key value</description>
-					<bitOffset>0</bitOffset>
-					<bitWidth>16</bitWidth>
+					<bitOffset>0</bitOffset>		
+					<bitWidth>16</bitWidth>						
+					<writeConstraint>
+					<useEnumeratedValues>true</useEnumeratedValues>
+					</writeConstraint>
 					<enumeratedValues>
 						<enumeratedValue>
 							<name>KEY</name>
@@ -1888,6 +1893,13 @@ In the event that Third Party Software has only been provided to you in object c
                     <description> NMI clear</description>
                     <bitOffset>0</bitOffset>
                     <bitWidth>1</bitWidth>
+					<enumeratedValues>
+						<enumeratedValue>
+							<description>CLEAR</description>
+							<name>CLEAR</name>
+							<value>1</value>
+						</enumeratedValue>
+					</enumeratedValues>
                 </field>
             </fields>
         </register>
