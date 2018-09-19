@@ -105,34 +105,18 @@ In the event that Third Party Software has only been provided to you in object c
 				<name>TIMER0</name>
 				<value>11</value>
 			</interrupt>
-			<registers>
+			<registers>	
 				<register>
 					<name>LOAD</name>
 					<description>16-bit load value</description>
 					<addressOffset>0x00</addressOffset>
-					<size>16</size>
-					<fields>
-						<field>
-							<name>VALUE</name>
-							<description>Load value</description>
-							<bitOffset>0</bitOffset>
-							<bitWidth>16</bitWidth>
-						</field>
-					</fields>
+					<size>16</size>						
 				</register>
 				<register>
 					<name>CURCNT</name>
 					<description>16-bit timer value. read only.</description>
 					<addressOffset>0x04</addressOffset>
 					<size>16</size>					
-					<fields>
-						<field>
-							<name>VALUE</name>
-							<description>Current value</description>
-							<bitOffset>0</bitOffset>
-							<bitWidth>16</bitWidth>
-						</field>
-					</fields>
 				</register>
 				<register>
 					<name>CTL</name>
@@ -353,6 +337,7 @@ In the event that Third Party Software has only been provided to you in object c
 							<bitWidth>2</bitWidth>
 							<enumeratedValues>
 								<enumeratedValue>
+									<description></description>
 									<name>DIV1</name>
 									<value>0</value>
 								</enumeratedValue>
@@ -410,42 +395,18 @@ In the event that Third Party Software has only been provided to you in object c
 					<description>Capture Register</description>
 					<addressOffset>0x10</addressOffset>
 					<size>16</size>			
-					<fields>
-						<field>
-							<name>VALUE</name>
-							<description>Capture value</description>
-							<bitOffset>0</bitOffset>
-							<bitWidth>16</bitWidth>
-						</field>					
-					</fields>
 				</register>
 				<register>
 					<name>ALOAD</name>
 					<description>16-bit load value, asynchronous</description>
 					<addressOffset>0x14</addressOffset>
 					<size>16</size>
-					<fields>
-						<field>
-							<name>ALOAD</name>
-							<description>Load value</description>
-							<bitOffset>0</bitOffset>
-							<bitWidth>16</bitWidth>
-						</field>
-					</fields>
 				</register>
 				<register>
 					<name>ACURCNT</name>
 					<description>16-bit timer value, asynchronous</description>
 					<addressOffset>0x18</addressOffset>
 					<size>16</size>
-					<fields>
-						<field>
-							<name>AVALUE</name>
-							<description>Value</description>
-							<bitOffset>0</bitOffset>
-							<bitWidth>16</bitWidth>
-						</field>
-					</fields>
 				</register>
 				<register>
 					<name>STATUS</name>
@@ -587,28 +548,12 @@ In the event that Third Party Software has only been provided to you in object c
 					<description>16-bit load value</description>
 					<addressOffset>0x00</addressOffset>
 					<size>16</size>
-					<fields>
-						<field>
-							<name>VALUE</name>
-							<description>Load value</description>
-							<bitOffset>0</bitOffset>
-							<bitWidth>16</bitWidth>
-						</field>
-					</fields>
 				</register>
 				<register>
 					<name>CURCNT</name>
 					<description>16-bit timer value</description>
 					<addressOffset>0x04</addressOffset>
 					<size>16</size>					
-					<fields>
-						<field>
-							<name>VALUE</name>
-							<description>Current value</description>
-							<bitOffset>0</bitOffset>
-							<bitWidth>16</bitWidth>
-						</field>
-					</fields>
 				</register>
 				<register>
 					<name>CTL</name>
@@ -883,42 +828,18 @@ In the event that Third Party Software has only been provided to you in object c
 					<description>Capture</description>
 					<addressOffset>0x10</addressOffset>
 					<size>16</size>			
-					<fields>
-						<field>
-							<name>VALUE</name>
-							<description>Capture value</description>
-							<bitOffset>0</bitOffset>
-							<bitWidth>16</bitWidth>
-						</field>					
-					</fields>
 				</register>
 				<register>
 					<name>ALOAD</name>
 					<description>16-bit load value, asynchronous</description>
 					<addressOffset>0x14</addressOffset>
 					<size>16</size>
-					<fields>
-						<field>
-							<name>ALOAD</name>
-							<description>Load value</description>
-							<bitOffset>0</bitOffset>
-							<bitWidth>16</bitWidth>
-						</field>
-					</fields>
 				</register>
 				<register>
 					<name>ACURCNT</name>
 					<description>16-bit timer value, asynchronous</description>
 					<addressOffset>0x18</addressOffset>
 					<size>16</size>
-					<fields>
-						<field>
-							<name>AVALUE</name>
-							<description>Value</description>
-							<bitOffset>0</bitOffset>
-							<bitWidth>16</bitWidth>
-						</field>
-					</fields>
 				</register>
 				<register>
 					<name>STATUS</name>
@@ -1037,14 +958,6 @@ In the event that Third Party Software has only been provided to you in object c
 					<description>PWM Match Value</description>
 					<addressOffset>0x24</addressOffset>
 					<size>16</size>
-					<fields>
-						<field>
-							<name>MATCH_VAL</name>
-							<description>PWM Match value</description>
-							<bitOffset>0</bitOffset>
-							<bitWidth>16</bitWidth>
-						</field>
-					</fields>
 				</register>
 			</registers>
 		</peripheral>
@@ -1069,28 +982,12 @@ In the event that Third Party Software has only been provided to you in object c
 					<description>16-bit load value</description>
 					<addressOffset>0x00</addressOffset>
 					<size>16</size>
-					<fields>
-						<field>
-							<name>VALUE</name>
-							<description>Load value</description>
-							<bitOffset>0</bitOffset>
-							<bitWidth>16</bitWidth>
-						</field>
-					</fields>
 				</register>
 				<register>
 					<name>CURCNT</name>
 					<description>16-bit timer value</description>
 					<addressOffset>0x04</addressOffset>
 					<size>16</size>					
-					<fields>
-						<field>
-							<name>VALUE</name>
-							<description>Current value</description>
-							<bitOffset>0</bitOffset>
-							<bitWidth>16</bitWidth>
-						</field>
-					</fields>
 				</register>
 				<register>
 					<name>CTL</name>
@@ -1365,42 +1262,18 @@ In the event that Third Party Software has only been provided to you in object c
 					<description>Capture</description>
 					<addressOffset>0x10</addressOffset>
 					<size>16</size>			
-					<fields>
-						<field>
-							<name>VALUE</name>
-							<description>Capture value</description>
-							<bitOffset>0</bitOffset>
-							<bitWidth>16</bitWidth>
-						</field>					
-					</fields>
 				</register>
 				<register>
 					<name>ALOAD</name>
 					<description>16-bit load value, asynchronous</description>
 					<addressOffset>0x14</addressOffset>
 					<size>16</size>
-					<fields>
-						<field>
-							<name>ALOAD</name>
-							<description>Load value</description>
-							<bitOffset>0</bitOffset>
-							<bitWidth>16</bitWidth>
-						</field>
-					</fields>
 				</register>
 				<register>
 					<name>ACURCNT</name>
 					<description>16-bit timer value, asynchronous</description>
 					<addressOffset>0x18</addressOffset>
 					<size>16</size>
-					<fields>
-						<field>
-							<name>AVALUE</name>
-							<description>Value</description>
-							<bitOffset>0</bitOffset>
-							<bitWidth>16</bitWidth>
-						</field>
-					</fields>
 				</register>
 				<register>
 					<name>STATUS</name>
@@ -1519,14 +1392,6 @@ In the event that Third Party Software has only been provided to you in object c
 					<description>PWM Match Value</description>
 					<addressOffset>0x24</addressOffset>
 					<size>16</size>
-					<fields>
-						<field>
-							<name>MATCH_VAL</name>
-							<description>PWM Match value</description>
-							<bitOffset>0</bitOffset>
-							<bitWidth>16</bitWidth>
-						</field>
-					</fields>
 				</register>
 			</registers>
 		</peripheral>
@@ -1616,20 +1481,20 @@ In the event that Third Party Software has only been provided to you in object c
 			<size>16</size>
 			<fields>
 				<field>
-					<name>VALUE</name>
-					<description>Key value</description>
-					<bitOffset>0</bitOffset>
-					<bitWidth>16</bitWidth>
-					<enumeratedValues>
-						<enumeratedValue>
-							<name>KEY1</name>
-							<value>0x4859</value>
-						</enumeratedValue>
-						<enumeratedValue>
-							<name>KEY2</name>
-							<value>0xf27b</value>
-						</enumeratedValue>
-					</enumeratedValues>
+					<name>KEY</name>
+					<description>Lock for PWRMOD</description>
+					<bitOffset>0</bitOffset>		
+					<bitWidth>16</bitWidth>					
+						<enumeratedValues>
+							<enumeratedValue>
+								<name>KEY1</name>
+								<value>0x4859</value>
+							</enumeratedValue>
+							<enumeratedValue>
+								<name>KEY2</name>
+								<value>0xf27b</value>
+							</enumeratedValue>
+						</enumeratedValues>
 				</field>
 			</fields>
 			</register>
