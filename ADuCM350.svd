@@ -1573,13 +1573,6 @@ In the event that Third Party Software has only been provided to you in object c
 			<description>PWR Oscillator control</description>
 			<addressOffset>0x10</addressOffset>
 			<size>16</size>
-			<fields>
-				<field>
-					<name>VALUE</name>
-					<bitOffset>0</bitOffset>
-					<bitWidth>16</bitWidth>
-				</field>
-			</fields>
 		</register>		
 		</registers>
 	</peripheral>
@@ -1594,38 +1587,47 @@ In the event that Third Party Software has only been provided to you in object c
 			<usage>registers</usage>
 		</addressBlock>
 			<interrupt>
+				<description>External Interrupt 0</description>
 				<name>EINT0</name>
 				<value>1</value>
 			</interrupt>		
 			<interrupt>
+				<description>External Interrupt 1</description>
 				<name>EINT1</name>
 				<value>2</value>
 			</interrupt>		
 			<interrupt>
+				<description>External Interrupt 2</description>			
 				<name>EINT2</name>
 				<value>3</value>
 			</interrupt>		
 			<interrupt>
+				<description>External Interrupt 3</description>			
 				<name>EINT3</name>
 				<value>4</value>
 			</interrupt>	
 			<interrupt>
+				<description>External Interrupt 4</description>			
 				<name>EINT4</name>
 				<value>5</value>
 			</interrupt>		
 			<interrupt>
+				<description>External Interrupt 5</description>			
 				<name>EINT5</name>
 				<value>6</value>
 			</interrupt>		
 			<interrupt>
+				<description>External Interrupt 6</description>
 				<name>EINT6</name>
 				<value>7</value>
 			</interrupt>		
 			<interrupt>
+				<description>External Interrupt 7</description>			
 				<name>EINT7</name>
 				<value>8</value>
 			</interrupt>
 			<interrupt>
+				<description>External Interrupt 8</description>
 				<name>EINT8</name>
 				<value>9</value>
 			</interrupt>
@@ -2069,13 +2071,6 @@ In the event that Third Party Software has only been provided to you in object c
 					<description>WUT Current count value - LS halfword.</description>
 					<addressOffset>0x00</addressOffset>
 					<size>16</size>
-					<fields>
-						<field>
-							<name>VALUE</name>
-							<bitOffset>0</bitOffset>
-							<bitWidth>16</bitWidth>
-						</field>
-					</fields>
 				</register>
 
 				<register>
@@ -2083,13 +2078,6 @@ In the event that Third Party Software has only been provided to you in object c
 					<description>WUT Current count value - MS halfword</description>
 					<addressOffset>0x04</addressOffset>
 					<size>16</size>
-					<fields>
-						<field>
-							<name>VALUE</name>
-							<bitOffset>0</bitOffset>
-							<bitWidth>16</bitWidth>
-						</field>
-					</fields>
 				</register>
 
 				<register>
@@ -2163,13 +2151,6 @@ In the event that Third Party Software has only been provided to you in object c
 					<description>WUT Wakeup field B - LS halfword</description>
 					<addressOffset>0x10</addressOffset>
 					<size>16</size>
-					<fields>
-						<field>
-							<name>VALUE</name>
-							<bitOffset>0</bitOffset>
-							<bitWidth>16</bitWidth>
-						</field>
-					</fields>
 				</register>
 
 				<register>
@@ -2177,13 +2158,6 @@ In the event that Third Party Software has only been provided to you in object c
 					<description>WUT Wakeup field B - MS halfword</description>
 					<addressOffset>0x14</addressOffset>
 					<size>16</size>
-						<fields>
-							<field>
-								<name>VALUE</name>
-								<bitOffset>0</bitOffset>
-								<bitWidth>16</bitWidth>
-							</field>
-						</fields>
 				</register>
 
 				<register>
@@ -2191,13 +2165,6 @@ In the event that Third Party Software has only been provided to you in object c
 					<description>WUT Wakeup field C - LS halfword</description>
 					<addressOffset>0x18</addressOffset>
 					<size>16</size>
-					<fields>
-						<field>
-							<name>VALUE</name>
-							<bitOffset>0</bitOffset>
-							<bitWidth>16</bitWidth>
-						</field>
-					</fields>
 				</register>
 
 				<register>
@@ -2205,26 +2172,12 @@ In the event that Third Party Software has only been provided to you in object c
 					<description>WUT Wakeup field C - MS halfword</description>
 					<addressOffset>0x1C</addressOffset>
 					<size>16</size>
-					<fields>
-						<field>
-							<name>VALUE</name>
-							<bitOffset>0</bitOffset>
-							<bitWidth>16</bitWidth>
-						</field>
-					</fields>
 				</register>
 
 				<register>
 					<name>T2WUFD0</name>
 					<description>WUT Wakeup field D - LS halfword</description>
 					<addressOffset>0x20</addressOffset>
-					<fields>
-						<field>
-							<name>VALUE</name>
-							<bitOffset>0</bitOffset>
-							<bitWidth>16</bitWidth>
-						</field>
-					</fields>
 				</register>
 
 				<register>
@@ -2232,13 +2185,6 @@ In the event that Third Party Software has only been provided to you in object c
 					<description>WUT Wakeup field D - MS halfword</description>
 					<addressOffset>0x24</addressOffset>
 					<size>16</size>
-					<fields>
-						<field>
-							<name>VALUE</name>
-							<bitOffset>0</bitOffset>
-							<bitWidth>16</bitWidth>
-						</field>
-					</fields>
 				</register>
 
 				<register>
@@ -2381,13 +2327,6 @@ In the event that Third Party Software has only been provided to you in object c
 					<description>WUT Unsynchronized lower 16 bits of WU Timer counter value.</description>
 					<addressOffset>0x34</addressOffset>
 					<size>16</size>
-					<fields>
-						<field>
-							<name>VALUE</name>
-							<bitOffset>0</bitOffset>
-							<bitWidth>16</bitWidth>
-						</field>
-					</fields>
 				</register>		
 
 				<register>
@@ -2395,13 +2334,6 @@ In the event that Third Party Software has only been provided to you in object c
 					<description>WUT Unsynchronized upper 16 bits of WU Timer counter value.</description>
 					<addressOffset>0x38</addressOffset>
 					<size>16</size>
-					<fields>
-						<field>
-							<name>VALUE</name>
-							<bitOffset>0</bitOffset>
-							<bitWidth>16</bitWidth>
-						</field>
-					</fields>
 				</register>
 
 				<register>
@@ -2409,13 +2341,6 @@ In the event that Third Party Software has only been provided to you in object c
 					<description>WUT Wakeup field A - LS halfword</description>
 					<addressOffset>0x3C</addressOffset>
 					<size>16</size>
-					<fields>
-						<field>
-							<name>VALUE</name>
-							<bitOffset>0</bitOffset>
-							<bitWidth>16</bitWidth>
-						</field>
-					</fields>
 				</register>
 
 				<register>
@@ -2423,13 +2348,6 @@ In the event that Third Party Software has only been provided to you in object c
 					<description>WUT Wakeup field A - MS halfword</description>
 					<addressOffset>0x40</addressOffset>
 					<size>16</size>
-					<fields>
-						<field>
-							<name>VALUE</name>
-							<bitOffset>0</bitOffset>
-							<bitWidth>16</bitWidth>
-						</field>
-					</fields>
 				</register>
 			</registers>
 		</peripheral>
@@ -2459,13 +2377,6 @@ In the event that Third Party Software has only been provided to you in object c
 					<description>WDT Load value</description>
 					<addressOffset>0x00</addressOffset>
 					<size>16</size>
-					<fields>
-						<field>
-							<name>VALUE</name>
-							<bitOffset>0</bitOffset>
-							<bitWidth>16</bitWidth>
-						</field>
-					</fields>
 				</register>
 
 				<register>
@@ -2473,13 +2384,6 @@ In the event that Third Party Software has only been provided to you in object c
 					<description>WDT Current count value</description>
 					<addressOffset>0x04</addressOffset>
 					<size>16</size>
-					<fields>
-						<field>
-							<name>VALUE</name>
-							<bitOffset>0</bitOffset>
-							<bitWidth>16</bitWidth>
-						</field>
-					</fields>
 				</register>
 
 			<register>
@@ -2526,13 +2430,6 @@ In the event that Third Party Software has only been provided to you in object c
 					<description>WDT Clear interrupt register</description>
 					<addressOffset>0x0C</addressOffset>
 					<size>16</size>
-					<fields>
-						<field>
-							<name>VALUE</name>
-							<bitOffset>0</bitOffset>
-							<bitWidth>16</bitWidth>
-						</field>
-					</fields>
 				</register>
 
 				<register>
@@ -2826,13 +2723,6 @@ In the event that Third Party Software has only been provided to you in object c
 			<description>RTC RTC Count 0</description>
 			<addressOffset>0x0C</addressOffset>
 			<size>16</size>
-			<fields>
-						<field>
-							<name>VALUE</name>
-							<bitOffset>0</bitOffset>
-							<bitWidth>16</bitWidth>
-						</field>
-			</fields>
 		</register>
 
 		<register>
@@ -2840,13 +2730,6 @@ In the event that Third Party Software has only been provided to you in object c
 			<description>RTC RTC Count 1</description>
 			<addressOffset>0x10</addressOffset>
 			<size>16</size>
-			<fields>
-						<field>
-							<name>VALUE</name>
-							<bitOffset>0</bitOffset>
-							<bitWidth>16</bitWidth>
-						</field>
-			</fields>
 		</register>
 
 		<register>
@@ -2854,13 +2737,6 @@ In the event that Third Party Software has only been provided to you in object c
 			<description>RTC RTC Alarm 0</description>
 			<addressOffset>0x14</addressOffset>
 			<size>16</size>
-			<fields>
-						<field>
-							<name>VALUE</name>
-							<bitOffset>0</bitOffset>
-							<bitWidth>16</bitWidth>
-						</field>
-			</fields>
 		</register>
 
 		<register>
@@ -2868,13 +2744,6 @@ In the event that Third Party Software has only been provided to you in object c
 			<description>RTC RTC Alarm 1</description>
 			<addressOffset>0x18</addressOffset>
 			<size>16</size>
-			<fields>
-						<field>
-							<name>VALUE</name>
-							<bitOffset>0</bitOffset>
-							<bitWidth>16</bitWidth>
-						</field>
-			</fields>
 		</register>
 
 		<register>
@@ -2909,13 +2778,6 @@ In the event that Third Party Software has only been provided to you in object c
 			<description>RTC RTC Gateway</description>
 			<addressOffset>0x20</addressOffset>
 			<size>16</size>
-			<fields>
-						<field>
-							<name>VALUE</name>
-							<bitOffset>0</bitOffset>
-							<bitWidth>16</bitWidth>
-						</field>
-			</fields>
 		</register>
 		</registers>
 	</peripheral>
@@ -4609,13 +4471,6 @@ In the event that Third Party Software has only been provided to you in object c
 				<description>UART Baudrate divider</description>
 				<addressOffset>0x28</addressOffset>
 				<size>16</size>
-					<fields>
-						<field>
-							<name>VALUE</name>
-							<bitOffset>0</bitOffset>
-							<bitWidth>16</bitWidth>
-						</field>
-					</fields>
 			</register>
 		</registers>
 	</peripheral>
@@ -4701,13 +4556,6 @@ In the event that Third Party Software has only been provided to you in object c
 					<description>I2S I2S format modes 1</description>
 					<addressOffset>0x10</addressOffset>
 					<size>16</size>
-					<fields>
-						<field>
-							<name>VALUE</name>
-							<bitOffset>0</bitOffset>
-							<bitWidth>16</bitWidth>
-						</field>
-					</fields>
 				</register>
 
 				<register>
@@ -4715,13 +4563,6 @@ In the event that Third Party Software has only been provided to you in object c
 					<description>I2S I2S format modes 2</description>
 					<addressOffset>0x14</addressOffset>
 					<size>16</size>
-					<fields>
-						<field>
-							<name>VALUE</name>
-							<bitOffset>0</bitOffset>
-							<bitWidth>16</bitWidth>
-						</field>
-					</fields>
 				</register>
 
 				<register>
@@ -4729,13 +4570,6 @@ In the event that Third Party Software has only been provided to you in object c
 					<description>I2S I2S configuration 1</description>
 					<addressOffset>0x18</addressOffset>
 					<size>16</size>
-					<fields>
-						<field>
-							<name>VALUE</name>
-							<bitOffset>0</bitOffset>
-							<bitWidth>16</bitWidth>
-						</field>
-					</fields>
 				</register>
 
 				<register>
@@ -4743,13 +4577,6 @@ In the event that Third Party Software has only been provided to you in object c
 					<description>I2S I2S configuration 2</description>
 					<addressOffset>0x1C</addressOffset>
 					<size>16</size>
-					<fields>
-						<field>
-							<name>VALUE</name>
-							<bitOffset>0</bitOffset>
-							<bitWidth>16</bitWidth>
-						</field>
-					</fields>
 				</register>
 
 				<register>
@@ -4757,13 +4584,6 @@ In the event that Third Party Software has only been provided to you in object c
 					<description>I2S I2S status</description>
 					<addressOffset>0x20</addressOffset>
 					<size>16</size>
-					<fields>
-						<field>
-							<name>VALUE</name>
-							<bitOffset>0</bitOffset>
-							<bitWidth>16</bitWidth>
-						</field>
-					</fields>
 				</register>
 			</registers>
 	</peripheral>
@@ -4794,13 +4614,6 @@ In the event that Third Party Software has only been provided to you in object c
 					<description>BEEP Beeper configuration</description>
 					<addressOffset>0x00</addressOffset>
 					<size>16</size>
-					<fields>
-						<field>
-							<name>VALUE</name>
-							<bitOffset>0</bitOffset>
-							<bitWidth>16</bitWidth>
-						</field>
-					</fields>
 				</register>
 
 				<register>
@@ -4808,13 +4621,6 @@ In the event that Third Party Software has only been provided to you in object c
 					<description>BEEP Beeper status</description>
 					<addressOffset>0x04</addressOffset>
 					<size>16</size>
-					<fields>
-						<field>
-							<name>VALUE</name>
-							<bitOffset>0</bitOffset>
-							<bitWidth>16</bitWidth>
-						</field>
-					</fields>
 				</register>
 
 				<register>
@@ -4822,13 +4628,6 @@ In the event that Third Party Software has only been provided to you in object c
 					<description>BEEP Tone A Data</description>
 					<addressOffset>0x08</addressOffset>
 					<size>16</size>
-					<fields>
-						<field>
-							<name>VALUE</name>
-							<bitOffset>0</bitOffset>
-							<bitWidth>16</bitWidth>
-						</field>
-					</fields>
 				</register>
 
 				<register>
@@ -4836,13 +4635,6 @@ In the event that Third Party Software has only been provided to you in object c
 					<description>BEEP Tone B Data</description>
 					<addressOffset>0x0C</addressOffset>
 					<size>16</size>
-					<fields>
-						<field>
-							<name>VALUE</name>
-							<bitOffset>0</bitOffset>
-							<bitWidth>16</bitWidth>
-						</field>
-					</fields>
 				</register>
 			</registers>
 	</peripheral>
@@ -4936,13 +4728,6 @@ In the event that Third Party Software has only been provided to you in object c
 					<description>RNG RNG Data Register</description>
 					<addressOffset>0x0C</addressOffset>
 					<size>16</size>
-					<fields>
-						<field>
-							<name>VALUE</name>
-							<bitOffset>0</bitOffset>
-							<bitWidth>16</bitWidth>
-						</field>
-					</fields>
 				</register>
 
 				<register>
@@ -4951,13 +4736,6 @@ In the event that Third Party Software has only been provided to you in object c
 					<addressOffset>0x10</addressOffset>
 					<size>16</size>
 					<access>read-only</access>					
-					<fields>
-						<field>
-							<name>VALUE</name>
-							<bitOffset>0</bitOffset>
-							<bitWidth>16</bitWidth>
-						</field>
-					</fields>
 				</register>
 
 				<register>
@@ -5159,13 +4937,6 @@ In the event that Third Party Software has only been provided to you in object c
 					<description>LCD Screen 0 LCD Data Register n</description>
 					<addressOffset>0x10</addressOffset>
 					<size>16</size>
-					<fields>
-						<field>
-							<name>VALUE</name>
-							<bitOffset>0</bitOffset>
-							<bitWidth>16</bitWidth>
-						</field>
-					</fields>
 				</register>
 
 				<register>
@@ -5173,13 +4944,6 @@ In the event that Third Party Software has only been provided to you in object c
 					<description>LCD Screen 0 LCD Data Register n</description>
 					<addressOffset>0x14</addressOffset>
 					<size>16</size>
-					<fields>
-						<field>
-							<name>VALUE</name>
-							<bitOffset>0</bitOffset>
-							<bitWidth>16</bitWidth>
-						</field>
-					</fields>
 				</register>
 
 				<register>
@@ -5187,13 +4951,6 @@ In the event that Third Party Software has only been provided to you in object c
 					<description>LCD Screen 0 LCD Data Register n</description>
 					<addressOffset>0x18</addressOffset>
 					<size>16</size>
-					<fields>
-						<field>
-							<name>VALUE</name>
-							<bitOffset>0</bitOffset>
-							<bitWidth>16</bitWidth>
-						</field>
-					</fields>
 				</register>
 
 				<register>
@@ -5201,13 +4958,6 @@ In the event that Third Party Software has only been provided to you in object c
 					<description>LCD Screen 0 LCD Data Register n</description>
 					<addressOffset>0x1C</addressOffset>
 					<size>16</size>
-					<fields>
-						<field>
-							<name>VALUE</name>
-							<bitOffset>0</bitOffset>
-							<bitWidth>16</bitWidth>
-						</field>
-					</fields>
 				</register>
 
 				<register>
@@ -5215,13 +4965,6 @@ In the event that Third Party Software has only been provided to you in object c
 					<description>LCD Screen 0 LCD Data Register n</description>
 					<addressOffset>0x20</addressOffset>
 					<size>16</size>
-					<fields>
-							<field>
-								<name>VALUE</name>
-								<bitOffset>0</bitOffset>
-								<bitWidth>16</bitWidth>
-							</field>
-					</fields>
 				</register>
 
 				<register>
@@ -5229,13 +4972,6 @@ In the event that Third Party Software has only been provided to you in object c
 					<description>LCD Screen 0 LCD Data Register n</description>
 					<addressOffset>0x24</addressOffset>
 					<size>16</size>
-					<fields>
-						<field>
-							<name>VALUE</name>
-							<bitOffset>0</bitOffset>
-							<bitWidth>16</bitWidth>
-						</field>
-					</fields>
 				</register>
 
 				<register>
@@ -5243,13 +4979,6 @@ In the event that Third Party Software has only been provided to you in object c
 					<description>LCD Screen 0 LCD Data Register n</description>
 					<addressOffset>0x28</addressOffset>
 					<size>16</size>
-					<fields>
-							<field>
-								<name>VALUE</name>
-								<bitOffset>0</bitOffset>
-								<bitWidth>16</bitWidth>
-							</field>
-					</fields>
 				</register>
 
 				<register>
@@ -5257,13 +4986,6 @@ In the event that Third Party Software has only been provided to you in object c
 					<description>LCD Screen 0 LCD Data Register n</description>
 					<addressOffset>0x2C</addressOffset>
 					<size>16</size>
-					<fields>
-						<field>
-							<name>VALUE</name>
-							<bitOffset>0</bitOffset>
-							<bitWidth>16</bitWidth>
-						</field>
-					</fields>
 				</register>
 
 				<register>
@@ -5271,13 +4993,6 @@ In the event that Third Party Software has only been provided to you in object c
 					<description>LCD Screen 1 LCD Data Register n</description>
 					<addressOffset>0x30</addressOffset>
 					<size>16</size>
-					<fields>
-							<field>
-								<name>VALUE</name>
-								<bitOffset>0</bitOffset>
-								<bitWidth>16</bitWidth>
-							</field>
-					</fields>
 				</register>
 
 				<register>
@@ -5285,13 +5000,6 @@ In the event that Third Party Software has only been provided to you in object c
 					<description>LCD Screen 1 LCD Data Register n</description>
 					<addressOffset>0x34</addressOffset>
 					<size>16</size>
-					<fields>
-						<field>
-							<name>VALUE</name>
-							<bitOffset>0</bitOffset>
-							<bitWidth>16</bitWidth>
-						</field>
-					</fields>
 				</register>
 
 				<register>
@@ -5299,13 +5007,6 @@ In the event that Third Party Software has only been provided to you in object c
 					<description>LCD Screen 1 LCD Data Register n</description>
 					<addressOffset>0x38</addressOffset>
 					<size>16</size>
-					<fields>
-							<field>
-								<name>VALUE</name>
-								<bitOffset>0</bitOffset>
-								<bitWidth>16</bitWidth>
-							</field>
-					</fields>
 				</register>
 
 				<register>
@@ -5313,13 +5014,6 @@ In the event that Third Party Software has only been provided to you in object c
 					<description>LCD Screen 1 LCD Data Register n</description>
 					<addressOffset>0x3C</addressOffset>
 					<size>16</size>
-					<fields>
-						<field>
-							<name>VALUE</name>
-							<bitOffset>0</bitOffset>
-							<bitWidth>16</bitWidth>
-						</field>
-					</fields>
 				</register>
 
 				<register>
@@ -5327,13 +5021,6 @@ In the event that Third Party Software has only been provided to you in object c
 					<description>LCD Screen 1 LCD Data Register n</description>
 					<addressOffset>0x40</addressOffset>
 					<size>16</size>
-					<fields>
-							<field>
-								<name>VALUE</name>
-								<bitOffset>0</bitOffset>
-								<bitWidth>16</bitWidth>
-							</field>
-					</fields>
 				</register>
 
 				<register>
@@ -5341,13 +5028,6 @@ In the event that Third Party Software has only been provided to you in object c
 					<description>LCD Screen 1 LCD Data Register n</description>
 					<addressOffset>0x44</addressOffset>
 					<size>16</size>
-					<fields>
-						<field>
-							<name>VALUE</name>
-							<bitOffset>0</bitOffset>
-							<bitWidth>16</bitWidth>
-						</field>
-					</fields>
 				</register>
 
 				<register>
@@ -5355,13 +5035,6 @@ In the event that Third Party Software has only been provided to you in object c
 					<description>LCD Screen 1 LCD Data Register n</description>
 					<addressOffset>0x48</addressOffset>
 					<size>16</size>
-					<fields>
-							<field>
-								<name>VALUE</name>
-								<bitOffset>0</bitOffset>
-								<bitWidth>16</bitWidth>
-							</field>
-					</fields>
 				</register>
 
 				<register>
@@ -5369,13 +5042,6 @@ In the event that Third Party Software has only been provided to you in object c
 					<description>LCD Screen 1 LCD Data Register n</description>
 					<addressOffset>0x4C</addressOffset>
 					<size>16</size>
-					<fields>
-						<field>
-							<name>VALUE</name>
-							<bitOffset>0</bitOffset>
-							<bitWidth>16</bitWidth>
-						</field>
-					</fields>
 				</register>
 			</registers>
 		</peripheral>
@@ -5525,13 +5191,6 @@ In the event that Third Party Software has only been provided to you in object c
 		<description>DMA DMA channel primary control data base pointer</description>
 		<addressOffset>0x08</addressOffset>
 		<size>16</size>
-		<fields>
-							<field>
-								<name>VALUE</name>
-								<bitOffset>0</bitOffset>
-								<bitWidth>16</bitWidth>
-							</field>
-		</fields>
 	</register>
 
 	<register>
@@ -5539,13 +5198,6 @@ In the event that Third Party Software has only been provided to you in object c
 		<description>DMA DMA channel alternate control data base pointer</description>
 		<addressOffset>0x0C</addressOffset>
 		<size>16</size>
-		<fields>
-						<field>
-							<name>VALUE</name>
-							<bitOffset>0</bitOffset>
-							<bitWidth>16</bitWidth>
-						</field>
-		</fields>
 	</register>
 
 	<register>
@@ -5864,13 +5516,6 @@ In the event that Third Party Software has only been provided to you in object c
 		<description>FEE0 Status</description>
 		<addressOffset>0x00</addressOffset>
 		<size>16</size>
-		<fields>
-							<field>
-								<name>VALUE</name>
-								<bitOffset>0</bitOffset>
-								<bitWidth>16</bitWidth>
-							</field>
-		</fields>
 	</register>
 
 	<register>
@@ -5878,13 +5523,6 @@ In the event that Third Party Software has only been provided to you in object c
 		<description>FEE0 Command Control</description>
 		<addressOffset>0x04</addressOffset>
 		<size>16</size>
-		<fields>
-						<field>
-							<name>VALUE</name>
-							<bitOffset>0</bitOffset>
-							<bitWidth>16</bitWidth>
-						</field>
-		</fields>
 	</register>
 
 	<register>
@@ -5892,13 +5530,6 @@ In the event that Third Party Software has only been provided to you in object c
 		<description>FEE0 Command</description>
 		<addressOffset>0x08</addressOffset>
 		<size>16</size>
-		<fields>
-							<field>
-								<name>VALUE</name>
-								<bitOffset>0</bitOffset>
-								<bitWidth>16</bitWidth>
-							</field>
-		</fields>
 	</register>
 
 	<register>
@@ -5906,13 +5537,6 @@ In the event that Third Party Software has only been provided to you in object c
 		<description>FEE0 Lower page address</description>
 		<addressOffset>0x10</addressOffset>
 		<size>16</size>
-		<fields>
-						<field>
-							<name>VALUE</name>
-							<bitOffset>0</bitOffset>
-							<bitWidth>16</bitWidth>
-						</field>
-		</fields>
 	</register>
 
 	<register>
@@ -5920,13 +5544,6 @@ In the event that Third Party Software has only been provided to you in object c
 		<description>FEE0 Upper page address</description>
 		<addressOffset>0x14</addressOffset>
 		<size>16</size>
-		<fields>
-							<field>
-								<name>VALUE</name>
-								<bitOffset>0</bitOffset>
-								<bitWidth>16</bitWidth>
-							</field>
-		</fields>
 	</register>
 
 	<register>
@@ -5934,13 +5551,6 @@ In the event that Third Party Software has only been provided to you in object c
 		<description>FEE0 Lower page address</description>
 		<addressOffset>0x18</addressOffset>
 		<size>16</size>
-		<fields>
-						<field>
-							<name>VALUE</name>
-							<bitOffset>0</bitOffset>
-							<bitWidth>16</bitWidth>
-						</field>
-		</fields>
 	</register>
 
 	<register>
@@ -5948,13 +5558,6 @@ In the event that Third Party Software has only been provided to you in object c
 		<description>FEE0 Upper page address</description>
 		<addressOffset>0x1C</addressOffset>
 		<size>16</size>
-		<fields>
-							<field>
-								<name>VALUE</name>
-								<bitOffset>0</bitOffset>
-								<bitWidth>16</bitWidth>
-							</field>
-		</fields>
 	</register>
 
 	<register>
@@ -5964,7 +5567,7 @@ In the event that Third Party Software has only been provided to you in object c
 		<size>16</size>
 		<fields>
 						<field>
-							<name>VALUE</name>
+							<name>KEY</name>
 							<bitOffset>0</bitOffset>
 							<bitWidth>16</bitWidth>
 						</field>
@@ -5976,13 +5579,6 @@ In the event that Third Party Software has only been provided to you in object c
 		<description>FEE0 Lower halfword of signature</description>
 		<addressOffset>0x30</addressOffset>
 		<size>16</size>
-		<fields>
-							<field>
-								<name>VALUE</name>
-								<bitOffset>0</bitOffset>
-								<bitWidth>16</bitWidth>
-							</field>
-		</fields>
 	</register>
 
 	<register>
@@ -5990,13 +5586,6 @@ In the event that Third Party Software has only been provided to you in object c
 		<description>FEE0 Upper halfword of signature</description>
 		<addressOffset>0x34</addressOffset>
 		<size>16</size>
-		<fields>
-						<field>
-							<name>VALUE</name>
-							<bitOffset>0</bitOffset>
-							<bitWidth>16</bitWidth>
-						</field>
-		</fields>
 	</register>
 
 	<register>
@@ -6004,13 +5593,6 @@ In the event that Third Party Software has only been provided to you in object c
 		<description>FEE0 Lower halfword of write abort address</description>
 		<addressOffset>0x48</addressOffset>
 		<size>16</size>
-		<fields>
-							<field>
-								<name>VALUE</name>
-								<bitOffset>0</bitOffset>
-								<bitWidth>16</bitWidth>
-							</field>
-		</fields>
 	</register>
 
 	<register>
@@ -6018,13 +5600,6 @@ In the event that Third Party Software has only been provided to you in object c
 		<description>FEE0 Upper halfword of write abort address</description>
 		<addressOffset>0x4C</addressOffset>
 		<size>16</size>
-		<fields>
-						<field>
-							<name>VALUE</name>
-							<bitOffset>0</bitOffset>
-							<bitWidth>16</bitWidth>
-						</field>
-		</fields>
 	</register>
 
 	<register>
@@ -6032,13 +5607,6 @@ In the event that Third Party Software has only been provided to you in object c
 		<description>FEE0 Parity Control Register</description>
 		<addressOffset>0x50</addressOffset>
 		<size>16</size>
-		<fields>
-							<field>
-								<name>VALUE</name>
-								<bitOffset>0</bitOffset>
-								<bitWidth>16</bitWidth>
-							</field>
-		</fields>
 	</register>
 
 	<register>
@@ -6046,13 +5614,6 @@ In the event that Third Party Software has only been provided to you in object c
 		<description>FEE0 Parity Status Register</description>
 		<addressOffset>0x54</addressOffset>
 		<size>16</size>
-		<fields>
-						<field>
-							<name>VALUE</name>
-							<bitOffset>0</bitOffset>
-							<bitWidth>16</bitWidth>
-						</field>
-		</fields>
 	</register>
 
 	<register>
@@ -6060,13 +5621,6 @@ In the event that Third Party Software has only been provided to you in object c
 		<description>FEE0 Parity Error Address Low</description>
 		<addressOffset>0x58</addressOffset>
 		<size>16</size>
-		<fields>
-							<field>
-								<name>VALUE</name>
-								<bitOffset>0</bitOffset>
-								<bitWidth>16</bitWidth>
-							</field>
-		</fields>
 	</register>
 
 	<register>
@@ -6074,13 +5628,6 @@ In the event that Third Party Software has only been provided to you in object c
 		<description>FEE0 Parity Error Address High</description>
 		<addressOffset>0x5C</addressOffset>
 		<size>16</size>
-		<fields>
-						<field>
-							<name>VALUE</name>
-							<bitOffset>0</bitOffset>
-							<bitWidth>16</bitWidth>
-						</field>
-		</fields>
 	</register>
 
 	<register>
@@ -6088,13 +5635,6 @@ In the event that Third Party Software has only been provided to you in object c
 		<description>FEE0 System IRQ abort enable for interrupts 15 to 0</description>
 		<addressOffset>0x78</addressOffset>
 		<size>16</size>
-		<fields>
-							<field>
-								<name>VALUE</name>
-								<bitOffset>0</bitOffset>
-								<bitWidth>16</bitWidth>
-							</field>
-		</fields>
 	</register>
 
 	<register>
@@ -6102,13 +5642,6 @@ In the event that Third Party Software has only been provided to you in object c
 		<description>FEE0 System IRQ abort enable for interrupts 31 to 16</description>
 		<addressOffset>0x7C</addressOffset>
 		<size>16</size>
-		<fields>
-						<field>
-							<name>VALUE</name>
-							<bitOffset>0</bitOffset>
-							<bitWidth>16</bitWidth>
-						</field>
-		</fields>
 	</register>
 
 	<register>
@@ -6116,13 +5649,6 @@ In the event that Third Party Software has only been provided to you in object c
 		<description>FEE0 System IRQ abort enable for interrupts 47 to 32</description>
 		<addressOffset>0x80</addressOffset>
 		<size>16</size>
-		<fields>
-							<field>
-								<name>VALUE</name>
-								<bitOffset>0</bitOffset>
-								<bitWidth>16</bitWidth>
-							</field>
-		</fields>
 	</register>
 
 	<register>
@@ -6130,13 +5656,6 @@ In the event that Third Party Software has only been provided to you in object c
 		<description>FEE0 System IRQ abort enable for interrupts 60 to 48</description>
 		<addressOffset>0x84</addressOffset>
 		<size>16</size>
-		<fields>
-						<field>
-							<name>VALUE</name>
-							<bitOffset>0</bitOffset>
-							<bitWidth>16</bitWidth>
-						</field>
-		</fields>
 	</register>
 	</registers>
 	</peripheral>
@@ -6162,13 +5681,6 @@ In the event that Third Party Software has only been provided to you in object c
 		<description>GPF Status</description>
 		<addressOffset>0x00</addressOffset>
 		<size>16</size>
-		<fields>
-							<field>
-								<name>VALUE</name>
-								<bitOffset>0</bitOffset>
-								<bitWidth>16</bitWidth>
-							</field>
-		</fields>
 	</register>
 
 	<register>
@@ -6176,13 +5688,6 @@ In the event that Third Party Software has only been provided to you in object c
 		<description>GPF Command Control</description>
 		<addressOffset>0x04</addressOffset>
 		<size>16</size>
-		<fields>
-						<field>
-							<name>VALUE</name>
-							<bitOffset>0</bitOffset>
-							<bitWidth>16</bitWidth>
-						</field>
-		</fields>
 	</register>
 
 	<register>
@@ -6190,13 +5695,6 @@ In the event that Third Party Software has only been provided to you in object c
 		<description>GPF Command</description>
 		<addressOffset>0x08</addressOffset>
 		<size>16</size>
-		<fields>
-							<field>
-								<name>VALUE</name>
-								<bitOffset>0</bitOffset>
-								<bitWidth>16</bitWidth>
-							</field>
-		</fields>
 	</register>
 
 	<register>
@@ -6204,13 +5702,6 @@ In the event that Third Party Software has only been provided to you in object c
 		<description>GPF Lower page address</description>
 		<addressOffset>0x10</addressOffset>
 		<size>16</size>
-		<fields>
-						<field>
-							<name>VALUE</name>
-							<bitOffset>0</bitOffset>
-							<bitWidth>16</bitWidth>
-						</field>
-		</fields>
 	</register>
 
 	<register>
@@ -6218,13 +5709,6 @@ In the event that Third Party Software has only been provided to you in object c
 		<description>GPF Lower page address</description>
 		<addressOffset>0x18</addressOffset>
 		<size>16</size>
-		<fields>
-							<field>
-								<name>VALUE</name>
-								<bitOffset>0</bitOffset>
-								<bitWidth>16</bitWidth>
-							</field>
-		</fields>
 	</register>
 
 	<register>
@@ -6232,13 +5716,6 @@ In the event that Third Party Software has only been provided to you in object c
 		<description>GPF Key</description>
 		<addressOffset>0x20</addressOffset>
 		<size>16</size>
-		<fields>
-						<field>
-							<name>VALUE</name>
-							<bitOffset>0</bitOffset>
-							<bitWidth>16</bitWidth>
-						</field>
-		</fields>
 	</register>
 
 	<register>
@@ -6246,13 +5723,6 @@ In the event that Third Party Software has only been provided to you in object c
 		<description>GPF Lower halfword of signature</description>
 		<addressOffset>0x30</addressOffset>
 		<size>16</size>
-		<fields>
-							<field>
-								<name>VALUE</name>
-								<bitOffset>0</bitOffset>
-								<bitWidth>16</bitWidth>
-							</field>
-		</fields>
 	</register>
 
 	<register>
@@ -6260,13 +5730,6 @@ In the event that Third Party Software has only been provided to you in object c
 		<description>GPF Upper halfword of signature</description>
 		<addressOffset>0x34</addressOffset>
 		<size>16</size>
-		<fields>
-						<field>
-							<name>VALUE</name>
-							<bitOffset>0</bitOffset>
-							<bitWidth>16</bitWidth>
-						</field>
-		</fields>
 	</register>
 
 	<register>
@@ -6274,13 +5737,6 @@ In the event that Third Party Software has only been provided to you in object c
 		<description>GPF Lower halfword of write abort address</description>
 		<addressOffset>0x48</addressOffset>
 		<size>16</size>
-		<fields>
-							<field>
-								<name>VALUE</name>
-								<bitOffset>0</bitOffset>
-								<bitWidth>16</bitWidth>
-							</field>
-		</fields>
 	</register>
 
 	<register>
@@ -6288,13 +5744,6 @@ In the event that Third Party Software has only been provided to you in object c
 		<description>GPF Upper halfword of write abort address</description>
 		<addressOffset>0x4C</addressOffset>
 		<size>16</size>
-		<fields>
-						<field>
-							<name>VALUE</name>
-							<bitOffset>0</bitOffset>
-							<bitWidth>16</bitWidth>
-						</field>
-		</fields>
 	</register>
 
 	<register>
@@ -6302,13 +5751,6 @@ In the event that Third Party Software has only been provided to you in object c
 		<description>GPF System IRQ abort enable for interrupts 15 to 0</description>
 		<addressOffset>0x78</addressOffset>
 		<size>16</size>
-		<fields>
-							<field>
-								<name>VALUE</name>
-								<bitOffset>0</bitOffset>
-								<bitWidth>16</bitWidth>
-							</field>
-		</fields>
 	</register>
 
 	<register>
@@ -6316,13 +5758,6 @@ In the event that Third Party Software has only been provided to you in object c
 		<description>GPF System IRQ abort enable for interrupts 31 to 16</description>
 		<addressOffset>0x7C</addressOffset>
 		<size>16</size>
-		<fields>
-						<field>
-							<name>VALUE</name>
-							<bitOffset>0</bitOffset>
-							<bitWidth>16</bitWidth>
-						</field>
-		</fields>
 	</register>
 
 	<register>
@@ -6330,13 +5765,6 @@ In the event that Third Party Software has only been provided to you in object c
 		<description>GPF System IRQ abort enable for interrupts 47 to 32</description>
 		<addressOffset>0x80</addressOffset>
 		<size>16</size>
-		<fields>
-							<field>
-								<name>VALUE</name>
-								<bitOffset>0</bitOffset>
-								<bitWidth>16</bitWidth>
-							</field>
-		</fields>
 	</register>
 
 	<register>
@@ -6344,13 +5772,6 @@ In the event that Third Party Software has only been provided to you in object c
 		<description>GPF System IRQ abort enable for interrupts 60 to 48</description>
 		<addressOffset>0x84</addressOffset>
 		<size>16</size>
-		<fields>
-						<field>
-							<name>VALUE</name>
-							<bitOffset>0</bitOffset>
-							<bitWidth>16</bitWidth>
-						</field>
-		</fields>
 	</register>
 	</registers>
 	</peripheral>
@@ -6386,13 +5807,6 @@ In the event that Third Party Software has only been provided to you in object c
 		<description>GPIO0 GPIO Port 0 Configuration</description>
 		<addressOffset>0x00</addressOffset>
 		<size>16</size>
-		<fields>
-							<field>
-								<name>VALUE</name>
-								<bitOffset>0</bitOffset>
-								<bitWidth>16</bitWidth>
-							</field>
-		</fields>
 	</register>
 
 	<register>
@@ -6400,13 +5814,6 @@ In the event that Third Party Software has only been provided to you in object c
 		<description>GPIO0 GPIO Port 0 output enable</description>
 		<addressOffset>0x04</addressOffset>
 		<size>16</size>
-		<fields>
-						<field>
-							<name>VALUE</name>
-							<bitOffset>0</bitOffset>
-							<bitWidth>16</bitWidth>
-						</field>
-		</fields>
 	</register>
 
 	<register>
@@ -6414,13 +5821,6 @@ In the event that Third Party Software has only been provided to you in object c
 		<description>GPIO0 GPIO Port 0 output pullup/pulldown enable</description>
 		<addressOffset>0x08</addressOffset>
 		<size>16</size>
-		<fields>
-							<field>
-								<name>VALUE</name>
-								<bitOffset>0</bitOffset>
-								<bitWidth>16</bitWidth>
-							</field>
-		</fields>
 	</register>
 
 	<register>
@@ -6428,13 +5828,6 @@ In the event that Third Party Software has only been provided to you in object c
 		<description>GPIO0 GPIO Port 0 Input Path Enable</description>
 		<addressOffset>0x0C</addressOffset>
 		<size>16</size>
-		<fields>
-						<field>
-							<name>VALUE</name>
-							<bitOffset>0</bitOffset>
-							<bitWidth>16</bitWidth>
-						</field>
-		</fields>
 	</register>
 
 	<register>
@@ -6442,13 +5835,6 @@ In the event that Third Party Software has only been provided to you in object c
 		<description>GPIO0 GPIO Port 0 registered data input</description>
 		<addressOffset>0x10</addressOffset>
 		<size>16</size>
-		<fields>
-							<field>
-								<name>VALUE</name>
-								<bitOffset>0</bitOffset>
-								<bitWidth>16</bitWidth>
-							</field>
-		</fields>
 	</register>
 
 	<register>
@@ -6456,13 +5842,6 @@ In the event that Third Party Software has only been provided to you in object c
 		<description>GPIO0 GPIO Port 0 data output</description>
 		<addressOffset>0x14</addressOffset>
 		<size>16</size>
-		<fields>
-						<field>
-							<name>VALUE</name>
-							<bitOffset>0</bitOffset>
-							<bitWidth>16</bitWidth>
-						</field>
-		</fields>
 	</register>
 
 	<register>
@@ -6470,13 +5849,6 @@ In the event that Third Party Software has only been provided to you in object c
 		<description>GPIO0 GPIO Port 0 data out set</description>
 		<addressOffset>0x18</addressOffset>
 		<size>16</size>
-		<fields>
-							<field>
-								<name>VALUE</name>
-								<bitOffset>0</bitOffset>
-								<bitWidth>16</bitWidth>
-							</field>
-		</fields>
 	</register>
 
 	<register>
@@ -6484,13 +5856,6 @@ In the event that Third Party Software has only been provided to you in object c
 		<description>GPIO0 GPIO Port 0 data out clear</description>
 		<addressOffset>0x1C</addressOffset>
 		<size>16</size>
-		<fields>
-						<field>
-							<name>VALUE</name>
-							<bitOffset>0</bitOffset>
-							<bitWidth>16</bitWidth>
-						</field>
-		</fields>
 	</register>
 
 	<register>
@@ -6498,13 +5863,6 @@ In the event that Third Party Software has only been provided to you in object c
 		<description>GPIO0 GPIO Port 0 pin toggle</description>
 		<addressOffset>0x20</addressOffset>
 		<size>16</size>
-		<fields>
-							<field>
-								<name>VALUE</name>
-								<bitOffset>0</bitOffset>
-								<bitWidth>16</bitWidth>
-							</field>
-		</fields>
 	</register>
 
 	<register>
@@ -6512,13 +5870,6 @@ In the event that Third Party Software has only been provided to you in object c
 		<description>GPIO0 GPIO Port 0 interrupt polarity</description>
 		<addressOffset>0x24</addressOffset>
 		<size>16</size>
-		<fields>
-						<field>
-							<name>VALUE</name>
-							<bitOffset>0</bitOffset>
-							<bitWidth>16</bitWidth>
-						</field>
-		</fields>
 	</register>
 
 	<register>
@@ -6526,13 +5877,6 @@ In the event that Third Party Software has only been provided to you in object c
 		<description>GPIO0 GPIO Port 0 interrupt A enable</description>
 		<addressOffset>0x28</addressOffset>
 		<size>16</size>
-		<fields>
-							<field>
-								<name>VALUE</name>
-								<bitOffset>0</bitOffset>
-								<bitWidth>16</bitWidth>
-							</field>
-		</fields>
 	</register>
 
 	<register>
@@ -6540,13 +5884,6 @@ In the event that Third Party Software has only been provided to you in object c
 		<description>GPIO0 GPIO Port 0 interrupt B enable</description>
 		<addressOffset>0x2C</addressOffset>
 		<size>16</size>
-		<fields>
-						<field>
-							<name>VALUE</name>
-							<bitOffset>0</bitOffset>
-							<bitWidth>16</bitWidth>
-						</field>
-		</fields>
 	</register>
 
 	<register>
@@ -6554,13 +5891,6 @@ In the event that Third Party Software has only been provided to you in object c
 		<description>GPIO0 GPIO Port 0 interrupt Status</description>
 		<addressOffset>0x30</addressOffset>
 		<size>16</size>
-		<fields>
-						<field>
-							<name>VALUE</name>
-							<bitOffset>0</bitOffset>
-							<bitWidth>16</bitWidth>
-						</field>
-		</fields>
 	</register>
 	</registers>
 	</peripheral>
@@ -6606,13 +5936,6 @@ In the event that Third Party Software has only been provided to you in object c
 		<description>SPIH Status</description>
 		<addressOffset>0x00</addressOffset>
 		<size>16</size>
-		<fields>
-							<field>
-								<name>VALUE</name>
-								<bitOffset>0</bitOffset>
-								<bitWidth>16</bitWidth>
-							</field>
-		</fields>
 	</register>
 
 	<register>
@@ -6620,13 +5943,6 @@ In the event that Third Party Software has only been provided to you in object c
 		<description>SPIH Receive</description>
 		<addressOffset>0x04</addressOffset>
 		<size>16</size>
-		<fields>
-						<field>
-							<name>VALUE</name>
-							<bitOffset>0</bitOffset>
-							<bitWidth>16</bitWidth>
-						</field>
-		</fields>
 	</register>
 
 	<register>
@@ -6634,13 +5950,6 @@ In the event that Third Party Software has only been provided to you in object c
 		<description>SPIH Transmit</description>
 		<addressOffset>0x08</addressOffset>
 		<size>16</size>
-		<fields>
-							<field>
-								<name>VALUE</name>
-								<bitOffset>0</bitOffset>
-								<bitWidth>16</bitWidth>
-							</field>
-		</fields>
 	</register>
 
 	<register>
@@ -6648,13 +5957,6 @@ In the event that Third Party Software has only been provided to you in object c
 		<description>SPIH Baud rate selection</description>
 		<addressOffset>0x0C</addressOffset>
 		<size>16</size>
-		<fields>
-						<field>
-							<name>VALUE</name>
-							<bitOffset>0</bitOffset>
-							<bitWidth>16</bitWidth>
-						</field>
-		</fields>
 	</register>
 
 	<register>
@@ -6662,13 +5964,6 @@ In the event that Third Party Software has only been provided to you in object c
 		<description>SPIH SPI configuration</description>
 		<addressOffset>0x10</addressOffset>
 		<size>16</size>
-		<fields>
-							<field>
-								<name>VALUE</name>
-								<bitOffset>0</bitOffset>
-								<bitWidth>16</bitWidth>
-							</field>
-		</fields>
 	</register>
 
 	<register>
@@ -6676,13 +5971,6 @@ In the event that Third Party Software has only been provided to you in object c
 		<description>SPIH SPI DMA enable</description>
 		<addressOffset>0x14</addressOffset>
 		<size>16</size>
-		<fields>
-						<field>
-							<name>VALUE</name>
-							<bitOffset>0</bitOffset>
-							<bitWidth>16</bitWidth>
-						</field>
-		</fields>
 	</register>
 
 	<register>
@@ -6690,13 +5978,6 @@ In the event that Third Party Software has only been provided to you in object c
 		<description>SPIH Transfer byte count</description>
 		<addressOffset>0x18</addressOffset>
 		<size>16</size>
-		<fields>
-							<field>
-								<name>VALUE</name>
-								<bitOffset>0</bitOffset>
-								<bitWidth>16</bitWidth>
-							</field>
-		</fields>
 	</register>
 	</registers>
 	</peripheral>
@@ -6722,13 +6003,6 @@ In the event that Third Party Software has only been provided to you in object c
 		<description>Clock Control Register 0</description>
 		<addressOffset>0x00</addressOffset>
 		<size>16</size>
-		<fields>
-							<field>
-								<name>VALUE</name>
-								<bitOffset>0</bitOffset>
-								<bitWidth>16</bitWidth>
-							</field>
-		</fields>
 	</register>
 
 	<register>
@@ -6736,13 +6010,6 @@ In the event that Third Party Software has only been provided to you in object c
 		<description>Clock Control Register 0</description>
 		<addressOffset>0x04</addressOffset>
 		<size>16</size>
-		<fields>
-						<field>
-							<name>VALUE</name>
-							<bitOffset>0</bitOffset>
-							<bitWidth>16</bitWidth>
-						</field>
-		</fields>
 	</register>
 
 	<register>
@@ -6750,65 +6017,30 @@ In the event that Third Party Software has only been provided to you in object c
 		<description>Clock Control Register 2</description>
 		<addressOffset>0x08</addressOffset>
 		<size>16</size>
-		<fields>
-						<field>
-							<name>VALUE</name>
-							<bitOffset>0</bitOffset>
-							<bitWidth>16</bitWidth>
-						</field>
-		</fields>
 	</register>
 	<register>
 		<name>CLKCON3</name>
 		<description>Clock Control Register 3</description>
 		<addressOffset>0x0c</addressOffset>
 		<size>16</size>
-		<fields>
-						<field>
-							<name>VALUE</name>
-							<bitOffset>0</bitOffset>
-							<bitWidth>16</bitWidth>
-						</field>
-		</fields>
 	</register>	
 	<register>
 		<name>CLKCON4</name>
 		<description>Clock Control Register 4</description>
 		<addressOffset>0x10</addressOffset>
 		<size>16</size>
-		<fields>
-						<field>
-							<name>VALUE</name>
-							<bitOffset>0</bitOffset>
-							<bitWidth>16</bitWidth>
-						</field>
-		</fields>
 	</register>		
 	<register>
 		<name>CLKCON5</name>
 		<description>Clock Control Register 5</description>
 		<addressOffset>0x14</addressOffset>
 		<size>16</size>
-		<fields>
-						<field>
-							<name>VALUE</name>
-							<bitOffset>0</bitOffset>
-							<bitWidth>16</bitWidth>
-						</field>
-		</fields>
 	</register>	
 	<register>
 		<name>CLKSTAT0</name>
 		<description>Clock Status Register 0</description>
 		<addressOffset>0x18</addressOffset>
 		<size>16</size>
-		<fields>
-						<field>
-							<name>VALUE</name>
-							<bitOffset>0</bitOffset>
-							<bitWidth>16</bitWidth>
-						</field>
-		</fields>
 	</register>	
 	</registers>
 	</peripheral>
@@ -6834,13 +6066,6 @@ In the event that Third Party Software has only been provided to you in object c
 		<description>CRC CRC Control Register</description>
 		<addressOffset>0x00</addressOffset>
 		<size>16</size>
-		<fields>
-							<field>
-								<name>VALUE</name>
-								<bitOffset>0</bitOffset>
-								<bitWidth>16</bitWidth>
-							</field>
-		</fields>
 	</register>
 
 	<register>
@@ -6848,13 +6073,6 @@ In the event that Third Party Software has only been provided to you in object c
 		<description>CRC Input Data Register</description>
 		<addressOffset>0x04</addressOffset>
 		<size>16</size>
-		<fields>
-						<field>
-							<name>VALUE</name>
-							<bitOffset>0</bitOffset>
-							<bitWidth>16</bitWidth>
-						</field>
-		</fields>
 	</register>
 
 	<register>
@@ -6862,13 +6080,6 @@ In the event that Third Party Software has only been provided to you in object c
 		<description>CRC CRC Result Register</description>
 		<addressOffset>0x08</addressOffset>
 		<size>16</size>
-		<fields>
-						<field>
-							<name>VALUE</name>
-							<bitOffset>0</bitOffset>
-							<bitWidth>16</bitWidth>
-						</field>
-		</fields>
 	</register>
 	</registers>
 	</peripheral>
@@ -6899,13 +6110,6 @@ In the event that Third Party Software has only been provided to you in object c
 		<description>PDI PDI Configuration Register</description>
 		<addressOffset>0x00</addressOffset>
 		<size>16</size>
-		<fields>
-						<field>
-							<name>VALUE</name>
-							<bitOffset>0</bitOffset>
-							<bitWidth>16</bitWidth>
-						</field>
-		</fields>
 	</register>
 
 	<register>
@@ -6913,13 +6117,6 @@ In the event that Third Party Software has only been provided to you in object c
 		<description>PDI PDI Interrupt Set Register</description>
 		<addressOffset>0x04</addressOffset>
 		<size>16</size>
-		<fields>
-						<field>
-							<name>VALUE</name>
-							<bitOffset>0</bitOffset>
-							<bitWidth>16</bitWidth>
-						</field>
-		</fields>
 	</register>
 
 	<register>
@@ -6927,13 +6124,6 @@ In the event that Third Party Software has only been provided to you in object c
 		<description>PDI PDI Interrupt Clear Register</description>
 		<addressOffset>0x08</addressOffset>
 		<size>16</size>
-		<fields>
-						<field>
-							<name>VALUE</name>
-							<bitOffset>0</bitOffset>
-							<bitWidth>16</bitWidth>
-						</field>
-		</fields>
 	</register>
 
 	<register>
@@ -6941,13 +6131,6 @@ In the event that Third Party Software has only been provided to you in object c
 		<description>PDI PDI Status Register</description>
 		<addressOffset>0x0C</addressOffset>
 		<size>16</size>
-		<fields>
-						<field>
-							<name>VALUE</name>
-							<bitOffset>0</bitOffset>
-							<bitWidth>16</bitWidth>
-						</field>
-		</fields>
 	</register>
 
 	<register>
@@ -6956,13 +6139,6 @@ In the event that Third Party Software has only been provided to you in object c
 		<description>PDI PDI Command Register</description>
 		<addressOffset>0x10</addressOffset>
 		<size>16</size>
-		<fields>
-						<field>
-							<name>VALUE</name>
-							<bitOffset>0</bitOffset>
-							<bitWidth>16</bitWidth>
-						</field>
-		</fields>
 	</register>
 
 	<register>
@@ -6970,13 +6146,6 @@ In the event that Third Party Software has only been provided to you in object c
 		<description>PDI PDI Frame Data Count Register</description>
 		<addressOffset>0x14</addressOffset>
 		<size>16</size>
-		<fields>
-						<field>
-							<name>VALUE</name>
-							<bitOffset>0</bitOffset>
-							<bitWidth>16</bitWidth>
-						</field>
-		</fields>
 	</register>
 
 	<register>
@@ -6984,13 +6153,6 @@ In the event that Third Party Software has only been provided to you in object c
 		<description>PDI PDI Parameter FIFO</description>
 		<addressOffset>0x18</addressOffset>
 		<size>16</size>
-		<fields>
-						<field>
-							<name>VALUE</name>
-							<bitOffset>0</bitOffset>
-							<bitWidth>16</bitWidth>
-						</field>
-		</fields>
 	</register>
 
 	<register>
@@ -6998,13 +6160,6 @@ In the event that Third Party Software has only been provided to you in object c
 		<description>PDI PDI Interface Timing Register</description>
 		<addressOffset>0x1C</addressOffset>
 		<size>16</size>
-		<fields>
-						<field>
-							<name>VALUE</name>
-							<bitOffset>0</bitOffset>
-							<bitWidth>16</bitWidth>
-						</field>
-		</fields>
 	</register>
 	</registers>
 	</peripheral>
@@ -7050,13 +6205,6 @@ In the event that Third Party Software has only been provided to you in object c
 		<description>AFE AFE Configuration</description>
 		<addressOffset>0x00</addressOffset>
 		<size>16</size>
-		<fields>
-						<field>
-							<name>VALUE</name>
-							<bitOffset>0</bitOffset>
-							<bitWidth>16</bitWidth>
-						</field>
-		</fields>
 	</register>
 
 	<register>
@@ -7064,13 +6212,6 @@ In the event that Third Party Software has only been provided to you in object c
 		<description>AFE Sequencer Configuration</description>
 		<addressOffset>0x04</addressOffset>
 		<size>16</size>
-		<fields>
-						<field>
-							<name>VALUE</name>
-							<bitOffset>0</bitOffset>
-							<bitWidth>16</bitWidth>
-						</field>
-		</fields>
 	</register>
 
 	<register>
@@ -7078,13 +6219,6 @@ In the event that Third Party Software has only been provided to you in object c
 		<description>AFE FIFOs Configuration</description>
 		<addressOffset>0x08</addressOffset>
 		<size>16</size>
-		<fields>
-							<field>
-								<name>VALUE</name>
-								<bitOffset>0</bitOffset>
-								<bitWidth>16</bitWidth>
-							</field>
-		</fields>
 	</register>
 
 	<register>
@@ -7092,13 +6226,6 @@ In the event that Third Party Software has only been provided to you in object c
 		<description>AFE Switch Matrix Configuration</description>
 		<addressOffset>0x0C</addressOffset>
 		<size>16</size>
-		<fields>
-							<field>
-								<name>VALUE</name>
-								<bitOffset>0</bitOffset>
-								<bitWidth>16</bitWidth>
-							</field>
-		</fields>
 	</register>
 
 	<register>
@@ -7106,13 +6233,6 @@ In the event that Third Party Software has only been provided to you in object c
 		<description>AFE DAC Configuration</description>
 		<addressOffset>0x10</addressOffset>
 		<size>16</size>
-		<fields>
-							<field>
-								<name>VALUE</name>
-								<bitOffset>0</bitOffset>
-								<bitWidth>16</bitWidth>
-							</field>
-		</fields>
 	</register>
 
 	<register>
@@ -7120,13 +6240,6 @@ In the event that Third Party Software has only been provided to you in object c
 		<description>AFE Waveform Generator Configuration</description>
 		<addressOffset>0x14</addressOffset>
 		<size>16</size>
-		<fields>
-							<field>
-								<name>VALUE</name>
-								<bitOffset>0</bitOffset>
-								<bitWidth>16</bitWidth>
-							</field>
-		</fields>
 	</register>
 
 	<register>
@@ -7134,13 +6247,6 @@ In the event that Third Party Software has only been provided to you in object c
 		<description>AFE Waveform Generator - Trapezoid DC Level 1</description>
 		<addressOffset>0x18</addressOffset>
 		<size>16</size>
-		<fields>
-							<field>
-								<name>VALUE</name>
-								<bitOffset>0</bitOffset>
-								<bitWidth>16</bitWidth>
-							</field>
-		</fields>
 	</register>
 
 	<register>
@@ -7148,13 +6254,6 @@ In the event that Third Party Software has only been provided to you in object c
 		<description>AFE Waveform Generator - Trapezoid DC Level 2</description>
 		<addressOffset>0x1C</addressOffset>
 		<size>16</size>
-		<fields>
-							<field>
-								<name>VALUE</name>
-								<bitOffset>0</bitOffset>
-								<bitWidth>16</bitWidth>
-							</field>
-		</fields>
 	</register>
 
 	<register>
@@ -7162,13 +6261,6 @@ In the event that Third Party Software has only been provided to you in object c
 		<description>AFE Waveform Generator - Trapezoid Delay 1 Time</description>
 		<addressOffset>0x20</addressOffset>
 		<size>16</size>
-		<fields>
-							<field>
-								<name>VALUE</name>
-								<bitOffset>0</bitOffset>
-								<bitWidth>16</bitWidth>
-							</field>
-		</fields>
 	</register>
 
 	<register>
@@ -7176,13 +6268,6 @@ In the event that Third Party Software has only been provided to you in object c
 		<description>AFE Waveform Generator - Trapezoid Slope 1 Time</description>
 		<addressOffset>0x24</addressOffset>
 		<size>16</size>
-		<fields>
-							<field>
-								<name>VALUE</name>
-								<bitOffset>0</bitOffset>
-								<bitWidth>16</bitWidth>
-							</field>
-		</fields>
 	</register>
 
 	<register>
@@ -7190,13 +6275,6 @@ In the event that Third Party Software has only been provided to you in object c
 		<description>AFE Waveform Generator - Trapezoid Delay 2 Time</description>
 		<addressOffset>0x28</addressOffset>
 		<size>16</size>
-		<fields>
-							<field>
-								<name>VALUE</name>
-								<bitOffset>0</bitOffset>
-								<bitWidth>16</bitWidth>
-							</field>
-		</fields>
 	</register>
 
 	<register>
@@ -7204,13 +6282,6 @@ In the event that Third Party Software has only been provided to you in object c
 		<description>AFE Waveform Generator - Trapezoid Slope 2 Time</description>
 		<addressOffset>0x2C</addressOffset>
 		<size>16</size>
-		<fields>
-							<field>
-								<name>VALUE</name>
-								<bitOffset>0</bitOffset>
-								<bitWidth>16</bitWidth>
-							</field>
-		</fields>
 	</register>
 
 	<register>
@@ -7218,13 +6289,6 @@ In the event that Third Party Software has only been provided to you in object c
 		<description>AFE Waveform Generator - Sinusoid Frequency Control Word</description>
 		<addressOffset>0x30</addressOffset>
 		<size>16</size>
-		<fields>
-							<field>
-								<name>VALUE</name>
-								<bitOffset>0</bitOffset>
-								<bitWidth>16</bitWidth>
-							</field>
-		</fields>
 	</register>
 
 	<register>
@@ -7232,13 +6296,6 @@ In the event that Third Party Software has only been provided to you in object c
 		<description>AFE Waveform Generator - Sinusoid Phase Offset</description>
 		<addressOffset>0x34</addressOffset>
 		<size>16</size>
-		<fields>
-							<field>
-								<name>VALUE</name>
-								<bitOffset>0</bitOffset>
-								<bitWidth>16</bitWidth>
-							</field>
-		</fields>
 	</register>
 
 	<register>
@@ -7246,13 +6303,6 @@ In the event that Third Party Software has only been provided to you in object c
 		<description>AFE Waveform Generator - Sinusoid Offset</description>
 		<addressOffset>0x38</addressOffset>
 		<size>16</size>
-		<fields>
-							<field>
-								<name>VALUE</name>
-								<bitOffset>0</bitOffset>
-								<bitWidth>16</bitWidth>
-							</field>
-		</fields>
 	</register>
 
 	<register>
@@ -7260,13 +6310,6 @@ In the event that Third Party Software has only been provided to you in object c
 		<description>AFE Waveform Generator - Sinusoid Amplitude</description>
 		<addressOffset>0x3C</addressOffset>
 		<size>16</size>
-		<fields>
-							<field>
-								<name>VALUE</name>
-								<bitOffset>0</bitOffset>
-								<bitWidth>16</bitWidth>
-							</field>
-		</fields>
 	</register>
 
 	<register>
@@ -7274,13 +6317,6 @@ In the event that Third Party Software has only been provided to you in object c
 		<description>AFE ADC Configuration</description>
 		<addressOffset>0x40</addressOffset>
 		<size>16</size>
-		<fields>
-							<field>
-								<name>VALUE</name>
-								<bitOffset>0</bitOffset>
-								<bitWidth>16</bitWidth>
-							</field>
-		</fields>
 	</register>
 
 	<register>
@@ -7288,13 +6324,6 @@ In the event that Third Party Software has only been provided to you in object c
 		<description>AFE Supply Rejection Filter Configuration</description>
 		<addressOffset>0x44</addressOffset>
 		<size>16</size>
-		<fields>
-							<field>
-								<name>VALUE</name>
-								<bitOffset>0</bitOffset>
-								<bitWidth>16</bitWidth>
-							</field>
-		</fields>
 	</register>
 
 	<register>
@@ -7302,13 +6331,6 @@ In the event that Third Party Software has only been provided to you in object c
 		<description>AFE Switch Matrix Full Configuration (MSB)</description>
 		<addressOffset>0x48</addressOffset>
 		<size>16</size>
-		<fields>
-							<field>
-								<name>VALUE</name>
-								<bitOffset>0</bitOffset>
-								<bitWidth>16</bitWidth>
-							</field>
-		</fields>
 	</register>
 
 	<register>
@@ -7316,13 +6338,6 @@ In the event that Third Party Software has only been provided to you in object c
 		<description>AFE Switch Matrix Full Configuration (LSB)</description>
 		<addressOffset>0x4C</addressOffset>
 		<size>16</size>
-		<fields>
-							<field>
-								<name>VALUE</name>
-								<bitOffset>0</bitOffset>
-								<bitWidth>16</bitWidth>
-							</field>
-		</fields>
 	</register>
 
 	<register>
@@ -7330,27 +6345,12 @@ In the event that Third Party Software has only been provided to you in object c
 		<description>AFE Waveform Generator - DAC Code</description>
 		<addressOffset>0x54</addressOffset>
 		<size>16</size>
-		<fields>
-							<field>
-								<name>VALUE</name>
-								<bitOffset>0</bitOffset>
-								<bitWidth>16</bitWidth>
-							</field>
-		</fields>
 	</register>
 
 	<register>
 		<name>STATUS</name>
 		<description>AFE AFE Status</description>
 		<addressOffset>0x58</addressOffset>
-		<size>16</size>
-		<fields>
-							<field>
-								<name>VALUE</name>
-								<bitOffset>0</bitOffset>
-								<bitWidth>16</bitWidth>
-							</field>
-		</fields>
 	</register>
 
 	<register>
@@ -7358,13 +6358,6 @@ In the event that Third Party Software has only been provided to you in object c
 		<description>AFE Sequencer CRC Value</description>
 		<addressOffset>0x60</addressOffset>
 		<size>16</size>
-		<fields>
-							<field>
-								<name>VALUE</name>
-								<bitOffset>0</bitOffset>
-								<bitWidth>16</bitWidth>
-							</field>
-		</fields>
 	</register>
 
 	<register>
@@ -7372,13 +6365,6 @@ In the event that Third Party Software has only been provided to you in object c
 		<description>AFE Sequencer Command Count</description>
 		<addressOffset>0x64</addressOffset>
 		<size>16</size>
-		<fields>
-							<field>
-								<name>VALUE</name>
-								<bitOffset>0</bitOffset>
-								<bitWidth>16</bitWidth>
-							</field>
-		</fields>
 	</register>
 
 	<register>
@@ -7386,13 +6372,6 @@ In the event that Third Party Software has only been provided to you in object c
 		<description>AFE Sequencer Timeout Counter</description>
 		<addressOffset>0x68</addressOffset>
 		<size>16</size>
-		<fields>
-							<field>
-								<name>VALUE</name>
-								<bitOffset>0</bitOffset>
-								<bitWidth>16</bitWidth>
-							</field>
-		</fields>
 	</register>
 
 	<register>
@@ -7400,13 +6379,6 @@ In the event that Third Party Software has only been provided to you in object c
 		<description>AFE Data FIFO Read</description>
 		<addressOffset>0x6C</addressOffset>
 		<size>16</size>
-		<fields>
-							<field>
-								<name>VALUE</name>
-								<bitOffset>0</bitOffset>
-								<bitWidth>16</bitWidth>
-							</field>
-		</fields>
 	</register>
 
 	<register>
@@ -7414,13 +6386,6 @@ In the event that Third Party Software has only been provided to you in object c
 		<description>AFE Command FIFO Write</description>
 		<addressOffset>0x70</addressOffset>
 		<size>16</size>
-		<fields>
-							<field>
-								<name>VALUE</name>
-								<bitOffset>0</bitOffset>
-								<bitWidth>16</bitWidth>
-							</field>
-		</fields>
 	</register>
 
 	<register>
@@ -7428,13 +6393,6 @@ In the event that Third Party Software has only been provided to you in object c
 		<description>AFE ADC Raw Result</description>
 		<addressOffset>0x74</addressOffset>
 		<size>16</size>
-		<fields>
-							<field>
-								<name>VALUE</name>
-								<bitOffset>0</bitOffset>
-								<bitWidth>16</bitWidth>
-							</field>
-		</fields>
 	</register>
 
 	<register>
@@ -7442,13 +6400,6 @@ In the event that Third Party Software has only been provided to you in object c
 		<description>AFE DFT Result, Real Part</description>
 		<addressOffset>0x78</addressOffset>
 		<size>16</size>
-		<fields>
-							<field>
-								<name>VALUE</name>
-								<bitOffset>0</bitOffset>
-								<bitWidth>16</bitWidth>
-							</field>
-		</fields>
 	</register>
 
 	<register>
@@ -7456,13 +6407,6 @@ In the event that Third Party Software has only been provided to you in object c
 		<description>AFE DFT Result, Imaginary Part</description>
 		<addressOffset>0x7C</addressOffset>
 		<size>16</size>
-		<fields>
-							<field>
-								<name>VALUE</name>
-								<bitOffset>0</bitOffset>
-								<bitWidth>16</bitWidth>
-							</field>
-		</fields>
 	</register>
 
 	<register>
@@ -7470,13 +6414,6 @@ In the event that Third Party Software has only been provided to you in object c
 		<description>AFE Supply Rejection Filter Result</description>
 		<addressOffset>0x80</addressOffset>
 		<size>16</size>
-		<fields>
-							<field>
-								<name>VALUE</name>
-								<bitOffset>0</bitOffset>
-								<bitWidth>16</bitWidth>
-							</field>
-		</fields>
 	</register>
 
 	<register>
@@ -7484,13 +6421,6 @@ In the event that Third Party Software has only been provided to you in object c
 		<description>AFE Temperature Sensor Result</description>
 		<addressOffset>0x84</addressOffset>
 		<size>16</size>
-		<fields>
-							<field>
-								<name>VALUE</name>
-								<bitOffset>0</bitOffset>
-								<bitWidth>16</bitWidth>
-							</field>
-		</fields>
 	</register>
 
 	<register>
@@ -7498,13 +6428,6 @@ In the event that Third Party Software has only been provided to you in object c
 		<description>AFE Analog Capture Interrupt Enable</description>
 		<addressOffset>0x8C</addressOffset>
 		<size>16</size>
-		<fields>
-							<field>
-								<name>VALUE</name>
-								<bitOffset>0</bitOffset>
-								<bitWidth>16</bitWidth>
-							</field>
-		</fields>
 	</register>
 
 	<register>
@@ -7512,13 +6435,6 @@ In the event that Third Party Software has only been provided to you in object c
 		<description>AFE Analog Generation Interrupt Enable</description>
 		<addressOffset>0x90</addressOffset>
 		<size>16</size>
-		<fields>
-							<field>
-								<name>VALUE</name>
-								<bitOffset>0</bitOffset>
-								<bitWidth>16</bitWidth>
-							</field>
-		</fields>
 	</register>
 
 	<register>
@@ -7526,13 +6442,6 @@ In the event that Third Party Software has only been provided to you in object c
 		<description>AFE Command FIFO Interrupt Enable</description>
 		<addressOffset>0x94</addressOffset>
 		<size>16</size>
-		<fields>
-							<field>
-								<name>VALUE</name>
-								<bitOffset>0</bitOffset>
-								<bitWidth>16</bitWidth>
-							</field>
-		</fields>
 	</register>
 
 	<register>
@@ -7540,13 +6449,6 @@ In the event that Third Party Software has only been provided to you in object c
 		<description>AFE Data FIFO Interrupt Enable</description>
 		<addressOffset>0x98</addressOffset>
 		<size>16</size>
-		<fields>
-							<field>
-								<name>VALUE</name>
-								<bitOffset>0</bitOffset>
-								<bitWidth>16</bitWidth>
-							</field>
-		</fields>
 	</register>
 
 	<register>
@@ -7554,13 +6456,6 @@ In the event that Third Party Software has only been provided to you in object c
 		<description>AFE Analog Capture Interrupt</description>
 		<addressOffset>0xA0</addressOffset>
 		<size>16</size>
-		<fields>
-							<field>
-								<name>VALUE</name>
-								<bitOffset>0</bitOffset>
-								<bitWidth>16</bitWidth>
-							</field>
-		</fields>
 	</register>
 
 	<register>
@@ -7568,13 +6463,6 @@ In the event that Third Party Software has only been provided to you in object c
 		<description>AFE Analog Generation Interrupt</description>
 		<addressOffset>0xA4</addressOffset>
 		<size>16</size>
-		<fields>
-							<field>
-								<name>VALUE</name>
-								<bitOffset>0</bitOffset>
-								<bitWidth>16</bitWidth>
-							</field>
-		</fields>
 	</register>
 
 	<register>
@@ -7582,13 +6470,6 @@ In the event that Third Party Software has only been provided to you in object c
 		<description>AFE Command FIFO Interrupt</description>
 		<addressOffset>0xA8</addressOffset>
 		<size>16</size>
-		<fields>
-							<field>
-								<name>VALUE</name>
-								<bitOffset>0</bitOffset>
-								<bitWidth>16</bitWidth>
-							</field>
-		</fields>
 	</register>
 
 	<register>
@@ -7596,13 +6477,6 @@ In the event that Third Party Software has only been provided to you in object c
 		<description>AFE Data FIFO Interrupt</description>
 		<addressOffset>0xAC</addressOffset>
 		<size>16</size>
-		<fields>
-							<field>
-								<name>VALUE</name>
-								<bitOffset>0</bitOffset>
-								<bitWidth>16</bitWidth>
-							</field>
-		</fields>
 	</register>
 
 	<register>
@@ -7610,13 +6484,6 @@ In the event that Third Party Software has only been provided to you in object c
 		<description>AFE Switch Matrix Status MSB</description>
 		<addressOffset>0xB0</addressOffset>
 		<size>16</size>
-		<fields>
-							<field>
-								<name>VALUE</name>
-								<bitOffset>0</bitOffset>
-								<bitWidth>16</bitWidth>
-							</field>
-		</fields>
 	</register>
 
 	<register>
@@ -7624,13 +6491,6 @@ In the event that Third Party Software has only been provided to you in object c
 		<description>AFE Switch Matrix Status (LSB)</description>
 		<addressOffset>0xB4</addressOffset>
 		<size>16</size>
-		<fields>
-							<field>
-								<name>VALUE</name>
-								<bitOffset>0</bitOffset>
-								<bitWidth>16</bitWidth>
-							</field>
-		</fields>
 	</register>
 
 	<register>
@@ -7638,13 +6498,6 @@ In the event that Third Party Software has only been provided to you in object c
 		<description>AFE ADC Minimum Value Check</description>
 		<addressOffset>0xB8</addressOffset>
 		<size>16</size>
-		<fields>
-							<field>
-								<name>VALUE</name>
-								<bitOffset>0</bitOffset>
-								<bitWidth>16</bitWidth>
-							</field>
-		</fields>
 	</register>
 
 	<register>
@@ -7652,13 +6505,6 @@ In the event that Third Party Software has only been provided to you in object c
 		<description>AFE ADC Maximum Value Check</description>
 		<addressOffset>0xBC</addressOffset>
 		<size>16</size>
-		<fields>
-							<field>
-								<name>VALUE</name>
-								<bitOffset>0</bitOffset>
-								<bitWidth>16</bitWidth>
-							</field>
-		</fields>
 	</register>
 
 	<register>
@@ -7666,13 +6512,6 @@ In the event that Third Party Software has only been provided to you in object c
 		<description>AFE ADC Delta Check</description>
 		<addressOffset>0xC0</addressOffset>
 		<size>16</size>
-		<fields>
-							<field>
-								<name>VALUE</name>
-								<bitOffset>0</bitOffset>
-								<bitWidth>16</bitWidth>
-							</field>
-		</fields>
 	</register>
 
 	<register>
@@ -7680,13 +6519,6 @@ In the event that Third Party Software has only been provided to you in object c
 		<description>AFE Calibration Data Lock</description>
 		<addressOffset>0x0100</addressOffset>
 		<size>16</size>
-		<fields>
-							<field>
-								<name>VALUE</name>
-								<bitOffset>0</bitOffset>
-								<bitWidth>16</bitWidth>
-							</field>
-		</fields>
 	</register>
 
 	<register>
@@ -7694,13 +6526,6 @@ In the event that Third Party Software has only been provided to you in object c
 		<description>AFE ADC Gain (TIA Measurement)</description>
 		<addressOffset>0x0104</addressOffset>
 		<size>16</size>
-		<fields>
-							<field>
-								<name>VALUE</name>
-								<bitOffset>0</bitOffset>
-								<bitWidth>16</bitWidth>
-							</field>
-		</fields>
 	</register>
 
 	<register>
@@ -7708,13 +6533,6 @@ In the event that Third Party Software has only been provided to you in object c
 		<description>AFE ADC Offset (TIA Measurement)</description>
 		<addressOffset>0x0108</addressOffset>
 		<size>16</size>
-		<fields>
-							<field>
-								<name>VALUE</name>
-								<bitOffset>0</bitOffset>
-								<bitWidth>16</bitWidth>
-							</field>
-		</fields>
 	</register>
 
 	<register>
@@ -7722,13 +6540,6 @@ In the event that Third Party Software has only been provided to you in object c
 		<description>AFE ADC Gain (Temperature Sensor Measurement)</description>
 		<addressOffset>0x010C</addressOffset>
 		<size>16</size>
-		<fields>
-							<field>
-								<name>VALUE</name>
-								<bitOffset>0</bitOffset>
-								<bitWidth>16</bitWidth>
-							</field>
-		</fields>
 	</register>
 
 	<register>
@@ -7736,13 +6547,6 @@ In the event that Third Party Software has only been provided to you in object c
 		<description>AFE ADC Offset (Temperature Sensor Measurement)</description>
 		<addressOffset>0x0110</addressOffset>
 		<size>16</size>
-		<fields>
-							<field>
-								<name>VALUE</name>
-								<bitOffset>0</bitOffset>
-								<bitWidth>16</bitWidth>
-							</field>
-		</fields>
 	</register>
 
 	<register>
@@ -7750,13 +6554,6 @@ In the event that Third Party Software has only been provided to you in object c
 		<description>AFE ADC Gain (Aux Channel Measurement)</description>
 		<addressOffset>0x0118</addressOffset>
 		<size>16</size>
-		<fields>
-							<field>
-								<name>VALUE</name>
-								<bitOffset>0</bitOffset>
-								<bitWidth>16</bitWidth>
-							</field>
-		</fields>
 	</register>
 
 	<register>
@@ -7764,13 +6561,6 @@ In the event that Third Party Software has only been provided to you in object c
 		<description>AFE ADC Offset (Aux Channel Measurement)</description>
 		<addressOffset>0x011C</addressOffset>
 		<size>16</size>
-		<fields>
-							<field>
-								<name>VALUE</name>
-								<bitOffset>0</bitOffset>
-								<bitWidth>16</bitWidth>
-							</field>
-		</fields>
 	</register>
 
 	<register>
@@ -7778,13 +6568,6 @@ In the event that Third Party Software has only been provided to you in object c
 		<description>AFE DAC Offset With Attenuator Disabled</description>
 		<addressOffset>0x0120</addressOffset>
 		<size>16</size>
-		<fields>
-							<field>
-								<name>VALUE</name>
-								<bitOffset>0</bitOffset>
-								<bitWidth>16</bitWidth>
-							</field>
-		</fields>
 	</register>
 
 	<register>
@@ -7792,13 +6575,6 @@ In the event that Third Party Software has only been provided to you in object c
 		<description>AFE DAC Offset With Attenuator Enabled</description>
 		<addressOffset>0x0124</addressOffset>
 		<size>16</size>
-		<fields>
-							<field>
-								<name>VALUE</name>
-								<bitOffset>0</bitOffset>
-								<bitWidth>16</bitWidth>
-							</field>
-		</fields>
 	</register>
 
 	<register>
@@ -7806,13 +6582,6 @@ In the event that Third Party Software has only been provided to you in object c
 		<description>AFE DAC Gain</description>
 		<addressOffset>0x0128</addressOffset>
 		<size>16</size>
-		<fields>
-							<field>
-								<name>VALUE</name>
-								<bitOffset>0</bitOffset>
-								<bitWidth>16</bitWidth>
-							</field>
-		</fields>
 	</register>
 
 	<register>
@@ -7820,13 +6589,6 @@ In the event that Third Party Software has only been provided to you in object c
 		<description>AFE Precision Reference Trim 0</description>
 		<addressOffset>0x012C</addressOffset>
 		<size>16</size>
-		<fields>
-							<field>
-								<name>VALUE</name>
-								<bitOffset>0</bitOffset>
-								<bitWidth>16</bitWidth>
-							</field>
-		</fields>
 	</register>
 
 	<register>
@@ -7834,13 +6596,6 @@ In the event that Third Party Software has only been provided to you in object c
 		<description>AFE Precision Reference Trim 1</description>
 		<addressOffset>0x0130</addressOffset>
 		<size>16</size>
-		<fields>
-							<field>
-								<name>VALUE</name>
-								<bitOffset>0</bitOffset>
-								<bitWidth>16</bitWidth>
-							</field>
-		</fields>
 	</register>
 
 	<register>
@@ -7848,13 +6603,6 @@ In the event that Third Party Software has only been provided to you in object c
 		<description>AFE Analog LDO Trim</description>
 		<addressOffset>0x0134</addressOffset>
 		<size>16</size>
-		<fields>
-							<field>
-								<name>VALUE</name>
-								<bitOffset>0</bitOffset>
-								<bitWidth>16</bitWidth>
-							</field>
-		</fields>
 	</register>
 
 	<register>
@@ -7862,13 +6610,6 @@ In the event that Third Party Software has only been provided to you in object c
 		<description>AFE DAC Trim</description>
 		<addressOffset>0x0138</addressOffset>
 		<size>16</size>
-		<fields>
-							<field>
-								<name>VALUE</name>
-								<bitOffset>0</bitOffset>
-								<bitWidth>16</bitWidth>
-							</field>
-		</fields>
 	</register>
 
 	<register>
@@ -7876,13 +6617,6 @@ In the event that Third Party Software has only been provided to you in object c
 		<description>AFE INAMP Trim</description>
 		<addressOffset>0x013C</addressOffset>
 		<size>16</size>
-		<fields>
-							<field>
-								<name>VALUE</name>
-								<bitOffset>0</bitOffset>
-								<bitWidth>16</bitWidth>
-							</field>
-		</fields>
 	</register>
 
 	<register>
@@ -7890,13 +6624,6 @@ In the event that Third Party Software has only been provided to you in object c
 		<description>AFE Excitation Buffer Trim</description>
 		<addressOffset>0x0140</addressOffset>
 		<size>16</size>
-		<fields>
-							<field>
-								<name>VALUE</name>
-								<bitOffset>0</bitOffset>
-								<bitWidth>16</bitWidth>
-							</field>
-		</fields>
 	</register>
 
 	<register>
@@ -7904,13 +6631,6 @@ In the event that Third Party Software has only been provided to you in object c
 		<description>AFE Temperature Sensor Trim</description>
 		<addressOffset>0x0144</addressOffset>
 		<size>16</size>
-		<fields>
-							<field>
-								<name>VALUE</name>
-								<bitOffset>0</bitOffset>
-								<bitWidth>16</bitWidth>
-							</field>
-		</fields>
 	</register>
 	</registers>
 	</peripheral>
@@ -7933,52 +6653,24 @@ In the event that Third Party Software has only been provided to you in object c
 		<description>Cap Touch </description>
 		<addressOffset>0x0</addressOffset>
 		<size>32</size>
-		<fields>
-						<field>
-							<name>VALUE</name>
-							<bitOffset>0</bitOffset>
-							<bitWidth>32</bitWidth>
-						</field>
-		</fields>
 	</register>
 	<register>
 		<name>CFG1</name>
 		<description>Cap Touch Config Register 1</description>
 		<addressOffset>0x4</addressOffset>
 		<size>32</size>
-		<fields>
-						<field>
-							<name>VALUE</name>
-							<bitOffset>0</bitOffset>
-							<bitWidth>32</bitWidth>
-						</field>
-		</fields>
 	</register>
 	<register>
 		<name>CFG2</name>
 		<description>Cap Touch Config Register 2</description>
 		<addressOffset>0x8</addressOffset>
 		<size>32</size>
-		<fields>
-						<field>
-							<name>VALUE</name>
-							<bitOffset>0</bitOffset>
-							<bitWidth>32</bitWidth>
-						</field>
-		</fields>
 	</register>	
 	<register>
 		<name>CFG3</name>
 		<description>Cap Touch Config Register 3</description>
 		<addressOffset>0xc</addressOffset>
 		<size>32</size>
-		<fields>
-						<field>
-							<name>VALUE</name>
-							<bitOffset>0</bitOffset>
-							<bitWidth>32</bitWidth>
-						</field>
-		</fields>
 	</register>
 	</registers>
 		
@@ -8018,13 +6710,6 @@ In the event that Third Party Software has only been provided to you in object c
 				<description>USB0 Function Address Register</description>
 				<addressOffset>0x00</addressOffset>
 				<size>8</size>
-				<fields>
-					<field>
-						<name>VALUE</name>
-						<bitOffset>0</bitOffset>
-						<bitWidth>8</bitWidth>
-					</field>
-				</fields>
 			</register>
 
 			<register>
@@ -8032,13 +6717,6 @@ In the event that Third Party Software has only been provided to you in object c
 				<description>USB0 Power and Device Control Register</description>
 				<addressOffset>0x01</addressOffset>
 				<size>8</size>
-				<fields>
-					<field>
-						<name>VALUE</name>
-						<bitOffset>0</bitOffset>
-						<bitWidth>8</bitWidth>
-					</field>
-				</fields>
 			</register>
 
 			<register>
@@ -8046,13 +6724,6 @@ In the event that Third Party Software has only been provided to you in object c
 				<description>USB0 Transmit Interrupt Register</description>
 				<addressOffset>0x02</addressOffset>
 				<size>8</size>
-				<fields>
-					<field>
-						<name>VALUE</name>
-						<bitOffset>0</bitOffset>
-						<bitWidth>8</bitWidth>
-					</field>
-				</fields>
 			</register>
 
 			<register>
@@ -8060,13 +6731,6 @@ In the event that Third Party Software has only been provided to you in object c
 				<description>USB0 Receive Interrupt Register</description>
 				<addressOffset>0x04</addressOffset>
 				<size>16</size>
-				<fields>
-					<field>
-						<name>VALUE</name>
-						<bitOffset>0</bitOffset>
-						<bitWidth>16</bitWidth>
-					</field>
-				</fields>
 			</register>
 
 			<register>
@@ -8074,13 +6738,6 @@ In the event that Third Party Software has only been provided to you in object c
 				<description>USB0 Transmit Interrupt Enable Register</description>
 				<addressOffset>0x0006</addressOffset>
 				<size>16</size>
-				<fields>
-					<field>
-						<name>VALUE</name>
-						<bitOffset>0</bitOffset>
-						<bitWidth>16</bitWidth>
-					</field>
-				</fields>
 			</register>
 
 			<register>
@@ -8088,13 +6745,6 @@ In the event that Third Party Software has only been provided to you in object c
 				<description>USB0 Receive Interrupt Enable Register</description>
 				<addressOffset>0x0008</addressOffset>
 				<size>16</size>
-				<fields>
-					<field>
-						<name>VALUE</name>
-						<bitOffset>0</bitOffset>
-						<bitWidth>16</bitWidth>
-					</field>
-				</fields>
 			</register>
 
 			<register>
@@ -8102,13 +6752,6 @@ In the event that Third Party Software has only been provided to you in object c
 				<description>USB0 Common Interrupts Register</description>
 				<addressOffset>0x000A</addressOffset>
 				<size>8</size>
-				<fields>
-					<field>
-						<name>VALUE</name>
-						<bitOffset>0</bitOffset>
-						<bitWidth>8</bitWidth>
-					</field>
-				</fields>
 			</register>
 
 			<register>
@@ -8116,13 +6759,6 @@ In the event that Third Party Software has only been provided to you in object c
 				<description>USB0 Common Interrupts Enable Register</description>
 				<addressOffset>0x000B</addressOffset>
 				<size>8</size>
-				<fields>
-					<field>
-						<name>VALUE</name>
-						<bitOffset>0</bitOffset>
-						<bitWidth>8</bitWidth>
-					</field>
-				</fields>
 			</register>
 
 			<register>
@@ -8130,13 +6766,6 @@ In the event that Third Party Software has only been provided to you in object c
 				<description>USB0 Frame Number Register</description>
 				<addressOffset>0x000C</addressOffset>
 				<size>16</size>
-				<fields>
-					<field>
-						<name>VALUE</name>
-						<bitOffset>0</bitOffset>
-						<bitWidth>16</bitWidth>
-					</field>
-				</fields>
 			</register>
 
 			<register>
@@ -8144,13 +6773,6 @@ In the event that Third Party Software has only been provided to you in object c
 				<description>USB0 Index Register</description>
 				<addressOffset>0x000E</addressOffset>
 				<size>8</size>
-				<fields>
-					<field>
-						<name>VALUE</name>
-						<bitOffset>0</bitOffset>
-						<bitWidth>8</bitWidth>
-					</field>
-				</fields>
 			</register>
 
 			<register>
@@ -8158,13 +6780,6 @@ In the event that Third Party Software has only been provided to you in object c
 				<description>USB0 Testmode Register</description>
 				<addressOffset>0x000F</addressOffset>
 				<size>8</size>
-				<fields>
-					<field>
-						<name>VALUE</name>
-						<bitOffset>0</bitOffset>
-						<bitWidth>8</bitWidth>
-					</field>
-				</fields>
 			</register>
 
 			<register>
@@ -8172,13 +6787,6 @@ In the event that Third Party Software has only been provided to you in object c
 				<description>USB0 EPn Transmit Maximum Packet Length Register</description>
 				<addressOffset>0x0010</addressOffset>
 				<size>16</size>
-				<fields>
-					<field>
-						<name>VALUE</name>
-						<bitOffset>0</bitOffset>
-						<bitWidth>16</bitWidth>
-					</field>
-				</fields>
 			</register>
 <!--
 			<register>
@@ -8186,13 +6794,6 @@ In the event that Third Party Software has only been provided to you in object c
 				<description>USB0 EPn Transmit Configuration and Status (Host) Register</description>
 				<addressOffset>0x0012</addressOffset>
 				<size>16</size>
-				<fields>
-					<field>
-						<name>VALUE</name>
-						<bitOffset>0</bitOffset>
-						<bitWidth>16</bitWidth>
-					</field>
-				</fields>
 			</register>
 -->
 <!--
@@ -8201,13 +6802,6 @@ In the event that Third Party Software has only been provided to you in object c
 				<description>USB0 EP0 Configuration and Status (Peripheral) Register</description>
 				<addressOffset>0x0012</addressOffset>
 				<size>16</size>
-				<fields>
-					<field>
-						<name>VALUE</name>
-						<bitOffset>0</bitOffset>
-						<bitWidth>16</bitWidth>
-					</field>
-				</fields>
 			</register>
 -->
 <!--
@@ -8216,13 +6810,6 @@ In the event that Third Party Software has only been provided to you in object c
 				<description>USB0 EP0 Configuration and Status (Host) Register</description>
 				<addressOffset>0x0012</addressOffset>
 				<size>16</size>
-				<fields>
-					<field>
-						<name>VALUE</name>
-						<bitOffset>0</bitOffset>
-						<bitWidth>16</bitWidth>
-					</field>
-				</fields>
 			</register>
 -->
 			<register>
@@ -8230,13 +6817,6 @@ In the event that Third Party Software has only been provided to you in object c
 				<description>USB0 EPn Transmit Configuration and Status (Peripheral) Register</description>
 				<addressOffset>0x0012</addressOffset>
 				<size>16</size>
-				<fields>
-					<field>
-						<name>VALUE</name>
-						<bitOffset>0</bitOffset>
-						<bitWidth>16</bitWidth>
-					</field>
-				</fields>
 			</register>
 
 			<register>
@@ -8244,13 +6824,6 @@ In the event that Third Party Software has only been provided to you in object c
 				<description>USB0 EPn Receive Maximum Packet Length Register</description>
 				<addressOffset>0x0014</addressOffset>
 				<size>16</size>
-				<fields>
-					<field>
-						<name>VALUE</name>
-						<bitOffset>0</bitOffset>
-						<bitWidth>16</bitWidth>
-					</field>
-				</fields>
 			</register>
 <!--
 			<register>
@@ -8258,13 +6831,6 @@ In the event that Third Party Software has only been provided to you in object c
 				<description>USB0 EPn Receive Configuration and Status (Host) Register</description>
 				<addressOffset>0x0016</addressOffset>
 				<size>16</size>
-				<fields>
-					<field>
-						<name>VALUE</name>
-						<bitOffset>0</bitOffset>
-						<bitWidth>16</bitWidth>
-					</field>
-				</fields>
 			</register>
 -->
 <!--
@@ -8273,13 +6839,6 @@ In the event that Third Party Software has only been provided to you in object c
 				<description>USB0 EPn Receive Configuration and Status (Peripheral) Register</description>
 				<addressOffset>0x0016</addressOffset>
 				<size>16</size>
-				<fields>
-					<field>
-						<name>VALUE</name>
-						<bitOffset>0</bitOffset>
-						<bitWidth>16</bitWidth>
-					</field>
-				</fields>
 			</register>
 -->
 			<register>
@@ -8287,13 +6846,6 @@ In the event that Third Party Software has only been provided to you in object c
 				<description>USB0 EP0 Number of Received Bytes Register</description>
 				<addressOffset>0x0018</addressOffset>
 				<size>16</size>
-				<fields>
-					<field>
-						<name>VALUE</name>
-						<bitOffset>0</bitOffset>
-						<bitWidth>16</bitWidth>
-					</field>
-				</fields>
 			</register>
 <!--
 			<register>
@@ -8301,13 +6853,6 @@ In the event that Third Party Software has only been provided to you in object c
 				<description>USB0 EPn Number of Bytes Received Register</description>
 				<addressOffset>0x0018</addressOffset>
 				<size>16</size>
-				<fields>
-					<field>
-						<name>VALUE</name>
-						<bitOffset>0</bitOffset>
-						<bitWidth>16</bitWidth>
-					</field>
-				</fields>
 			</register>
 -->
 			<register>
@@ -8315,13 +6860,6 @@ In the event that Third Party Software has only been provided to you in object c
 				<description>USB0 EP0 Configuration Information Register</description>
 				<addressOffset>0x001F</addressOffset>
 				<size>8</size>
-				<fields>
-					<field>
-						<name>VALUE</name>
-						<bitOffset>0</bitOffset>
-						<bitWidth>8</bitWidth>
-					</field>
-				</fields>
 			</register>
 <!--
 			<register>
@@ -8329,13 +6867,6 @@ In the event that Third Party Software has only been provided to you in object c
 				<description>USB0 FIFO size</description>
 				<addressOffset>0x001F</addressOffset>
 				<size>8</size>
-				<fields>
-					<field>
-						<name>VALUE</name>
-						<bitOffset>0</bitOffset>
-						<bitWidth>8</bitWidth>
-					</field>
-				</fields>
 			</register>
 -->
 			<register>
@@ -8343,13 +6874,6 @@ In the event that Third Party Software has only been provided to you in object c
 				<description>USB0 FIFO Word (32-Bit) Register</description>
 				<addressOffset>0x0020</addressOffset>
 				<size>16</size>
-				<fields>
-					<field>
-						<name>VALUE</name>
-						<bitOffset>0</bitOffset>
-						<bitWidth>16</bitWidth>
-					</field>
-				</fields>
 			</register>
 
 			<register>
@@ -8357,26 +6881,12 @@ In the event that Third Party Software has only been provided to you in object c
 				<description>USB0 FIFO Word (32-Bit) Register</description>
 				<addressOffset>0x0024</addressOffset>
 				<size>16</size>
-				<fields>
-					<field>
-						<name>VALUE</name>
-						<bitOffset>0</bitOffset>
-						<bitWidth>16</bitWidth>
-					</field>
-				</fields>
 			</register>
 
 			<register>
 				<name>FIFO2</name>
 				<description>USB0 FIFO Word (32-Bit) Register</description>
 				<addressOffset>0x0028</addressOffset>
-				<fields>
-					<field>
-						<name>VALUE</name>
-						<bitOffset>0</bitOffset>
-						<bitWidth>16</bitWidth>
-					</field>
-				</fields>
 			</register>
 
 			<register>
@@ -8384,13 +6894,6 @@ In the event that Third Party Software has only been provided to you in object c
 				<description>USB0 FIFO Word (32-Bit) Register</description>
 				<addressOffset>0x002C</addressOffset>
 				<size>16</size>
-				<fields>
-					<field>
-						<name>VALUE</name>
-						<bitOffset>0</bitOffset>
-						<bitWidth>16</bitWidth>
-					</field>
-				</fields>
 			</register>
 <!--
 			<register>
@@ -8398,13 +6901,6 @@ In the event that Third Party Software has only been provided to you in object c
 				<description>USB0 FIFO Half-Word (16-Bit) Register</description>
 				<addressOffset>0x0020</addressOffset>
 				<size>16</size>
-				<fields>
-					<field>
-						<name>VALUE</name>
-						<bitOffset>0</bitOffset>
-						<bitWidth>16</bitWidth>
-					</field>
-				</fields>
 			</register>
 
 			<register>
@@ -8412,13 +6908,6 @@ In the event that Third Party Software has only been provided to you in object c
 				<description>USB0 FIFO Half-Word (16-Bit) Register</description>
 				<addressOffset>0x0024</addressOffset>
 				<size>16</size>
-				<fields>
-					<field>
-						<name>VALUE</name>
-						<bitOffset>0</bitOffset>
-						<bitWidth>16</bitWidth>
-					</field>
-				</fields>
 			</register>
 
 			<register>
@@ -8426,13 +6915,6 @@ In the event that Third Party Software has only been provided to you in object c
 				<description>USB0 FIFO Half-Word (16-Bit) Register</description>
 				<addressOffset>0x0028</addressOffset>
 				<size>16</size>
-				<fields>
-					<field>
-						<name>VALUE</name>
-						<bitOffset>0</bitOffset>
-						<bitWidth>16</bitWidth>
-					</field>
-				</fields>
 			</register>
 
 			<register>
@@ -8440,13 +6922,6 @@ In the event that Third Party Software has only been provided to you in object c
 				<description>USB0 FIFO Half-Word (16-Bit) Register</description>
 				<addressOffset>0x002C</addressOffset>
 				<size>16</size>
-				<fields>
-					<field>
-						<name>VALUE</name>
-						<bitOffset>0</bitOffset>
-						<bitWidth>16</bitWidth>
-					</field>
-				</fields>
 			</register>
 -->
 <!--
@@ -8455,13 +6930,6 @@ In the event that Third Party Software has only been provided to you in object c
 				<description>USB0 FIFO Byte (8-Bit) Register</description>
 				<addressOffset>0x0020</addressOffset>
 				<size>16</size>
-				<fields>
-					<field>
-						<name>VALUE</name>
-						<bitOffset>0</bitOffset>
-						<bitWidth>16</bitWidth>
-					</field>
-				</fields>
 			</register>
 
 			<register>
@@ -8469,13 +6937,6 @@ In the event that Third Party Software has only been provided to you in object c
 				<description>USB0 FIFO Byte (8-Bit) Register</description>
 				<addressOffset>0x0024</addressOffset>
 				<size>16</size>
-				<fields>
-					<field>
-						<name>VALUE</name>
-						<bitOffset>0</bitOffset>
-						<bitWidth>16</bitWidth>
-					</field>
-				</fields>
 			</register>
 
 			<register>
@@ -8483,13 +6944,6 @@ In the event that Third Party Software has only been provided to you in object c
 				<description>USB0 FIFO Byte (8-Bit) Register</description>
 				<addressOffset>0x0028</addressOffset>
 				<size>16</size>
-				<fields>
-					<field>
-						<name>VALUE</name>
-						<bitOffset>0</bitOffset>
-						<bitWidth>16</bitWidth>
-					</field>
-				</fields>
 			</register>
 
 			<register>
@@ -8497,13 +6951,6 @@ In the event that Third Party Software has only been provided to you in object c
 				<description>USB0 FIFO Byte (8-Bit) Register</description>
 				<addressOffset>0x002C</addressOffset>
 				<size>16</size>
-				<fields>
-					<field>
-						<name>VALUE</name>
-						<bitOffset>0</bitOffset>
-						<bitWidth>16</bitWidth>
-					</field>
-				</fields>
 			</register>
 -->
 			<register>
@@ -8511,13 +6958,6 @@ In the event that Third Party Software has only been provided to you in object c
 				<description>USB0 Device Control Register</description>
 				<addressOffset>0x0060</addressOffset>
 				<size>8</size>
-				<fields>
-					<field>
-						<name>VALUE</name>
-						<bitOffset>0</bitOffset>
-						<bitWidth>8</bitWidth>
-					</field>
-				</fields>
 			</register>
 
 			<register>
@@ -8525,13 +6965,6 @@ In the event that Third Party Software has only been provided to you in object c
 				<description>USB0 Miscellaneous Register</description>
 				<addressOffset>0x0061</addressOffset>
 				<size>8</size>
-				<fields>
-					<field>
-						<name>VALUE</name>
-						<bitOffset>0</bitOffset>
-						<bitWidth>8</bitWidth>
-					</field>
-				</fields>
 			</register>
 
 			<register>
@@ -8539,13 +6972,6 @@ In the event that Third Party Software has only been provided to you in object c
 				<description>USB0 Endpoint Information Register</description>
 				<addressOffset>0x0078</addressOffset>
 				<size>8</size>
-				<fields>
-					<field>
-						<name>VALUE</name>
-						<bitOffset>0</bitOffset>
-						<bitWidth>8</bitWidth>
-					</field>
-				</fields>
 			</register>
 
 			<register>
@@ -8553,13 +6979,6 @@ In the event that Third Party Software has only been provided to you in object c
 					<description>USB0 RAM Information Register</description>
 					<addressOffset>0x0079</addressOffset>
 					<size>8</size>
-					<fields>
-							<field>
-								<name>VALUE</name>
-								<bitOffset>0</bitOffset>
-								<bitWidth>8</bitWidth>
-							</field>
-					</fields>
 				</register>
 
 				<register>
@@ -8567,13 +6986,6 @@ In the event that Third Party Software has only been provided to you in object c
 					<description>USB0 Link Information Register</description>
 					<addressOffset>0x007A</addressOffset>
 					<size>16</size>
-					<fields>
-							<field>
-								<name>VALUE</name>
-								<bitOffset>0</bitOffset>
-								<bitWidth>16</bitWidth>
-							</field>
-					</fields>
 				</register>
 
 				<register>
@@ -8581,13 +6993,7 @@ In the event that Third Party Software has only been provided to you in object c
 					<description>USB0 Full-Speed EOF 1 Register</description>
 					<addressOffset>0x007D</addressOffset>
 					<size>8</size>
-					<fields>
-							<field>
-								<name>VALUE</name>
-								<bitOffset>0</bitOffset>
-								<bitWidth>8</bitWidth>
-							</field>
-					</fields>
+
 				</register>
 
 				<register>
@@ -8595,13 +7001,6 @@ In the event that Third Party Software has only been provided to you in object c
 					<description>USB0 Software Reset Register</description>
 					<addressOffset>0x007F</addressOffset>
 					<size>8</size>
-					<fields>
-							<field>
-								<name>VALUE</name>
-								<bitOffset>0</bitOffset>
-								<bitWidth>8</bitWidth>
-							</field>
-					</fields>
 				</register>
 
 				<register>
@@ -8609,13 +7008,6 @@ In the event that Third Party Software has only been provided to you in object c
 					<description>USB0 EPn Transmit Maximum Packet Length Register</description>
 					<addressOffset>0x0100</addressOffset>
 					<size>16</size>
-					<fields>
-							<field>
-								<name>VALUE</name>
-								<bitOffset>0</bitOffset>
-								<bitWidth>16</bitWidth>
-							</field>
-					</fields>
 				</register>
 
 				<register>
@@ -8623,13 +7015,6 @@ In the event that Third Party Software has only been provided to you in object c
 					<description>USB0 EPn Transmit Maximum Packet Length Register</description>
 					<addressOffset>0x0110</addressOffset>
 					<size>16</size>
-					<fields>
-							<field>
-								<name>VALUE</name>
-								<bitOffset>0</bitOffset>
-								<bitWidth>16</bitWidth>
-							</field>
-					</fields>
 				</register>
 
 				<register>
@@ -8637,13 +7022,6 @@ In the event that Third Party Software has only been provided to you in object c
 					<description>USB0 EPn Transmit Maximum Packet Length Register</description>
 					<addressOffset>0x0120</addressOffset>
 					<size>16</size>
-					<fields>
-							<field>
-								<name>VALUE</name>
-								<bitOffset>0</bitOffset>
-								<bitWidth>16</bitWidth>
-							</field>
-					</fields>
 				</register>
 
 				<register>
@@ -8651,13 +7029,6 @@ In the event that Third Party Software has only been provided to you in object c
 					<description>USB0 EPn Transmit Maximum Packet Length Register</description>
 					<addressOffset>0x0130</addressOffset>
 					<size>16</size>
-					<fields>
-							<field>
-								<name>VALUE</name>
-								<bitOffset>0</bitOffset>
-								<bitWidth>16</bitWidth>
-							</field>
-					</fields>
 				</register>
 
 				<register>
@@ -8665,13 +7036,6 @@ In the event that Third Party Software has only been provided to you in object c
 					<description>USB0 EPn Transmit Configuration and Status (Peripheral) Register</description>
 					<addressOffset>0x0102</addressOffset>
 					<size>16</size>
-					<fields>
-							<field>
-								<name>VALUE</name>
-								<bitOffset>0</bitOffset>
-								<bitWidth>16</bitWidth>
-							</field>
-					</fields>
 				</register>
 
 				<register>
@@ -8679,13 +7043,6 @@ In the event that Third Party Software has only been provided to you in object c
 					<description>USB0 EPn Transmit Configuration and Status (Peripheral) Register</description>
 					<addressOffset>0x0112</addressOffset>
 					<size>16</size>
-					<fields>
-							<field>
-								<name>VALUE</name>
-								<bitOffset>0</bitOffset>
-								<bitWidth>16</bitWidth>
-							</field>
-					</fields>
 				</register>
 
 				<register>
@@ -8693,13 +7050,6 @@ In the event that Third Party Software has only been provided to you in object c
 					<description>USB0 EPn Transmit Configuration and Status (Peripheral) Register</description>
 					<addressOffset>0x0122</addressOffset>
 					<size>16</size>
-					<fields>
-							<field>
-								<name>VALUE</name>
-								<bitOffset>0</bitOffset>
-								<bitWidth>16</bitWidth>
-							</field>
-					</fields>
 				</register>
 
 				<register>
@@ -8707,13 +7057,6 @@ In the event that Third Party Software has only been provided to you in object c
 					<description>USB0 EPn Transmit Configuration and Status (Peripheral) Register</description>
 					<addressOffset>0x0132</addressOffset>
 					<size>16</size>
-					<fields>
-							<field>
-								<name>VALUE</name>
-								<bitOffset>0</bitOffset>
-								<bitWidth>16</bitWidth>
-							</field>
-					</fields>
 				</register>
 <!--
 				<register>
@@ -8721,13 +7064,6 @@ In the event that Third Party Software has only been provided to you in object c
 					<description>USB0 EP0 Configuration and Status (Peripheral) Register</description>
 					<addressOffset>0x0102</addressOffset>
 					<size>16</size>
-					<fields>
-							<field>
-								<name>VALUE</name>
-								<bitOffset>0</bitOffset>
-								<bitWidth>16</bitWidth>
-							</field>
-					</fields>
 				</register>
 -->
 <!--
@@ -8736,13 +7072,6 @@ In the event that Third Party Software has only been provided to you in object c
 					<description>USB0 EP0 Configuration and Status (Host) Register</description>
 					<addressOffset>0x0102</addressOffset>
 					<size>16</size>
-					<fields>
-							<field>
-								<name>VALUE</name>
-								<bitOffset>0</bitOffset>
-								<bitWidth>16</bitWidth>
-							</field>
-					</fields>
 				</register>
 -->
 <!--
@@ -8751,13 +7080,6 @@ In the event that Third Party Software has only been provided to you in object c
 					<description>USB0 EPn Transmit Configuration and Status (Host) Register</description>
 					<addressOffset>0x0102</addressOffset>
 					<size>16</size>
-					<fields>
-							<field>
-								<name>VALUE</name>
-								<bitOffset>0</bitOffset>
-								<bitWidth>16</bitWidth>
-							</field>
-					</fields>
 				</register>
 -->
 <!--
@@ -8766,13 +7088,6 @@ In the event that Third Party Software has only been provided to you in object c
 					<description>USB0 EPn Transmit Configuration and Status (Host) Register</description>
 					<addressOffset>0x0112</addressOffset>
 					<size>16</size>
-					<fields>
-							<field>
-								<name>VALUE</name>
-								<bitOffset>0</bitOffset>
-								<bitWidth>16</bitWidth>
-							</field>
-					</fields>
 				</register>
 -->
 <!--
@@ -8781,13 +7096,6 @@ In the event that Third Party Software has only been provided to you in object c
 					<description>USB0 EPn Transmit Configuration and Status (Host) Register</description>
 					<addressOffset>0x0122</addressOffset>
 					<size>16</size>
-					<fields>
-							<field>
-								<name>VALUE</name>
-								<bitOffset>0</bitOffset>
-								<bitWidth>16</bitWidth>
-							</field>
-					</fields>
 				</register>
 -->
 <!--
@@ -8796,13 +7104,6 @@ In the event that Third Party Software has only been provided to you in object c
 					<description>USB0 EPn Transmit Configuration and Status (Host) Register</description>
 					<addressOffset>0x0132</addressOffset>
 					<size>16</size>
-					<fields>
-							<field>
-								<name>VALUE</name>
-								<bitOffset>0</bitOffset>
-								<bitWidth>16</bitWidth>
-							</field>
-					</fields>
 				</register>
 -->
 
@@ -8811,13 +7112,6 @@ In the event that Third Party Software has only been provided to you in object c
 					<description>USB0 EPn Receive Maximum Packet Length Register</description>
 					<addressOffset>0x0104</addressOffset>
 					<size>16</size>
-					<fields>
-							<field>
-								<name>VALUE</name>
-								<bitOffset>0</bitOffset>
-								<bitWidth>16</bitWidth>
-							</field>
-					</fields>
 				</register>
 
 				<register>
@@ -8825,13 +7119,6 @@ In the event that Third Party Software has only been provided to you in object c
 					<description>USB0 EPn Receive Maximum Packet Length Register</description>
 					<addressOffset>0x0114</addressOffset>
 					<size>16</size>
-					<fields>
-							<field>
-								<name>VALUE</name>
-								<bitOffset>0</bitOffset>
-								<bitWidth>16</bitWidth>
-							</field>
-					</fields>
 				</register>
 
 				<register>
@@ -8839,13 +7126,6 @@ In the event that Third Party Software has only been provided to you in object c
 					<description>USB0 EPn Receive Maximum Packet Length Register</description>
 					<addressOffset>0x0124</addressOffset>
 					<size>16</size>
-					<fields>
-							<field>
-								<name>VALUE</name>
-								<bitOffset>0</bitOffset>
-								<bitWidth>16</bitWidth>
-							</field>
-					</fields>
 				</register>
 
 				<register>
@@ -8853,13 +7133,6 @@ In the event that Third Party Software has only been provided to you in object c
 					<description>USB0 EPn Receive Maximum Packet Length Register</description>
 					<addressOffset>0x0134</addressOffset>
 					<size>16</size>
-					<fields>
-							<field>
-								<name>VALUE</name>
-								<bitOffset>0</bitOffset>
-								<bitWidth>16</bitWidth>
-							</field>
-					</fields>
 				</register>
 
 				<register>
@@ -8867,13 +7140,6 @@ In the event that Third Party Software has only been provided to you in object c
 					<description>USB0 EPn Receive Configuration and Status (Peripheral) Register</description>
 					<addressOffset>0x0106</addressOffset>
 					<size>16</size>
-					<fields>
-							<field>
-								<name>VALUE</name>
-								<bitOffset>0</bitOffset>
-								<bitWidth>16</bitWidth>
-							</field>
-					</fields>
 				</register>
 
 				<register>
@@ -8881,13 +7147,6 @@ In the event that Third Party Software has only been provided to you in object c
 					<description>USB0 EPn Receive Configuration and Status (Peripheral) Register</description>
 					<addressOffset>0x0116</addressOffset>
 					<size>16</size>
-					<fields>
-							<field>
-								<name>VALUE</name>
-								<bitOffset>0</bitOffset>
-								<bitWidth>16</bitWidth>
-							</field>
-					</fields>
 				</register>
 
 				<register>
@@ -8895,13 +7154,6 @@ In the event that Third Party Software has only been provided to you in object c
 					<description>USB0 EPn Receive Configuration and Status (Peripheral) Register</description>
 					<addressOffset>0x0126</addressOffset>
 					<size>16</size>
-					<fields>
-							<field>
-								<name>VALUE</name>
-								<bitOffset>0</bitOffset>
-								<bitWidth>16</bitWidth>
-							</field>
-					</fields>
 				</register>
 
 				<register>
@@ -8909,13 +7161,6 @@ In the event that Third Party Software has only been provided to you in object c
 					<description>USB0 EPn Receive Configuration and Status (Peripheral) Register</description>
 					<addressOffset>0x0136</addressOffset>
 					<size>16</size>
-					<fields>
-							<field>
-								<name>VALUE</name>
-								<bitOffset>0</bitOffset>
-								<bitWidth>16</bitWidth>
-							</field>
-					</fields>
 				</register>
 <!--
 				<register>
@@ -8923,13 +7168,6 @@ In the event that Third Party Software has only been provided to you in object c
 					<description>USB0 EPn Receive Configuration and Status (Host) Register</description>
 					<addressOffset>0x0106</addressOffset>
 					<size>16</size>
-					<fields>
-							<field>
-								<name>VALUE</name>
-								<bitOffset>0</bitOffset>
-								<bitWidth>16</bitWidth>
-							</field>
-					</fields>
 				</register>
 -->
 <!--
@@ -8938,13 +7176,6 @@ In the event that Third Party Software has only been provided to you in object c
 					<description>USB0 EPn Receive Configuration and Status (Host) Register</description>
 					<addressOffset>0x0116</addressOffset>
 					<size>16</size>
-					<fields>
-							<field>
-								<name>VALUE</name>
-								<bitOffset>0</bitOffset>
-								<bitWidth>16</bitWidth>
-							</field>
-					</fields>
 				</register>
 -->
 <!--
@@ -8953,13 +7184,6 @@ In the event that Third Party Software has only been provided to you in object c
 					<description>USB0 EPn Receive Configuration and Status (Host) Register</description>
 					<addressOffset>0x0126</addressOffset>
 					<size>16</size>
-					<fields>
-							<field>
-								<name>VALUE</name>
-								<bitOffset>0</bitOffset>
-								<bitWidth>16</bitWidth>
-							</field>
-					</fields>
 				</register>
 -->
 <!--
@@ -8968,13 +7192,6 @@ In the event that Third Party Software has only been provided to you in object c
 					<description>USB0 EPn Receive Configuration and Status (Host) Register</description>
 					<addressOffset>0x0136</addressOffset>
 					<size>16</size>
-					<fields>
-							<field>
-								<name>VALUE</name>
-								<bitOffset>0</bitOffset>
-								<bitWidth>16</bitWidth>
-							</field>
-					</fields>
 				</register>
 -->
 				<register>
@@ -8982,13 +7199,6 @@ In the event that Third Party Software has only been provided to you in object c
 					<description>USB0 EP0 Number of Received Bytes Register</description>
 					<addressOffset>0x0108</addressOffset>
 					<size>16</size>
-					<fields>
-							<field>
-								<name>VALUE</name>
-								<bitOffset>0</bitOffset>
-								<bitWidth>16</bitWidth>
-							</field>
-					</fields>
 				</register>
 <!--
 				<register>
@@ -8996,13 +7206,6 @@ In the event that Third Party Software has only been provided to you in object c
 					<description>USB0 EPn Number of Bytes Received Register</description>
 					<addressOffset>0x0108</addressOffset>
 					<size>16</size>
-					<fields>
-							<field>
-								<name>VALUE</name>
-								<bitOffset>0</bitOffset>
-								<bitWidth>16</bitWidth>
-							</field>
-					</fields>
 				</register>
 -->
 				<register>
@@ -9010,13 +7213,6 @@ In the event that Third Party Software has only been provided to you in object c
 					<description>USB0 EPn Number of Bytes Received Register</description>
 					<addressOffset>0x0118</addressOffset>
 					<size>16</size>
-					<fields>
-							<field>
-								<name>VALUE</name>
-								<bitOffset>0</bitOffset>
-								<bitWidth>16</bitWidth>
-							</field>
-					</fields>
 				</register>
 
 				<register>
@@ -9024,13 +7220,6 @@ In the event that Third Party Software has only been provided to you in object c
 					<description>USB0 EPn Number of Bytes Received Register</description>
 					<addressOffset>0x0128</addressOffset>
 					<size>16</size>
-					<fields>
-							<field>
-								<name>VALUE</name>
-								<bitOffset>0</bitOffset>
-								<bitWidth>16</bitWidth>
-							</field>
-					</fields>
 				</register>
 
 				<register>
@@ -9038,13 +7227,6 @@ In the event that Third Party Software has only been provided to you in object c
 					<description>USB0 EPn Number of Bytes Received Register</description>
 					<addressOffset>0x0138</addressOffset>
 					<size>16</size>
-					<fields>
-							<field>
-								<name>VALUE</name>
-								<bitOffset>0</bitOffset>
-								<bitWidth>16</bitWidth>
-							</field>
-					</fields>
 				</register>
 <!--
 				<register>
@@ -9052,13 +7234,6 @@ In the event that Third Party Software has only been provided to you in object c
 					<description>USB0 FIFO size</description>
 					<addressOffset>0x010F</addressOffset>
 					<size>16</size>
-					<fields>
-							<field>
-								<name>VALUE</name>
-								<bitOffset>0</bitOffset>
-								<bitWidth>16</bitWidth>
-							</field>
-					</fields>
 				</register>
 
 				<register>
@@ -9066,13 +7241,6 @@ In the event that Third Party Software has only been provided to you in object c
 					<description>USB0 FIFO size</description>
 					<addressOffset>0x011F</addressOffset>
 					<size>16</size>
-					<fields>
-							<field>
-								<name>VALUE</name>
-								<bitOffset>0</bitOffset>
-								<bitWidth>16</bitWidth>
-							</field>
-					</fields>
 				</register>
 
 				<register>
@@ -9080,13 +7248,6 @@ In the event that Third Party Software has only been provided to you in object c
 					<description>USB0 FIFO size</description>
 					<addressOffset>0x012F</addressOffset>
 					<size>16</size>
-					<fields>
-							<field>
-								<name>VALUE</name>
-								<bitOffset>0</bitOffset>
-								<bitWidth>16</bitWidth>
-							</field>
-					</fields>
 				</register>
 
 				<register>
@@ -9094,13 +7255,6 @@ In the event that Third Party Software has only been provided to you in object c
 					<description>USB0 FIFO size</description>
 					<addressOffset>0x013F</addressOffset>
 					<size>16</size>
-					<fields>
-							<field>
-								<name>VALUE</name>
-								<bitOffset>0</bitOffset>
-								<bitWidth>16</bitWidth>
-							</field>
-					</fields>
 				</register>
 -->
 <!--
@@ -9109,13 +7263,6 @@ In the event that Third Party Software has only been provided to you in object c
 					<description>USB0 EP0 Configuration Information Register</description>
 					<addressOffset>0x010F</addressOffset>
 					<size>16</size>
-					<fields>
-							<field>
-								<name>VALUE</name>
-								<bitOffset>0</bitOffset>
-								<bitWidth>16</bitWidth>
-							</field>
-					</fields>
 				</register>
 -->
 				<register>
@@ -9123,13 +7270,6 @@ In the event that Third Party Software has only been provided to you in object c
 					<description>USB0 DMA Interrupt Register</description>
 					<addressOffset>0x0200</addressOffset>
 					<size>16</size>
-					<fields>
-							<field>
-								<name>VALUE</name>
-								<bitOffset>0</bitOffset>
-								<bitWidth>16</bitWidth>
-							</field>
-					</fields>
 				</register>
 
 				<register>
@@ -9137,13 +7277,6 @@ In the event that Third Party Software has only been provided to you in object c
 					<description>USB0 DMA Channel n Control Register</description>
 					<addressOffset>0x0204</addressOffset>
 					<size>16</size>
-					<fields>
-							<field>
-								<name>VALUE</name>
-								<bitOffset>0</bitOffset>
-								<bitWidth>16</bitWidth>
-							</field>
-					</fields>
 				</register>
 
 				<register>
@@ -9151,13 +7284,6 @@ In the event that Third Party Software has only been provided to you in object c
 					<description>USB0 DMA Channel n Control Register</description>
 					<addressOffset>0x0214</addressOffset>
 					<size>16</size>
-					<fields>
-							<field>
-								<name>VALUE</name>
-								<bitOffset>0</bitOffset>
-								<bitWidth>16</bitWidth>
-							</field>
-					</fields>
 				</register>
 
 				<register>
@@ -9165,13 +7291,6 @@ In the event that Third Party Software has only been provided to you in object c
 					<description>USB0 DMA Channel n Address Register</description>
 					<addressOffset>0x0208</addressOffset>
 					<size>16</size>
-					<fields>
-							<field>
-								<name>VALUE</name>
-								<bitOffset>0</bitOffset>
-								<bitWidth>16</bitWidth>
-							</field>
-					</fields>
 				</register>
 
 				<register>
@@ -9179,13 +7298,6 @@ In the event that Third Party Software has only been provided to you in object c
 					<description>USB0 DMA Channel n Address Register</description>
 					<addressOffset>0x0218</addressOffset>
 					<size>16</size>
-					<fields>
-							<field>
-								<name>VALUE</name>
-								<bitOffset>0</bitOffset>
-								<bitWidth>16</bitWidth>
-							</field>
-					</fields>
 				</register>
 
 				<register>
@@ -9193,13 +7305,6 @@ In the event that Third Party Software has only been provided to you in object c
 					<description>USB0 DMA Channel n Count Register</description>
 					<addressOffset>0x020C</addressOffset>
 					<size>16</size>
-					<fields>
-							<field>
-								<name>VALUE</name>
-								<bitOffset>0</bitOffset>
-								<bitWidth>16</bitWidth>
-							</field>
-					</fields>
 				</register>
 
 				<register>
@@ -9207,13 +7312,6 @@ In the event that Third Party Software has only been provided to you in object c
 					<description>USB0 DMA Channel n Count Register</description>
 					<addressOffset>0x021C</addressOffset>
 					<size>16</size>
-					<fields>
-							<field>
-								<name>VALUE</name>
-								<bitOffset>0</bitOffset>
-								<bitWidth>16</bitWidth>
-							</field>
-					</fields>
 				</register>
 
 				<register>
@@ -9221,13 +7319,6 @@ In the event that Third Party Software has only been provided to you in object c
 					<description>USB0 RX Double Packet Buffer Disable for Endpoints 1 to 3</description>
 					<addressOffset>0x0340</addressOffset>
 					<size>16</size>
-					<fields>
-							<field>
-								<name>VALUE</name>
-								<bitOffset>0</bitOffset>
-								<bitWidth>16</bitWidth>
-							</field>
-					</fields>
 				</register>
 
 				<register>
@@ -9235,13 +7326,6 @@ In the event that Third Party Software has only been provided to you in object c
 					<description>USB0 TX Double Packet Buffer Disable for Endpoints 1 to 3</description>
 					<addressOffset>0x0342</addressOffset>
 					<size>16</size>
-					<fields>
-							<field>
-								<name>VALUE</name>
-								<bitOffset>0</bitOffset>
-								<bitWidth>16</bitWidth>
-							</field>
-					</fields>
 				</register>
 
 				<register>
@@ -9249,13 +7333,6 @@ In the event that Third Party Software has only been provided to you in object c
 					<description>USB0 Chirp Timeout Register</description>
 					<addressOffset>0x0344</addressOffset>
 					<size>16</size>
-					<fields>
-							<field>
-								<name>VALUE</name>
-								<bitOffset>0</bitOffset>
-								<bitWidth>16</bitWidth>
-							</field>
-					</fields>
 				</register>
 
 				<register>
@@ -9263,13 +7340,6 @@ In the event that Third Party Software has only been provided to you in object c
 					<description>USB0 LPM Attribute Register</description>
 					<addressOffset>0x0360</addressOffset>
 					<size>16</size>
-					<fields>
-							<field>
-								<name>VALUE</name>
-								<bitOffset>0</bitOffset>
-								<bitWidth>16</bitWidth>
-							</field>
-					</fields>
 				</register>
 
 				<register>
@@ -9277,13 +7347,6 @@ In the event that Third Party Software has only been provided to you in object c
 					<description>USB0 LPM Control Register</description>
 					<addressOffset>0x0362</addressOffset>
 					<size>8</size>
-					<fields>
-							<field>
-								<name>VALUE</name>
-								<bitOffset>0</bitOffset>
-								<bitWidth>8</bitWidth>
-							</field>
-					</fields>
 				</register>
 
 				<register>
@@ -9291,13 +7354,6 @@ In the event that Third Party Software has only been provided to you in object c
 					<description>USB0 LPM Interrupt Enable Register</description>
 					<addressOffset>0x0363</addressOffset>
 					<size>8</size>
-					<fields>
-							<field>
-								<name>VALUE</name>
-								<bitOffset>0</bitOffset>
-								<bitWidth>8</bitWidth>
-							</field>
-					</fields>
 				</register>
 
 				<register>
@@ -9305,13 +7361,6 @@ In the event that Third Party Software has only been provided to you in object c
 					<description>USB0 LPM Interrupt Status Register</description>
 					<addressOffset>0x0364</addressOffset>
 					<size>8</size>
-					<fields>
-							<field>
-								<name>VALUE</name>
-								<bitOffset>0</bitOffset>
-								<bitWidth>8</bitWidth>
-							</field>
-					</fields>
 				</register>
 
 				<register>
@@ -9319,13 +7368,6 @@ In the event that Third Party Software has only been provided to you in object c
 					<description>USB0 FS PHY Control</description>
 					<addressOffset>0x039C</addressOffset>
 					<size>16</size>
-					<fields>
-							<field>
-								<name>VALUE</name>
-								<bitOffset>0</bitOffset>
-								<bitWidth>16</bitWidth>
-							</field>
-					</fields>
 				</register>
 
 				<register>
@@ -9333,13 +7375,6 @@ In the event that Third Party Software has only been provided to you in object c
 					<description>USB0 FS PHY Status</description>
 					<addressOffset>0x039E</addressOffset>
 					<size>16</size>
-					<fields>
-							<field>
-								<name>VALUE</name>
-								<bitOffset>0</bitOffset>
-								<bitWidth>16</bitWidth>
-							</field>
-					</fields>
 				</register>
 
 				<register>
@@ -9347,13 +7382,6 @@ In the event that Third Party Software has only been provided to you in object c
 					<description>USB0 RAM Address Register</description>
 					<addressOffset>0x03B0</addressOffset>
 					<size>32</size>
-					<fields>
-							<field>
-								<name>VALUE</name>
-								<bitOffset>0</bitOffset>
-								<bitWidth>32</bitWidth>
-							</field>
-					</fields>
 				</register>
 
 				<register>
@@ -9361,13 +7389,6 @@ In the event that Third Party Software has only been provided to you in object c
 					<description>USB0 RAM Data Register</description>
 					<addressOffset>0x03B4</addressOffset>
 					<size>32</size>
-					<fields>
-							<field>
-								<name>VALUE</name>
-								<bitOffset>0</bitOffset>
-								<bitWidth>32</bitWidth>
-							</field>
-					</fields>
 				</register>
 			</registers>
 		</peripheral>
