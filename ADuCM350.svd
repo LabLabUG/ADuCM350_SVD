@@ -5568,11 +5568,25 @@ In the event that Third Party Software has only been provided to you in object c
 		<addressOffset>0x20</addressOffset>
 		<size>16</size>
 		<fields>
-						<field>
-							<name>KEY</name>
-							<bitOffset>0</bitOffset>
-							<bitWidth>16</bitWidth>
-						</field>
+				<field>
+					<name>KEY</name>
+					<description>Lock for FEE</description>
+					<bitOffset>0</bitOffset>		
+					<bitWidth>16</bitWidth>	
+					<writeConstraint>
+					<useEnumeratedValues>true</useEnumeratedValues>
+					</writeConstraint>
+					<enumeratedValues>
+							<enumeratedValue>
+								<name>KEY1</name>
+								<value>0xF456</value>
+							</enumeratedValue>
+							<enumeratedValue>
+								<name>KEY2</name>
+								<value>0xF123</value>
+							</enumeratedValue>
+						</enumeratedValues>
+				</field>
 		</fields>
 	</register>
 
