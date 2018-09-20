@@ -1864,6 +1864,18 @@ In the event that Third Party Software has only been provided to you in object c
 					<description> External Interrupt 2 Enable bit</description>
 					<bitOffset>11</bitOffset>
 					<bitWidth>1</bitWidth>
+						<enumeratedValues>
+							<enumeratedValue>
+								<description>Enable</description>
+								<name>ENABLE</name>
+								<value>1</value>
+							</enumeratedValue>
+							<enumeratedValue>
+								<description>Disable</description>							
+								<name>DISABLE</name>
+								<value>0</value>
+							</enumeratedValue>
+						</enumeratedValues>						
 				</field>
 				<field>
 					<name>IRQ2MDE</name>
@@ -1873,13 +1885,25 @@ In the event that Third Party Software has only been provided to you in object c
 				</field>
 				<field>
 					<name>IRQ1EN</name>
-					<description> External Interrupt 1 Enable bit</description>
+					<description>External Interrupt 1 Enable bit</description>
 					<bitOffset>7</bitOffset>
 					<bitWidth>1</bitWidth>
+						<enumeratedValues>
+							<enumeratedValue>
+								<description>Enable</description>
+								<name>ENABLE</name>
+								<value>1</value>
+							</enumeratedValue>
+							<enumeratedValue>
+								<description>Disable</description>							
+								<name>DISABLE</name>
+								<value>0</value>
+							</enumeratedValue>
+						</enumeratedValues>						
 				</field>
 				<field>
 					<name>IRQ1MDE</name>
-					<description> External Interrupt 1 Mode registers</description>
+					<description>External Interrupt 1 Mode registers</description>
 					<bitOffset>4</bitOffset>
 					<bitWidth>1</bitWidth>
 				</field>
@@ -1888,6 +1912,18 @@ In the event that Third Party Software has only been provided to you in object c
 					<description> External Interrupt 0 Enable bit</description>
 					<bitOffset>3</bitOffset>
 					<bitWidth>1</bitWidth>
+						<enumeratedValues>
+							<enumeratedValue>
+								<description>Enable</description>
+								<name>ENABLE</name>
+								<value>1</value>
+							</enumeratedValue>
+							<enumeratedValue>
+								<description>Disable</description>							
+								<name>DISABLE</name>
+								<value>0</value>
+							</enumeratedValue>
+						</enumeratedValues>						
 				</field>
 				<field>
 					<name>IRQ0MDE</name>
@@ -1909,6 +1945,18 @@ In the event that Third Party Software has only been provided to you in object c
                     <description> External Interrupt 7 enable bit</description>
                     <bitOffset>15</bitOffset>
                     <bitWidth>1</bitWidth>
+						<enumeratedValues>
+							<enumeratedValue>
+								<description>Enable</description>
+								<name>ENABLE</name>
+								<value>1</value>
+							</enumeratedValue>
+							<enumeratedValue>
+								<description>Disable</description>							
+								<name>DISABLE</name>
+								<value>0</value>
+							</enumeratedValue>
+						</enumeratedValues>						
                 </field>
                 <field>
                     <name>IRQ7MDE</name>
@@ -1921,6 +1969,18 @@ In the event that Third Party Software has only been provided to you in object c
                     <description> External Interrupt 6 Enable bit</description>
                     <bitOffset>11</bitOffset>
                     <bitWidth>1</bitWidth>
+						<enumeratedValues>
+							<enumeratedValue>
+								<description>Enable</description>
+								<name>ENABLE</name>
+								<value>1</value>
+							</enumeratedValue>
+							<enumeratedValue>
+								<description>Disable</description>							
+								<name>DISABLE</name>
+								<value>0</value>
+							</enumeratedValue>
+						</enumeratedValues>						
                 </field>
                 <field>
                     <name>IRQ6MDE</name>
@@ -1933,6 +1993,18 @@ In the event that Third Party Software has only been provided to you in object c
                     <description> External Interrupt 5 Enable bit</description>
                     <bitOffset>7</bitOffset>
                     <bitWidth>1</bitWidth>
+						<enumeratedValues>
+							<enumeratedValue>
+								<description>Enable</description>
+								<name>ENABLE</name>
+								<value>1</value>
+							</enumeratedValue>
+							<enumeratedValue>
+								<description>Disable</description>							
+								<name>DISABLE</name>
+								<value>0</value>
+							</enumeratedValue>
+						</enumeratedValues>						
                 </field>
                 <field>
                     <name>IRQ5MDE</name>
@@ -1945,6 +2017,18 @@ In the event that Third Party Software has only been provided to you in object c
                     <description> External Interrupt 4 Enable bit</description>
                     <bitOffset>3</bitOffset>
                     <bitWidth>1</bitWidth>
+						<enumeratedValues>
+							<enumeratedValue>
+								<description>Enable</description>
+								<name>ENABLE</name>
+								<value>1</value>
+							</enumeratedValue>
+							<enumeratedValue>
+								<description>Disable</description>							
+								<name>DISABLE</name>
+								<value>0</value>
+							</enumeratedValue>
+						</enumeratedValues>						
                 </field>
                 <field>
                     <name>IRQ4MDE</name>
@@ -1966,6 +2050,18 @@ In the event that Third Party Software has only been provided to you in object c
                     <description> USB VBUS Detection Enable bit</description>
                     <bitOffset>15</bitOffset>
                     <bitWidth>1</bitWidth>
+						<enumeratedValues>
+							<enumeratedValue>
+								<description>Enable</description>
+								<name>ENABLE</name>
+								<value>1</value>
+							</enumeratedValue>
+							<enumeratedValue>
+								<description>Disable</description>							
+								<name>DISABLE</name>
+								<value>0</value>
+							</enumeratedValue>
+						</enumeratedValues>						
                 </field>
                 <field>
                     <name>USBVBUSMDE</name>
@@ -1978,6 +2074,18 @@ In the event that Third Party Software has only been provided to you in object c
                     <description> USB DM Detection Enable bit</description>
                     <bitOffset>11</bitOffset>
                     <bitWidth>1</bitWidth>
+						<enumeratedValues>
+							<enumeratedValue>
+								<description>Enable</description>
+								<name>ENABLE</name>
+								<value>1</value>
+							</enumeratedValue>
+							<enumeratedValue>
+								<description>Disable</description>							
+								<name>DISABLE</name>
+								<value>0</value>
+							</enumeratedValue>
+						</enumeratedValues>						
                 </field>
                 <field>
                     <name>USBDMMDE</name>
@@ -1990,6 +2098,18 @@ In the event that Third Party Software has only been provided to you in object c
                     <description> USB DP Detection Enable bit</description>
                     <bitOffset>7</bitOffset>
                     <bitWidth>1</bitWidth>
+						<enumeratedValues>
+							<enumeratedValue>
+								<description>Enable</description>
+								<name>ENABLE</name>
+								<value>1</value>
+							</enumeratedValue>
+							<enumeratedValue>
+								<description>Disable</description>							
+								<name>DISABLE</name>
+								<value>0</value>
+							</enumeratedValue>
+						</enumeratedValues>						
                 </field>
                 <field>
                     <name>USBDPMDE</name>
@@ -2002,6 +2122,18 @@ In the event that Third Party Software has only been provided to you in object c
                     <description> External Interrupt 8 Enable bit</description>
                     <bitOffset>3</bitOffset>
                     <bitWidth>1</bitWidth>
+						<enumeratedValues>
+							<enumeratedValue>
+								<description>Enable</description>
+								<name>ENABLE</name>
+								<value>1</value>
+							</enumeratedValue>
+							<enumeratedValue>
+								<description>Disable</description>							
+								<name>DISABLE</name>
+								<value>0</value>
+							</enumeratedValue>
+						</enumeratedValues>						
                 </field>
                 <field>
                     <name>IRQ8MDE</name>
@@ -2023,72 +2155,156 @@ In the event that Third Party Software has only been provided to you in object c
                     <description> USB VBUS detection</description>
                     <bitOffset>11</bitOffset>
                     <bitWidth>1</bitWidth>
+						<enumeratedValues>
+							<enumeratedValue>
+								<description>Set to Clear</description>
+								<name>CLEAR</name>
+								<value>1</value>
+							</enumeratedValue>
+						</enumeratedValues>						
                 </field>
                 <field>
                     <name>USBDM</name>
                     <description> USB DM detection</description>
                     <bitOffset>10</bitOffset>
                     <bitWidth>1</bitWidth>
+						<enumeratedValues>
+							<enumeratedValue>
+								<description>Set to Clear</description>
+								<name>CLEAR</name>
+								<value>1</value>
+							</enumeratedValue>
+						</enumeratedValues>							
                 </field>
                 <field>
                     <name>USBDP</name>
                     <description> USB DP detection</description>
                     <bitOffset>9</bitOffset>
                     <bitWidth>1</bitWidth>
+						<enumeratedValues>
+							<enumeratedValue>
+								<description>Set to Clear</description>
+								<name>CLEAR</name>
+								<value>1</value>
+							</enumeratedValue>
+						</enumeratedValues>						
                 </field>
                 <field>
                     <name>IRQ8</name>
                     <description> External interrupt 8</description>
                     <bitOffset>8</bitOffset>
                     <bitWidth>1</bitWidth>
+						<enumeratedValues>
+							<enumeratedValue>
+								<description>Set to Clear</description>
+								<name>CLEAR</name>
+								<value>1</value>
+							</enumeratedValue>
+						</enumeratedValues>							
                 </field>
                 <field>
                     <name>IRQ7</name>
                     <description> External interrupt 7</description>
                     <bitOffset>7</bitOffset>
                     <bitWidth>1</bitWidth>
+						<enumeratedValues>
+							<enumeratedValue>
+								<description>Set to Clear</description>
+								<name>CLEAR</name>
+								<value>1</value>
+							</enumeratedValue>
+						</enumeratedValues>							
                 </field>
                 <field>
                     <name>IRQ6</name>
                     <description> External interrupt 6</description>
                     <bitOffset>6</bitOffset>
                     <bitWidth>1</bitWidth>
+						<enumeratedValues>
+							<enumeratedValue>
+								<description>Set to Clear</description>
+								<name>CLEAR</name>
+								<value>1</value>
+							</enumeratedValue>
+						</enumeratedValues>						
                 </field>
                 <field>
                     <name>IRQ5</name>
                     <description> External interrupt 5</description>
                     <bitOffset>5</bitOffset>
                     <bitWidth>1</bitWidth>
+						<enumeratedValues>
+							<enumeratedValue>
+								<description>Set to Clear</description>
+								<name>CLEAR</name>
+								<value>1</value>
+							</enumeratedValue>
+						</enumeratedValues>						
                 </field>
                 <field>
                     <name>IRQ4</name>
                     <description> External interrupt 4</description>
                     <bitOffset>4</bitOffset>
                     <bitWidth>1</bitWidth>
+						<enumeratedValues>
+							<enumeratedValue>
+								<description>Set to Clear</description>
+								<name>CLEAR</name>
+								<value>1</value>
+							</enumeratedValue>
+						</enumeratedValues>						
                 </field>
                 <field>
                     <name>IRQ3</name>
                     <description> External interrupt 3</description>
                     <bitOffset>3</bitOffset>
                     <bitWidth>1</bitWidth>
+						<enumeratedValues>
+							<enumeratedValue>
+								<description>Set to Clear</description>
+								<name>CLEAR</name>
+								<value>1</value>
+							</enumeratedValue>
+						</enumeratedValues>						
                 </field>
                 <field>
                     <name>IRQ2</name>
                     <description> External interrupt 2</description>
                     <bitOffset>2</bitOffset>
                     <bitWidth>1</bitWidth>
+						<enumeratedValues>
+							<enumeratedValue>
+								<description>Set to Clear</description>
+								<name>CLEAR</name>
+								<value>1</value>
+							</enumeratedValue>
+						</enumeratedValues>						
                 </field>
                 <field>
                     <name>IRQ1</name>
                     <description> External interrupt 1</description>
                     <bitOffset>1</bitOffset>
                     <bitWidth>1</bitWidth>
+						<enumeratedValues>
+							<enumeratedValue>
+								<description>Set to Clear</description>
+								<name>CLEAR</name>
+								<value>1</value>
+							</enumeratedValue>
+						</enumeratedValues>						
                 </field>
                 <field>
                     <name>IRQ0</name>
                     <description> External interrupt 0</description>
                     <bitOffset>0</bitOffset>
                     <bitWidth>1</bitWidth>
+						<enumeratedValues>
+							<enumeratedValue>
+								<description>Set to Clear</description>
+								<name>CLEAR</name>
+								<value>1</value>
+							</enumeratedValue>
+						</enumeratedValues>						
                 </field>
             </fields>
         </register>
@@ -2305,7 +2521,24 @@ In the event that Third Party Software has only been provided to you in object c
 							<name>CLK</name>
 							<description> Clock select</description>
 							<bitOffset>9</bitOffset>
-							<bitWidth>1</bitWidth>
+							<bitWidth>2</bitWidth>
+							<enumeratedValues>
+								<enumeratedValue>
+									<name>PCLK</name>
+									<description>PCLK (default)</description>
+									<value>0</value>
+								</enumeratedValue>
+								<enumeratedValue>
+									<name>LFXTAL</name>
+									<description>LF Crystal</description>
+									<value>1</value>
+								</enumeratedValue>
+								<enumeratedValue>
+									<name>LFOSC</name>
+									<description>- Internal 32 kHz Oscillator</description>
+									<value>2</value>
+								</enumeratedValue>
+							</enumeratedValues>							
 						</field>
 						<field>
 							<name>WUEN</name>
@@ -2315,7 +2548,7 @@ In the event that Third Party Software has only been provided to you in object c
 						</field>
 						<field>
 							<name>ENABLE</name>
-							<description> Timer enable</description>
+							<description>Timer enable</description>
 							<bitOffset>7</bitOffset>
 							<bitWidth>1</bitWidth>
 						</field>
@@ -2335,7 +2568,29 @@ In the event that Third Party Software has only been provided to you in object c
 							<name>PRE</name>
 							<description> Prescaler</description>
 							<bitOffset>0</bitOffset>
-							<bitWidth>1</bitWidth>
+							<bitWidth>2</bitWidth>
+							<enumeratedValues>
+								<enumeratedValue>
+									<description>If Core CLK Divide by 4 otherwise divide by 1</description>
+									<name>DIV1</name>
+									<value>0</value>
+								</enumeratedValue>
+								<enumeratedValue>
+									<description>Divide clock source by 16</description>								
+									<name>DIV16</name>
+									<value>1</value>
+								</enumeratedValue>
+								<enumeratedValue>
+									<description>Divide clock source by 256</description>								
+									<name>DIV256</name>
+									<value>2</value>
+								</enumeratedValue>
+								<enumeratedValue>
+									<description>Divide clock source by 32768</description>								
+									<name>DIV32768</name>
+									<value>3</value>
+								</enumeratedValue>
+							</enumeratedValues>							
 						</field>
 					</fields>
 				</register>
@@ -2350,7 +2605,7 @@ In the event that Third Party Software has only been provided to you in object c
 							<name>INTERVAL</name>
 							<description> Interval for wakeup field A</description>
 							<bitOffset>0</bitOffset>
-							<bitWidth>1</bitWidth>
+							<bitWidth>11</bitWidth>
 						</field>
 					</fields>
 				</register>
@@ -2617,7 +2872,29 @@ In the event that Third Party Software has only been provided to you in object c
 							<name>PRE</name>
 							<description> Prescaler</description>
 							<bitOffset>2</bitOffset>
-							<bitWidth>1</bitWidth>
+							<bitWidth>2</bitWidth>
+							<enumeratedValues>
+								<enumeratedValue>
+									<description>If Core CLK Divide by 4 otherwise divide by 1</description>
+									<name>DIV1</name>
+									<value>0</value>
+								</enumeratedValue>
+								<enumeratedValue>
+									<description>Divide clock source by 16</description>								
+									<name>DIV16</name>
+									<value>1</value>
+								</enumeratedValue>
+								<enumeratedValue>
+									<description>Divide clock source by 256</description>								
+									<name>DIV256</name>
+									<value>2</value>
+								</enumeratedValue>
+								<enumeratedValue>
+									<description>Divide clock source by 4096</description>								
+									<name>DIV4096</name>
+									<value>3</value>
+								</enumeratedValue>
+							</enumeratedValues>								
 						</field>
 						<field>
 							<name>IRQ</name>
@@ -5301,6 +5578,18 @@ In the event that Third Party Software has only been provided to you in object c
                         <description> Charge pump enable</description>
                         <bitOffset>5</bitOffset>
                         <bitWidth>1</bitWidth>
+						<enumeratedValues>
+							<enumeratedValue>
+								<description>Enable</description>
+								<name>ENABLE</name>
+								<value>1</value>
+							</enumeratedValue>
+							<enumeratedValue>
+								<description>Disable</description>							
+								<name>DISABLE</name>
+								<value>0</value>
+							</enumeratedValue>
+						</enumeratedValues>							
                     </field>
                     <field>
                         <name>BIASLVL</name>
@@ -6575,12 +6864,36 @@ In the event that Third Party Software has only been provided to you in object c
 							<description> Loopback enable</description>
 							<bitOffset>10</bitOffset>
 							<bitWidth>1</bitWidth>
+						<enumeratedValues>
+							<enumeratedValue>
+								<description>Enable</description>
+								<name>ENABLE</name>
+								<value>1</value>
+							</enumeratedValue>
+							<enumeratedValue>
+								<description>Disable</description>							
+								<name>DISABLE</name>
+								<value>0</value>
+							</enumeratedValue>
+						</enumeratedValues>								
 						</field>
 						<field>
 							<name>OEN</name>
 							<description> Slave MISO output enable</description>
 							<bitOffset>9</bitOffset>
 							<bitWidth>1</bitWidth>
+						<enumeratedValues>
+							<enumeratedValue>
+								<description>Enable</description>
+								<name>ENABLE</name>
+								<value>1</value>
+							</enumeratedValue>
+							<enumeratedValue>
+								<description>Disable</description>							
+								<name>DISABLE</name>
+								<value>0</value>
+							</enumeratedValue>
+						</enumeratedValues>								
 						</field>
 						<field>
 							<name>RXOF</name>
@@ -6593,6 +6906,18 @@ In the event that Third Party Software has only been provided to you in object c
 							<description> Transmit zeros enable</description>
 							<bitOffset>7</bitOffset>
 							<bitWidth>1</bitWidth>
+						<enumeratedValues>
+							<enumeratedValue>
+								<description>Enable</description>
+								<name>ENABLE</name>
+								<value>1</value>
+							</enumeratedValue>
+							<enumeratedValue>
+								<description>Disable</description>							
+								<name>DISABLE</name>
+								<value>0</value>
+							</enumeratedValue>
+						</enumeratedValues>								
 						</field>
 						<field>
 							<name>TIM</name>
@@ -6629,12 +6954,36 @@ In the event that Third Party Software has only been provided to you in object c
 							<description> Master mode enable</description>
 							<bitOffset>1</bitOffset>
 							<bitWidth>1</bitWidth>
+						<enumeratedValues>
+							<enumeratedValue>
+								<description>Enable</description>
+								<name>ENABLE</name>
+								<value>1</value>
+							</enumeratedValue>
+							<enumeratedValue>
+								<description>Disable</description>							
+								<name>DISABLE</name>
+								<value>0</value>
+							</enumeratedValue>
+						</enumeratedValues>								
 						</field>
 						<field>
 							<name>ENABLE</name>
-							<description> SPI enable</description>
+							<description>SPI enable</description>
 							<bitOffset>0</bitOffset>
 							<bitWidth>1</bitWidth>
+						<enumeratedValues>
+							<enumeratedValue>
+								<description>Enable</description>
+								<name>ENABLE</name>
+								<value>1</value>
+							</enumeratedValue>
+							<enumeratedValue>
+								<description>Disable</description>							
+								<name>DISABLE</name>
+								<value>0</value>
+							</enumeratedValue>
+						</enumeratedValues>								
 						</field>
 					</fields>
 				</register>
