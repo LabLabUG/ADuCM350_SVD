@@ -6255,6 +6255,182 @@ In the event that Third Party Software has only been provided to you in object c
 		<description>Clock Control Register 0</description>
 		<addressOffset>0x00</addressOffset>
 		<size>16</size>
+		<fields>
+			<field>
+				<name>HFXTALIE</name>
+						<description>HF Crystal Interupt Enable</description>
+						<bitOffset>15</bitOffset>
+						<bitWidth>1</bitWidth>
+						<enumeratedValues>
+							<enumeratedValue>
+								<description>Disable Interrupt Generation</description>
+								<name>DISABLE</name>
+								<value>0</value>
+							</enumeratedValue>
+							<enumeratedValue>
+								<description>Enable Interrupt Generation</description>								
+								<name>ENABLE</name>
+								<value>1</value>								
+							</enumeratedValue>
+						</enumeratedValues>
+			</field>
+			<field>
+				<name>LFXTALIE</name>
+						<description>LF Crystal Interupt Enable</description>
+						<bitOffset>14</bitOffset>
+						<bitWidth>1</bitWidth>
+						<enumeratedValues>
+							<enumeratedValue>
+								<description>Disable Interrupt Generation</description>
+								<name>DISABLE</name>
+								<value>0</value>
+							</enumeratedValue>
+							<enumeratedValue>
+								<description>Enable Interrupt Generation</description>								
+								<name>ENABLE</name>
+								<value>1</value>								
+							</enumeratedValue>
+						</enumeratedValues>
+			</field>
+			<field>
+				<name>PLLMUX</name>
+						<description>SPLL Mux selects which source clock is fed to the SPLL</description>
+						<bitOffset>11</bitOffset>
+						<bitWidth>1</bitWidth>
+						<enumeratedValues>
+							<enumeratedValue>
+								<description>Internal RC</description>
+								<name>INTERNAL</name>
+								<value>0</value>
+							</enumeratedValue>
+							<enumeratedValue>
+								<description>External Crystal</description>								
+								<name>XTAL</name>
+								<value>1</value>								
+							</enumeratedValue>
+						</enumeratedValues>
+			</field>
+			<field>
+				<name>LFCLKMUX</name>
+						<description>32kHz clock select</description>
+						<bitOffset>8</bitOffset>
+						<bitWidth>1</bitWidth>
+						<enumeratedValues>
+							<enumeratedValue>
+								<description>Internal RC</description>
+								<name>INTERNAL</name>
+								<value>0</value>
+							</enumeratedValue>
+							<enumeratedValue>
+								<description>External Crystal</description>								
+								<name>XTAL</name>
+								<value>1</value>								
+							</enumeratedValue>
+						</enumeratedValues>
+			</field>			
+			<field>
+				<name>CLKCOUT</name>
+						<description>GPIO clock out select</description>
+						<bitOffset>4</bitOffset>
+						<bitWidth>4</bitWidth>
+						<enumeratedValues>
+							<enumeratedValue>
+								<description>Root Clock</description>
+								<name>ROOT_CLK</name>
+								<value>0</value>
+							</enumeratedValue>
+							<enumeratedValue>
+								<description>LF Clock</description>								
+								<name>LF_CLK</name>
+								<value>1</value>								
+							</enumeratedValue>
+							<enumeratedValue>
+								<description>Cap Touch Clock</description>
+								<name>CT_CLK</name>
+								<value>2</value>
+							</enumeratedValue>
+							<enumeratedValue>
+								<description>HCLK Bus Clock</description>								
+								<name>HCLK_BUS</name>
+								<value>3</value>								
+							</enumeratedValue>							
+							<enumeratedValue>
+								<description>HCLK Core Clock</description>								
+								<name>HCLK_CORE</name>
+								<value>4</value>								
+							</enumeratedValue>	
+							<enumeratedValue>
+								<description>P Clock</description>
+								<name>P_CLK</name>
+								<value>5</value>
+							</enumeratedValue>
+							<enumeratedValue>
+								<description>USB Control Clock</description>								
+								<name>USB_CTL_CLK</name>
+								<value>6</value>								
+							</enumeratedValue>
+							<enumeratedValue>
+								<description>USB Phy Clock</description>
+								<name>USB_PHY_CLK</name>
+								<value>7</value>
+							</enumeratedValue>
+							<enumeratedValue>
+								<description>GPT0 Clock</description>
+								<name>GPT0_CLK</name>
+								<value>8</value>
+							</enumeratedValue>
+							<enumeratedValue>
+								<description>GPT1 Clock</description>								
+								<name>GPT1_CLK</name>
+								<value>9</value>								
+							</enumeratedValue>
+							<enumeratedValue>
+								<description>GPT2 Clock</description>
+								<name>GPT2_CLK</name>
+								<value>10</value>
+							</enumeratedValue>
+							<enumeratedValue>
+								<description>Wake Up Timer Clock</description>								
+								<name>WUT_CLK</name>
+								<value>11</value>								
+							</enumeratedValue>							
+							<enumeratedValue>
+								<description>RTC Count Clock</description>								
+								<name>RTC_CNT_CLK</name>
+								<value>12</value>								
+							</enumeratedValue>	
+						</enumeratedValues>
+			</field>
+			<field>
+				<name>CLKMUX</name>
+						<description>Clock Mux select</description>
+						<bitOffset>0</bitOffset>
+						<bitWidth>2</bitWidth>
+						<enumeratedValues>
+							<enumeratedValue>
+								<description>HF Internal</description>
+								<name>HFINT</name>
+								<value>0</value>
+							</enumeratedValue>
+							<enumeratedValue>
+								<description>HF External</description>								
+								<name>HFEXTERNAL</name>
+								<value>1</value>								
+							</enumeratedValue>
+							<enumeratedValue>
+								<description>System PLL</description>
+								<name>SYSPLL</name>
+								<value>2</value>
+							</enumeratedValue>
+							<enumeratedValue>
+								<description>External GPIO</description>								
+								<name>GPIOEXTERNAL</name>
+								<value>3</value>								
+							</enumeratedValue>							
+						</enumeratedValues>
+			</field>			
+			
+		</fields>
 	</register>
 
 	<register>
