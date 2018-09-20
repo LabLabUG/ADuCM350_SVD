@@ -3761,23 +3761,45 @@ In the event that Third Party Software has only been provided to you in object c
 							<name>RXFSTA</name>
 							<description> SPI Rx FIFO status</description>
 							<bitOffset>8</bitOffset>
-							<bitWidth>1</bitWidth>
+							<bitWidth>3</bitWidth>
+						<enumeratedValues>
+							<enumeratedValue>
+								<description>RX FIFO Empty</description>							
+								<name>EMPTY</name>
+								<value>0</value>
+							</enumeratedValue>								
+							<enumeratedValue>
+								<description>1 Valid Byte in FIFO</description>
+								<name>FIFO1</name>
+								<value>1</value>
+							</enumeratedValue>
+							<enumeratedValue>
+								<description>2 Valid Bytes in FIFO</description>							
+								<name>FIFO2</name>
+								<value>2</value>
+							</enumeratedValue>
+							<enumeratedValue>
+								<description>3 Valid Bytes in FIFO</description>							
+								<name>FIFO3</name>
+								<value>3</value>
+							</enumeratedValue>							
+						</enumeratedValues>								
 						</field>
 						<field>
 							<name>RXOF</name>
-							<description> SPI Rx FIFO overflow</description>
+							<description>SPI Rx FIFO overflow</description>
 							<bitOffset>7</bitOffset>
 							<bitWidth>1</bitWidth>
 						</field>
 						<field>
 							<name>RX</name>
-							<description> SPI Rx IRQ</description>
+							<description>SPI Rx IRQ</description>
 							<bitOffset>6</bitOffset>
 							<bitWidth>1</bitWidth>
 						</field>
 						<field>
 							<name>TX</name>
-							<description> SPI Tx IRQ</description>
+							<description>SPI Tx IRQ</description>
 							<bitOffset>5</bitOffset>
 							<bitWidth>1</bitWidth>
 						</field>
@@ -3791,7 +3813,29 @@ In the event that Third Party Software has only been provided to you in object c
 							<name>TXFSTA</name>
 							<description> SPI Tx FIFO status</description>
 							<bitOffset>1</bitOffset>
-							<bitWidth>1</bitWidth>
+							<bitWidth>3</bitWidth>
+						<enumeratedValues>
+							<enumeratedValue>
+								<description>TX FIFO Empty</description>							
+								<name>EMPTY</name>
+								<value>0</value>
+							</enumeratedValue>								
+							<enumeratedValue>
+								<description>1 Valid Byte in FIFO</description>
+								<name>FIFO1</name>
+								<value>1</value>
+							</enumeratedValue>
+							<enumeratedValue>
+								<description>2 Valid Bytes in FIFO</description>							
+								<name>FIFO2</name>
+								<value>2</value>
+							</enumeratedValue>
+							<enumeratedValue>
+								<description>3 Valid Bytes in FIFO</description>							
+								<name>FIFO3</name>
+								<value>3</value>
+							</enumeratedValue>							
+						</enumeratedValues>	
 						</field>
 						<field>
 							<name>IRQ</name>
@@ -3812,13 +3856,13 @@ In the event that Third Party Software has only been provided to you in object c
 							<name>DMA</name>
 							<description> 8-bit receive buffer</description>
 							<bitOffset>8</bitOffset>
-							<bitWidth>1</bitWidth>
+							<bitWidth>8</bitWidth>
 						</field>
 						<field>
 							<name>DATA</name>
 							<description> 8-bit receive buffer</description>
 							<bitOffset>0</bitOffset>
-							<bitWidth>1</bitWidth>
+							<bitWidth>8</bitWidth>
 						</field>
 					</fields>
 				</register>
@@ -3833,13 +3877,13 @@ In the event that Third Party Software has only been provided to you in object c
 							<name>DMA</name>
 							<description> 8-bit transmit buffer</description>
 							<bitOffset>8</bitOffset>
-							<bitWidth>1</bitWidth>
+							<bitWidth>8</bitWidth>
 						</field>
 						<field>
 							<name>DATA</name>
 							<description> 8-bit transmit buffer</description>
 							<bitOffset>0</bitOffset>
-							<bitWidth>1</bitWidth>
+							<bitWidth>8</bitWidth>
 						</field>
 					</fields>
 				</register>
@@ -3872,7 +3916,7 @@ In the event that Third Party Software has only been provided to you in object c
 							<name>DIV</name>
 							<description> SPI clock divider</description>
 							<bitOffset>0</bitOffset>
-							<bitWidth>1</bitWidth>
+							<bitWidth>6</bitWidth>
 						</field>
 					</fields>
 				</register>
@@ -3887,7 +3931,7 @@ In the event that Third Party Software has only been provided to you in object c
 							<name>MOD</name>
 							<description> SPI IRQ mode bits</description>
 							<bitOffset>14</bitOffset>
-							<bitWidth>1</bitWidth>
+							<bitWidth>2</bitWidth>
 						</field>
 						<field>
 							<name>TFLUSH</name>
@@ -3987,18 +4031,54 @@ In the event that Third Party Software has only been provided to you in object c
 							<description> Enable receive DMA request</description>
 							<bitOffset>2</bitOffset>
 							<bitWidth>1</bitWidth>
+						<enumeratedValues>
+							<enumeratedValue>
+								<description>Enable</description>
+								<name>ENABLE</name>
+								<value>1</value>
+							</enumeratedValue>
+							<enumeratedValue>
+								<description>Disable</description>							
+								<name>DISABLE</name>
+								<value>0</value>
+							</enumeratedValue>
+						</enumeratedValues>								
 						</field>
 						<field>
 							<name>IENTXDMA</name>
 							<description> Enable transmit DMA request</description>
 							<bitOffset>1</bitOffset>
 							<bitWidth>1</bitWidth>
+						<enumeratedValues>
+							<enumeratedValue>
+								<description>Enable</description>
+								<name>ENABLE</name>
+								<value>1</value>
+							</enumeratedValue>
+							<enumeratedValue>
+								<description>Disable</description>							
+								<name>DISABLE</name>
+								<value>0</value>
+							</enumeratedValue>
+						</enumeratedValues>								
 						</field>
 						<field>
 							<name>ENABLE</name>
 							<description> Enable DMA for data transfer</description>
 							<bitOffset>0</bitOffset>
 							<bitWidth>1</bitWidth>
+						<enumeratedValues>
+							<enumeratedValue>
+								<description>Enable</description>
+								<name>ENABLE</name>
+								<value>1</value>
+							</enumeratedValue>
+							<enumeratedValue>
+								<description>Disable</description>							
+								<name>DISABLE</name>
+								<value>0</value>
+							</enumeratedValue>
+						</enumeratedValues>								
 						</field>
 					</fields>
 				</register>
@@ -4013,7 +4093,7 @@ In the event that Third Party Software has only been provided to you in object c
 							<name>COUNT</name>
 							<description> Transfer byte count</description>
 							<bitOffset>0</bitOffset>
-							<bitWidth>1</bitWidth>
+							<bitWidth>8</bitWidth>
 						</field>
 					</fields>
 				</register>
@@ -4039,292 +4119,378 @@ In the event that Third Party Software has only been provided to you in object c
 				<description>interrupt</description>
 				<value>42</value>
 			</interrupt>
-			<registers>
-
+			<registers>	
 				<register>
 					<name>SPISTA</name>
 					<description>SPI1 Status</description>
 					<addressOffset>0x00</addressOffset>
-                <fields>
-                    <field>
-                        <name>CSRSG</name>
-                        <description> Detected a rising edge on CS, in CONT mode</description>
-                        <bitOffset>14</bitOffset>
-                        <bitWidth>1</bitWidth>
-                    </field>
-                    <field>
-                        <name>CSFLG</name>
-                        <description> Detected a falling edge on CS, in CONT mode</description>
-                        <bitOffset>13</bitOffset>
-                        <bitWidth>1</bitWidth>
-                    </field>
-                    <field>
-                        <name>CSERR</name>
-                        <description> Detected a CS error condition</description>
-                        <bitOffset>12</bitOffset>
-                        <bitWidth>1</bitWidth>
-                    </field>
-                    <field>
-                        <name>RXS</name>
-                        <description> SPI Rx FIFO excess bytes present</description>
-                        <bitOffset>11</bitOffset>
-                        <bitWidth>1</bitWidth>
-                    </field>
-                    <field>
-                        <name>RXFSTA</name>
-                        <description> SPI Rx FIFO status</description>
-                        <bitOffset>8</bitOffset>
-                        <bitWidth>1</bitWidth>
-                    </field>
-                    <field>
-                        <name>RXOF</name>
-                        <description> SPI Rx FIFO overflow</description>
-                        <bitOffset>7</bitOffset>
-                        <bitWidth>1</bitWidth>
-                    </field>
-                    <field>
-                        <name>RX</name>
-                        <description> SPI Rx IRQ</description>
-                        <bitOffset>6</bitOffset>
-                        <bitWidth>1</bitWidth>
-                    </field>
-                    <field>
-                        <name>TX</name>
-                        <description> SPI Tx IRQ</description>
-                        <bitOffset>5</bitOffset>
-                        <bitWidth>1</bitWidth>
-                    </field>
-                    <field>
-                        <name>TXUR</name>
-                        <description> SPI Tx FIFO underflow</description>
-                        <bitOffset>4</bitOffset>
-                        <bitWidth>1</bitWidth>
-                    </field>
-                    <field>
-                        <name>TXFSTA</name>
-                        <description> SPI Tx FIFO status</description>
-                        <bitOffset>1</bitOffset>
-                        <bitWidth>1</bitWidth>
-                    </field>
-                    <field>
-                        <name>IRQ</name>
-                        <description> SPI Interrupt status</description>
-                        <bitOffset>0</bitOffset>
-                        <bitWidth>1</bitWidth>
-                    </field>
-                </fields>
-            </register>
+					<fields>
+						<field>
+							<name>CSRSG</name>
+							<description> Detected a rising edge on CS, in CONT mode</description>
+							<bitOffset>14</bitOffset>
+							<bitWidth>1</bitWidth>
+						</field>
+						<field>
+							<name>CSFLG</name>
+							<description> Detected a falling edge on CS, in CONT mode</description>
+							<bitOffset>13</bitOffset>
+							<bitWidth>1</bitWidth>
+						</field>
+						<field>
+							<name>CSERR</name>
+							<description> Detected a CS error condition</description>
+							<bitOffset>12</bitOffset>
+							<bitWidth>1</bitWidth>
+						</field>
+						<field>
+							<name>RXS</name>
+							<description> SPI Rx FIFO excess bytes present</description>
+							<bitOffset>11</bitOffset>
+							<bitWidth>1</bitWidth>
+						</field>
+						<field>
+							<name>RXFSTA</name>
+							<description> SPI Rx FIFO status</description>
+							<bitOffset>8</bitOffset>
+							<bitWidth>3</bitWidth>
+						<enumeratedValues>
+							<enumeratedValue>
+								<description>RX FIFO Empty</description>							
+								<name>EMPTY</name>
+								<value>0</value>
+							</enumeratedValue>								
+							<enumeratedValue>
+								<description>1 Valid Byte in FIFO</description>
+								<name>FIFO1</name>
+								<value>1</value>
+							</enumeratedValue>
+							<enumeratedValue>
+								<description>2 Valid Bytes in FIFO</description>							
+								<name>FIFO2</name>
+								<value>2</value>
+							</enumeratedValue>
+							<enumeratedValue>
+								<description>3 Valid Bytes in FIFO</description>							
+								<name>FIFO3</name>
+								<value>3</value>
+							</enumeratedValue>							
+						</enumeratedValues>								
+						</field>
+						<field>
+							<name>RXOF</name>
+							<description>SPI Rx FIFO overflow</description>
+							<bitOffset>7</bitOffset>
+							<bitWidth>1</bitWidth>
+						</field>
+						<field>
+							<name>RX</name>
+							<description>SPI Rx IRQ</description>
+							<bitOffset>6</bitOffset>
+							<bitWidth>1</bitWidth>
+						</field>
+						<field>
+							<name>TX</name>
+							<description>SPI Tx IRQ</description>
+							<bitOffset>5</bitOffset>
+							<bitWidth>1</bitWidth>
+						</field>
+						<field>
+							<name>TXUR</name>
+							<description> SPI Tx FIFO underflow</description>
+							<bitOffset>4</bitOffset>
+							<bitWidth>1</bitWidth>
+						</field>
+						<field>
+							<name>TXFSTA</name>
+							<description> SPI Tx FIFO status</description>
+							<bitOffset>1</bitOffset>
+							<bitWidth>3</bitWidth>
+						<enumeratedValues>
+							<enumeratedValue>
+								<description>TX FIFO Empty</description>							
+								<name>EMPTY</name>
+								<value>0</value>
+							</enumeratedValue>								
+							<enumeratedValue>
+								<description>1 Valid Byte in FIFO</description>
+								<name>FIFO1</name>
+								<value>1</value>
+							</enumeratedValue>
+							<enumeratedValue>
+								<description>2 Valid Bytes in FIFO</description>							
+								<name>FIFO2</name>
+								<value>2</value>
+							</enumeratedValue>
+							<enumeratedValue>
+								<description>3 Valid Bytes in FIFO</description>							
+								<name>FIFO3</name>
+								<value>3</value>
+							</enumeratedValue>							
+						</enumeratedValues>	
+						</field>
+						<field>
+							<name>IRQ</name>
+							<description> SPI Interrupt status</description>
+							<bitOffset>0</bitOffset>
+							<bitWidth>1</bitWidth>
+						</field>
+					</fields>
+				</register>
 
 				<register>
 					<name>SPIRX</name>
 					<description>SPI1 Receive</description>
 					<addressOffset>0x04</addressOffset>
-                <fields>
-                    <field>
-                        <name>DMA</name>
-                        <description> 8-bit receive buffer</description>
-                        <bitOffset>8</bitOffset>
-                        <bitWidth>1</bitWidth>
-                    </field>
-                    <field>
-                        <name>DATA</name>
-                        <description> 8-bit receive buffer</description>
-                        <bitOffset>0</bitOffset>
-                        <bitWidth>1</bitWidth>
-                    </field>
-                </fields>
-            </register>
+					<size>16</size>
+					<fields>
+						<field>
+							<name>DMA</name>
+							<description> 8-bit receive buffer</description>
+							<bitOffset>8</bitOffset>
+							<bitWidth>8</bitWidth>
+						</field>
+						<field>
+							<name>DATA</name>
+							<description> 8-bit receive buffer</description>
+							<bitOffset>0</bitOffset>
+							<bitWidth>8</bitWidth>
+						</field>
+					</fields>
+				</register>
 
 				<register>
 					<name>SPITX</name>
 					<description>SPI1 Transmit</description>
 					<addressOffset>0x08</addressOffset>
-                <fields>
-                    <field>
-                        <name>DMA</name>
-                        <description> 8-bit transmit buffer</description>
-                        <bitOffset>8</bitOffset>
-                        <bitWidth>1</bitWidth>
-                    </field>
-                    <field>
-                        <name>DATA</name>
-                        <description> 8-bit transmit buffer</description>
-                        <bitOffset>0</bitOffset>
-                        <bitWidth>1</bitWidth>
-                    </field>
-                </fields>
-            </register>
+					<size>16</size>
+					<fields>
+						<field>
+							<name>DMA</name>
+							<description> 8-bit transmit buffer</description>
+							<bitOffset>8</bitOffset>
+							<bitWidth>8</bitWidth>
+						</field>
+						<field>
+							<name>DATA</name>
+							<description> 8-bit transmit buffer</description>
+							<bitOffset>0</bitOffset>
+							<bitWidth>8</bitWidth>
+						</field>
+					</fields>
+				</register>
 
-			<register>
-				<name>SPIDIV</name>
-				<description>SPI1 Baud rate selection</description>
-				<addressOffset>0x0C</addressOffset>
-                <fields>
-                    <field>
-                        <name>CSIRQ</name>
-                        <description> Enable interrupt on every CS edge in CONT mode</description>
-                        <bitOffset>8</bitOffset>
-                        <bitWidth>1</bitWidth>
-                    </field>
-                    <field>
-                        <name>MD</name>
-                        <description> Reset Mode for CSERR</description>
-                        <bitOffset>7</bitOffset>
-                        <bitWidth>1</bitWidth>
-                    </field>
-                    <field>
-                        <name>HFM</name>
-                        <description> High Frequency Mode</description>
-                        <bitOffset>6</bitOffset>
-                        <bitWidth>1</bitWidth>
-                    </field>
-                    <field>
-                        <name>DIV</name>
-                        <description> SPI clock divider</description>
-                        <bitOffset>0</bitOffset>
-                        <bitWidth>1</bitWidth>
-                    </field>
-                </fields>
-            </register>
+				<register>
+					<name>SPIDIV</name>
+					<description>SPI1 Baud rate selection</description>
+					<addressOffset>0x0C</addressOffset>
+					<size>16</size>
+					<fields>
+						<field>
+							<name>CSIRQ</name>
+							<description> Enable interrupt on every CS edge in CONT mode</description>
+							<bitOffset>8</bitOffset>
+							<bitWidth>1</bitWidth>
+						</field>
+						<field>
+							<name>MD</name>
+							<description> Reset Mode for CSERR</description>
+							<bitOffset>7</bitOffset>
+							<bitWidth>1</bitWidth>
+						</field>
+						<field>
+							<name>HFM</name>
+							<description> High Frequency Mode</description>
+							<bitOffset>6</bitOffset>
+							<bitWidth>1</bitWidth>
+						</field>
+						<field>
+							<name>DIV</name>
+							<description> SPI clock divider</description>
+							<bitOffset>0</bitOffset>
+							<bitWidth>6</bitWidth>
+						</field>
+					</fields>
+				</register>
 
-			<register>
-				<name>SPICON</name>
-				<description>SPI1 SPI configuration</description>
-				<addressOffset>0x10</addressOffset>
-                <fields>
-                    <field>
-                        <name>MOD</name>
-                        <description> SPI IRQ mode bits</description>
-                        <bitOffset>14</bitOffset>
-                        <bitWidth>1</bitWidth>
-                    </field>
-                    <field>
-                        <name>TFLUSH</name>
-                        <description> SPI Tx FIFO Flush enable</description>
-                        <bitOffset>13</bitOffset>
-                        <bitWidth>1</bitWidth>
-                    </field>
-                    <field>
-                        <name>RFLUSH</name>
-                        <description> SPI Rx FIFO Flush enable</description>
-                        <bitOffset>12</bitOffset>
-                        <bitWidth>1</bitWidth>
-                    </field>
-                    <field>
-                        <name>CON</name>
-                        <description> Continuous transfer enable</description>
-                        <bitOffset>11</bitOffset>
-                        <bitWidth>1</bitWidth>
-                    </field>
-                    <field>
-                        <name>LOOPBACK</name>
-                        <description> Loopback enable</description>
-                        <bitOffset>10</bitOffset>
-                        <bitWidth>1</bitWidth>
-                    </field>
-                    <field>
-                        <name>OEN</name>
-                        <description> Slave MISO output enable</description>
-                        <bitOffset>9</bitOffset>
-                        <bitWidth>1</bitWidth>
-                    </field>
-                    <field>
-                        <name>RXOF</name>
-                        <description> SPIRX overflow overwrite enable</description>
-                        <bitOffset>8</bitOffset>
-                        <bitWidth>1</bitWidth>
-                    </field>
-                    <field>
-                        <name>ZEN</name>
-                        <description> Transmit zeros enable</description>
-                        <bitOffset>7</bitOffset>
-                        <bitWidth>1</bitWidth>
-                    </field>
-                    <field>
-                        <name>TIM</name>
-                        <description> SPI transfer and interrupt mode</description>
-                        <bitOffset>6</bitOffset>
-                        <bitWidth>1</bitWidth>
-                    </field>
-                    <field>
-                        <name>LSB</name>
-                        <description> LSB first transfer enable</description>
-                        <bitOffset>5</bitOffset>
-                        <bitWidth>1</bitWidth>
-                    </field>
-                    <field>
-                        <name>WOM</name>
-                        <description> SPI Wired Or mode</description>
-                        <bitOffset>4</bitOffset>
-                        <bitWidth>1</bitWidth>
-                    </field>
-                    <field>
-                        <name>CPOL</name>
-                        <description> Serial Clock Polarity</description>
-                        <bitOffset>3</bitOffset>
-                        <bitWidth>1</bitWidth>
-                    </field>
-                    <field>
-                        <name>CPHA</name>
-                        <description> Serial clock phase mode</description>
-                        <bitOffset>2</bitOffset>
-                        <bitWidth>1</bitWidth>
-                    </field>
-                    <field>
-                        <name>MASEN</name>
-                        <description> Master mode enable</description>
-                        <bitOffset>1</bitOffset>
-                        <bitWidth>1</bitWidth>
-                    </field>
-                    <field>
-                        <name>ENABLE</name>
-                        <description> SPI enable</description>
-                        <bitOffset>0</bitOffset>
-                        <bitWidth>1</bitWidth>
-                    </field>
-                </fields>
-            </register>
+				<register>
+					<name>SPICON</name>
+					<description>SPI1 SPI configuration</description>
+					<addressOffset>0x10</addressOffset>
+					<size>16</size>
+					<fields>
+						<field>
+							<name>MOD</name>
+							<description> SPI IRQ mode bits</description>
+							<bitOffset>14</bitOffset>
+							<bitWidth>2</bitWidth>
+						</field>
+						<field>
+							<name>TFLUSH</name>
+							<description> SPI Tx FIFO Flush enable</description>
+							<bitOffset>13</bitOffset>
+							<bitWidth>1</bitWidth>
+						</field>
+						<field>
+							<name>RFLUSH</name>
+							<description> SPI Rx FIFO Flush enable</description>
+							<bitOffset>12</bitOffset>
+							<bitWidth>1</bitWidth>
+						</field>
+						<field>
+							<name>CON</name>
+							<description> Continuous transfer enable</description>
+							<bitOffset>11</bitOffset>
+							<bitWidth>1</bitWidth>
+						</field>
+						<field>
+							<name>LOOPBACK</name>
+							<description> Loopback enable</description>
+							<bitOffset>10</bitOffset>
+							<bitWidth>1</bitWidth>
+						</field>
+						<field>
+							<name>OEN</name>
+							<description> Slave MISO output enable</description>
+							<bitOffset>9</bitOffset>
+							<bitWidth>1</bitWidth>
+						</field>
+						<field>
+							<name>RXOF</name>
+							<description> SPIRX overflow overwrite enable</description>
+							<bitOffset>8</bitOffset>
+							<bitWidth>1</bitWidth>
+						</field>
+						<field>
+							<name>ZEN</name>
+							<description> Transmit zeros enable</description>
+							<bitOffset>7</bitOffset>
+							<bitWidth>1</bitWidth>
+						</field>
+						<field>
+							<name>TIM</name>
+							<description> SPI transfer and interrupt mode</description>
+							<bitOffset>6</bitOffset>
+							<bitWidth>1</bitWidth>
+						</field>
+						<field>
+							<name>LSB</name>
+							<description> LSB first transfer enable</description>
+							<bitOffset>5</bitOffset>
+							<bitWidth>1</bitWidth>
+						</field>
+						<field>
+							<name>WOM</name>
+							<description> SPI Wired Or mode</description>
+							<bitOffset>4</bitOffset>
+							<bitWidth>1</bitWidth>
+						</field>
+						<field>
+							<name>CPOL</name>
+							<description> Serial Clock Polarity</description>
+							<bitOffset>3</bitOffset>
+							<bitWidth>1</bitWidth>
+						</field>
+						<field>
+							<name>CPHA</name>
+							<description> Serial clock phase mode</description>
+							<bitOffset>2</bitOffset>
+							<bitWidth>1</bitWidth>
+						</field>
+						<field>
+							<name>MASEN</name>
+							<description> Master mode enable</description>
+							<bitOffset>1</bitOffset>
+							<bitWidth>1</bitWidth>
+						</field>
+						<field>
+							<name>ENABLE</name>
+							<description> SPI enable</description>
+							<bitOffset>0</bitOffset>
+							<bitWidth>1</bitWidth>
+						</field>
+					</fields>
+				</register>
 
-			<register>
-				<name>SPIDMA</name>
-				<description>SPI1 SPI DMA enable</description>
-				<addressOffset>0x14</addressOffset>
-                <fields>
-                    <field>
-                        <name>IENRXDMA</name>
-                        <description> Enable receive DMA request</description>
-                        <bitOffset>2</bitOffset>
-                        <bitWidth>1</bitWidth>
-                    </field>
-                    <field>
-                        <name>IENTXDMA</name>
-                        <description> Enable transmit DMA request</description>
-                        <bitOffset>1</bitOffset>
-                        <bitWidth>1</bitWidth>
-                    </field>
-                    <field>
-                        <name>ENABLE</name>
-                        <description> Enable DMA for data transfer</description>
-                        <bitOffset>0</bitOffset>
-                        <bitWidth>1</bitWidth>
-                    </field>
-                </fields>
-            </register>
+				<register>
+					<name>SPIDMA</name>
+					<description>SPI1 SPI DMA enable</description>
+					<addressOffset>0x14</addressOffset>
+					<size>16</size>
+					<fields>
+						<field>
+							<name>IENRXDMA</name>
+							<description> Enable receive DMA request</description>
+							<bitOffset>2</bitOffset>
+							<bitWidth>1</bitWidth>
+						<enumeratedValues>
+							<enumeratedValue>
+								<description>Enable</description>
+								<name>ENABLE</name>
+								<value>1</value>
+							</enumeratedValue>
+							<enumeratedValue>
+								<description>Disable</description>							
+								<name>DISABLE</name>
+								<value>0</value>
+							</enumeratedValue>
+						</enumeratedValues>								
+						</field>
+						<field>
+							<name>IENTXDMA</name>
+							<description> Enable transmit DMA request</description>
+							<bitOffset>1</bitOffset>
+							<bitWidth>1</bitWidth>
+						<enumeratedValues>
+							<enumeratedValue>
+								<description>Enable</description>
+								<name>ENABLE</name>
+								<value>1</value>
+							</enumeratedValue>
+							<enumeratedValue>
+								<description>Disable</description>							
+								<name>DISABLE</name>
+								<value>0</value>
+							</enumeratedValue>
+						</enumeratedValues>								
+						</field>
+						<field>
+							<name>ENABLE</name>
+							<description> Enable DMA for data transfer</description>
+							<bitOffset>0</bitOffset>
+							<bitWidth>1</bitWidth>
+						<enumeratedValues>
+							<enumeratedValue>
+								<description>Enable</description>
+								<name>ENABLE</name>
+								<value>1</value>
+							</enumeratedValue>
+							<enumeratedValue>
+								<description>Disable</description>							
+								<name>DISABLE</name>
+								<value>0</value>
+							</enumeratedValue>
+						</enumeratedValues>								
+						</field>
+					</fields>
+				</register>
 
-			<register>
-				<name>SPICNT</name>
-				<description>SPI1 Transfer byte count</description>
-				<addressOffset>0x18</addressOffset>
-                <fields>
-                    <field>
-                        <name>COUNT</name>
-                        <description> Transfer byte count</description>
-                        <bitOffset>0</bitOffset>
-                        <bitWidth>1</bitWidth>
-                    </field>
-                </fields>
-            </register>
-		</registers>
+				<register>
+					<name>SPICNT</name>
+					<description>SPI1 Transfer byte count</description>
+					<addressOffset>0x18</addressOffset>
+					<size>16</size>
+					<fields>
+						<field>
+							<name>COUNT</name>
+							<description> Transfer byte count</description>
+							<bitOffset>0</bitOffset>
+							<bitWidth>8</bitWidth>
+						</field>
+					</fields>
+				</register>
+			</registers>
+
 	</peripheral>
 		
 		<peripheral>
@@ -6180,58 +6346,377 @@ In the event that Third Party Software has only been provided to you in object c
 	<description>interrupt</description>
 	<value>16</value>
 	</interrupt>
-	
-			<registers>
+				<registers>	
+				<register>
+					<name>SPISTA</name>
+					<description>SPIH Status</description>
+					<addressOffset>0x00</addressOffset>
+					<fields>
+						<field>
+							<name>CSRSG</name>
+							<description> Detected a rising edge on CS, in CONT mode</description>
+							<bitOffset>14</bitOffset>
+							<bitWidth>1</bitWidth>
+						</field>
+						<field>
+							<name>CSFLG</name>
+							<description> Detected a falling edge on CS, in CONT mode</description>
+							<bitOffset>13</bitOffset>
+							<bitWidth>1</bitWidth>
+						</field>
+						<field>
+							<name>CSERR</name>
+							<description> Detected a CS error condition</description>
+							<bitOffset>12</bitOffset>
+							<bitWidth>1</bitWidth>
+						</field>
+						<field>
+							<name>RXS</name>
+							<description> SPI Rx FIFO excess bytes present</description>
+							<bitOffset>11</bitOffset>
+							<bitWidth>1</bitWidth>
+						</field>
+						<field>
+							<name>RXFSTA</name>
+							<description> SPI Rx FIFO status</description>
+							<bitOffset>8</bitOffset>
+							<bitWidth>3</bitWidth>
+						<enumeratedValues>
+							<enumeratedValue>
+								<description>RX FIFO Empty</description>							
+								<name>EMPTY</name>
+								<value>0</value>
+							</enumeratedValue>
+							<enumeratedValue>
+								<description>1 Valid Byte in FIFO</description>
+								<name>FIFO1</name>
+								<value>1</value>
+							</enumeratedValue>
+							<enumeratedValue>
+								<description>2 Valid Bytes in FIFO</description>							
+								<name>FIFO2</name>
+								<value>2</value>
+							</enumeratedValue>
+							<enumeratedValue>
+								<description>3 Valid Bytes in FIFO</description>							
+								<name>FIFO3</name>
+								<value>3</value>
+							</enumeratedValue>							
+						</enumeratedValues>								
+						</field>
+						<field>
+							<name>RXOF</name>
+							<description>SPI Rx FIFO overflow</description>
+							<bitOffset>7</bitOffset>
+							<bitWidth>1</bitWidth>
+						</field>
+						<field>
+							<name>RX</name>
+							<description>SPI Rx IRQ</description>
+							<bitOffset>6</bitOffset>
+							<bitWidth>1</bitWidth>
+						</field>
+						<field>
+							<name>TX</name>
+							<description>SPI Tx IRQ</description>
+							<bitOffset>5</bitOffset>
+							<bitWidth>1</bitWidth>
+						</field>
+						<field>
+							<name>TXUR</name>
+							<description> SPI Tx FIFO underflow</description>
+							<bitOffset>4</bitOffset>
+							<bitWidth>1</bitWidth>
+						</field>
+						<field>
+							<name>TXFSTA</name>
+							<description> SPI Tx FIFO status</description>
+							<bitOffset>1</bitOffset>
+							<bitWidth>3</bitWidth>
+						<enumeratedValues>
+							<enumeratedValue>
+								<description>TX FIFO Empty</description>							
+								<name>EMPTY</name>
+								<value>0</value>
+							</enumeratedValue>	
+							<enumeratedValue>
+								<description>1 Valid Byte in FIFO</description>
+								<name>FIFO1</name>
+								<value>1</value>
+							</enumeratedValue>
+							<enumeratedValue>
+								<description>2 Valid Bytes in FIFO</description>							
+								<name>FIFO2</name>
+								<value>2</value>
+							</enumeratedValue>
+							<enumeratedValue>
+								<description>3 Valid Bytes in FIFO</description>							
+								<name>FIFO3</name>
+								<value>3</value>
+							</enumeratedValue>							
+						</enumeratedValues>	
+						</field>
+						<field>
+							<name>IRQ</name>
+							<description> SPI Interrupt status</description>
+							<bitOffset>0</bitOffset>
+							<bitWidth>1</bitWidth>
+						</field>
+					</fields>
+				</register>
 
-	<register>
-		<name>SPIH0STA</name>
-		<description>SPIH Status</description>
-		<addressOffset>0x00</addressOffset>
-		<size>16</size>
-	</register>
+				<register>
+					<name>SPIRX</name>
+					<description>SPIH Receive</description>
+					<addressOffset>0x04</addressOffset>
+					<size>16</size>
+					<fields>
+						<field>
+							<name>DMA</name>
+							<description> 8-bit receive buffer</description>
+							<bitOffset>8</bitOffset>
+							<bitWidth>8</bitWidth>
+						</field>
+						<field>
+							<name>DATA</name>
+							<description> 8-bit receive buffer</description>
+							<bitOffset>0</bitOffset>
+							<bitWidth>8</bitWidth>
+						</field>
+					</fields>
+				</register>
 
-	<register>
-		<name>SPIH0RX</name>
-		<description>SPIH Receive</description>
-		<addressOffset>0x04</addressOffset>
-		<size>16</size>
-	</register>
+				<register>
+					<name>SPITX</name>
+					<description>SPIH Transmit</description>
+					<addressOffset>0x08</addressOffset>
+					<size>16</size>
+					<fields>
+						<field>
+							<name>DMA</name>
+							<description> 8-bit transmit buffer</description>
+							<bitOffset>8</bitOffset>
+							<bitWidth>8</bitWidth>
+						</field>
+						<field>
+							<name>DATA</name>
+							<description> 8-bit transmit buffer</description>
+							<bitOffset>0</bitOffset>
+							<bitWidth>8</bitWidth>
+						</field>
+					</fields>
+				</register>
 
-	<register>
-		<name>SPIH0TX</name>
-		<description>SPIH Transmit</description>
-		<addressOffset>0x08</addressOffset>
-		<size>16</size>
-	</register>
+				<register>
+					<name>SPIDIV</name>
+					<description>SPIH Baud rate selection</description>
+					<addressOffset>0x0C</addressOffset>
+					<size>16</size>
+					<fields>
+						<field>
+							<name>CSIRQ</name>
+							<description> Enable interrupt on every CS edge in CONT mode</description>
+							<bitOffset>8</bitOffset>
+							<bitWidth>1</bitWidth>
+						</field>
+						<field>
+							<name>MD</name>
+							<description> Reset Mode for CSERR</description>
+							<bitOffset>7</bitOffset>
+							<bitWidth>1</bitWidth>
+						</field>
+						<field>
+							<name>HFM</name>
+							<description> High Frequency Mode</description>
+							<bitOffset>6</bitOffset>
+							<bitWidth>1</bitWidth>
+						</field>
+						<field>
+							<name>DIV</name>
+							<description> SPI clock divider</description>
+							<bitOffset>0</bitOffset>
+							<bitWidth>6</bitWidth>
+						</field>
+					</fields>
+				</register>
 
-	<register>
-		<name>SPIH0DIV</name>
-		<description>SPIH Baud rate selection</description>
-		<addressOffset>0x0C</addressOffset>
-		<size>16</size>
-	</register>
+				<register>
+					<name>SPICON</name>
+					<description>SPIH SPI configuration</description>
+					<addressOffset>0x10</addressOffset>
+					<size>16</size>
+					<fields>
+						<field>
+							<name>MOD</name>
+							<description> SPI IRQ mode bits</description>
+							<bitOffset>14</bitOffset>
+							<bitWidth>2</bitWidth>
+						</field>
+						<field>
+							<name>TFLUSH</name>
+							<description> SPI Tx FIFO Flush enable</description>
+							<bitOffset>13</bitOffset>
+							<bitWidth>1</bitWidth>
+						</field>
+						<field>
+							<name>RFLUSH</name>
+							<description> SPI Rx FIFO Flush enable</description>
+							<bitOffset>12</bitOffset>
+							<bitWidth>1</bitWidth>
+						</field>
+						<field>
+							<name>CON</name>
+							<description> Continuous transfer enable</description>
+							<bitOffset>11</bitOffset>
+							<bitWidth>1</bitWidth>
+						</field>
+						<field>
+							<name>LOOPBACK</name>
+							<description> Loopback enable</description>
+							<bitOffset>10</bitOffset>
+							<bitWidth>1</bitWidth>
+						</field>
+						<field>
+							<name>OEN</name>
+							<description> Slave MISO output enable</description>
+							<bitOffset>9</bitOffset>
+							<bitWidth>1</bitWidth>
+						</field>
+						<field>
+							<name>RXOF</name>
+							<description> SPIRX overflow overwrite enable</description>
+							<bitOffset>8</bitOffset>
+							<bitWidth>1</bitWidth>
+						</field>
+						<field>
+							<name>ZEN</name>
+							<description> Transmit zeros enable</description>
+							<bitOffset>7</bitOffset>
+							<bitWidth>1</bitWidth>
+						</field>
+						<field>
+							<name>TIM</name>
+							<description> SPI transfer and interrupt mode</description>
+							<bitOffset>6</bitOffset>
+							<bitWidth>1</bitWidth>
+						</field>
+						<field>
+							<name>LSB</name>
+							<description> LSB first transfer enable</description>
+							<bitOffset>5</bitOffset>
+							<bitWidth>1</bitWidth>
+						</field>
+						<field>
+							<name>WOM</name>
+							<description> SPI Wired Or mode</description>
+							<bitOffset>4</bitOffset>
+							<bitWidth>1</bitWidth>
+						</field>
+						<field>
+							<name>CPOL</name>
+							<description> Serial Clock Polarity</description>
+							<bitOffset>3</bitOffset>
+							<bitWidth>1</bitWidth>
+						</field>
+						<field>
+							<name>CPHA</name>
+							<description> Serial clock phase mode</description>
+							<bitOffset>2</bitOffset>
+							<bitWidth>1</bitWidth>
+						</field>
+						<field>
+							<name>MASEN</name>
+							<description> Master mode enable</description>
+							<bitOffset>1</bitOffset>
+							<bitWidth>1</bitWidth>
+						</field>
+						<field>
+							<name>ENABLE</name>
+							<description> SPI enable</description>
+							<bitOffset>0</bitOffset>
+							<bitWidth>1</bitWidth>
+						</field>
+					</fields>
+				</register>
 
-	<register>
-		<name>SPIH0CON</name>
-		<description>SPIH SPI configuration</description>
-		<addressOffset>0x10</addressOffset>
-		<size>16</size>
-	</register>
+				<register>
+					<name>SPIDMA</name>
+					<description>SPIH SPI DMA enable</description>
+					<addressOffset>0x14</addressOffset>
+					<size>16</size>
+					<fields>
+						<field>
+							<name>IENRXDMA</name>
+							<description> Enable receive DMA request</description>
+							<bitOffset>2</bitOffset>
+							<bitWidth>1</bitWidth>
+						<enumeratedValues>
+							<enumeratedValue>
+								<description>Enable</description>
+								<name>ENABLE</name>
+								<value>1</value>
+							</enumeratedValue>
+							<enumeratedValue>
+								<description>Disable</description>							
+								<name>DISABLE</name>
+								<value>0</value>
+							</enumeratedValue>
+						</enumeratedValues>								
+						</field>
+						<field>
+							<name>IENTXDMA</name>
+							<description> Enable transmit DMA request</description>
+							<bitOffset>1</bitOffset>
+							<bitWidth>1</bitWidth>
+						<enumeratedValues>
+							<enumeratedValue>
+								<description>Enable</description>
+								<name>ENABLE</name>
+								<value>1</value>
+							</enumeratedValue>
+							<enumeratedValue>
+								<description>Disable</description>							
+								<name>DISABLE</name>
+								<value>0</value>
+							</enumeratedValue>
+						</enumeratedValues>								
+						</field>
+						<field>
+							<name>ENABLE</name>
+							<description> Enable DMA for data transfer</description>
+							<bitOffset>0</bitOffset>
+							<bitWidth>1</bitWidth>
+						<enumeratedValues>
+							<enumeratedValue>
+								<description>Enable</description>
+								<name>ENABLE</name>
+								<value>1</value>
+							</enumeratedValue>
+							<enumeratedValue>
+								<description>Disable</description>							
+								<name>DISABLE</name>
+								<value>0</value>
+							</enumeratedValue>
+						</enumeratedValues>								
+						</field>
+					</fields>
+				</register>
 
-	<register>
-		<name>SPIH0DMA</name>
-		<description>SPIH SPI DMA enable</description>
-		<addressOffset>0x14</addressOffset>
-		<size>16</size>
-	</register>
-
-	<register>
-		<name>SPIH0CNT</name>
-		<description>SPIH Transfer byte count</description>
-		<addressOffset>0x18</addressOffset>
-		<size>16</size>
-	</register>
-	</registers>
+				<register>
+					<name>SPICNT</name>
+					<description>SPIH Transfer byte count</description>
+					<addressOffset>0x18</addressOffset>
+					<size>16</size>
+					<fields>
+						<field>
+							<name>COUNT</name>
+							<description> Transfer byte count</description>
+							<bitOffset>0</bitOffset>
+							<bitWidth>8</bitWidth>
+						</field>
+					</fields>
+				</register>
+			</registers>
 	</peripheral>
 	
 	<peripheral>
