@@ -149,7 +149,7 @@ In the event that Third Party Software has only been provided to you in object c
 							<bitWidth>4</bitWidth>
 							<enumeratedValues>
 								<enumeratedValue>
-									<name>T2</name>
+									<name>WUT</name>
 									<description>- Wakeup Timer</description>
 									<value>0</value>
 								</enumeratedValue>
@@ -194,38 +194,34 @@ In the event that Third Party Software has only been provided to you in object c
 									<value>8</value>
 								</enumeratedValue>
 								<enumeratedValue>
-									<name>T3</name>
-									<description>- Watchdog timer</description>
+									<name>EXT8</name>
+									<description>- External interrupt 8</description>
 									<value>9</value>
 								</enumeratedValue>
+<!-- Value 10 is reserved -->
 								<enumeratedValue>
-									<name>T1</name>
-									<description>- Timer1</description>
-									<value>10</value>
-								</enumeratedValue>
-								<enumeratedValue>
-									<name>ADC0</name>
-									<description>- ADC0</description>
+									<name>CAPTOUCH</name>
+									<description>CapTouch</description>
 									<value>11</value>
 								</enumeratedValue>
 								<enumeratedValue>
-									<name>ADC1</name>
-									<description>- ADC1</description>
+									<name>WDT</name>
+									<description>WatchDog Timer</description>
 									<value>12</value>
 								</enumeratedValue>
 								<enumeratedValue>
-									<name>STEP</name>
-									<description>- STEP</description>
+									<name>FLASH</name>
+									<description>Flash Controller</description>
 									<value>13</value>
 								</enumeratedValue>
 								<enumeratedValue>
-									<name>DMADONE</name>
-									<description>DMA Done</description>
+									<name>TIMER1</name>
+									<description>Timer 1</description>
 									<value>14</value>
 								</enumeratedValue>
 								<enumeratedValue>
-									<name>FEE</name>
-									<description>- Flash controller</description>
+									<name>TIMER2</name>
+									<description>Timer 2</description>
 									<value>15</value>
 								</enumeratedValue>
 							</enumeratedValues>
@@ -337,20 +333,23 @@ In the event that Third Party Software has only been provided to you in object c
 							<bitWidth>2</bitWidth>
 							<enumeratedValues>
 								<enumeratedValue>
+									<description>If CLK source 0 or 1 Divide by 4 otherwise divide by 1</description>
 									<name>DIV1</name>
 									<value>0</value>
 								</enumeratedValue>
 								<enumeratedValue>
+									<description>Divide clock source by 16</description>								
 									<name>DIV16</name>
 									<value>1</value>
 								</enumeratedValue>
 								<enumeratedValue>
+									<description>Divide clock source by 256</description>								
 									<name>DIV256</name>
 									<value>2</value>
 								</enumeratedValue>
 								<enumeratedValue>
+									<description>Divide clock source by 32768</description>								
 									<name>DIV32768</name>
-									<description>- If the selected clock source is UCLK then this setting results in a prescaler of 4.</description>
 									<value>3</value>
 								</enumeratedValue>
 							</enumeratedValues>
@@ -365,11 +364,12 @@ In the event that Third Party Software has only been provided to you in object c
 					<fields>
 						<field>
 							<name>CAP</name>
-							<description>Clear captured event interrupt</description>
+							<description>Captured event interrupt</description>
 							<bitOffset>1</bitOffset>
 							<bitWidth>1</bitWidth>
 							<enumeratedValues>
 								<enumeratedValue>
+									<description>Clear Event interrupt</description>								
 									<name>CLR</name>
 									<value>1</value>
 								</enumeratedValue>
@@ -377,14 +377,20 @@ In the event that Third Party Software has only been provided to you in object c
 						</field>
 						<field>
 							<name>TMOUT</name>
-							<description>Clear timeout interrupt</description>
+							<description>timeout interrupt</description>
 							<bitOffset>0</bitOffset>
 							<bitWidth>1</bitWidth>
 							<enumeratedValues>
 								<enumeratedValue>
-									<name>CLR</name>
+									<description>Timeout occured</description>
+									<name>TRUE</name>
 									<value>1</value>
 								</enumeratedValue>
+								<enumeratedValue>
+									<description>No Timeout</description>								
+									<name>FALSE</name>
+									<value>0</value>
+								</enumeratedValue>								
 							</enumeratedValues>
 						</field>
 					</fields>
@@ -392,874 +398,6 @@ In the event that Third Party Software has only been provided to you in object c
 				<register>
 					<name>CAPTURE</name>
 					<description>Capture Register</description>
-					<addressOffset>0x10</addressOffset>
-					<size>16</size>			
-				</register>
-				<register>
-					<name>ALOAD</name>
-					<description>16-bit load value, asynchronous</description>
-					<addressOffset>0x14</addressOffset>
-					<size>16</size>
-				</register>
-				<register>
-					<name>ACURCNT</name>
-					<description>16-bit timer value, asynchronous</description>
-					<addressOffset>0x18</addressOffset>
-					<size>16</size>
-				</register>
-				<register>
-					<name>STATUS</name>
-					<description>Status</description>
-					<addressOffset>0x1C</addressOffset>
-					<size>16</size>				
-					<fields>
-						<field>
-							<name>PDOK</name>
-							<description>GPTI Sync</description>
-							<bitOffset>7</bitOffset>
-							<bitWidth>1</bitWidth>
-							<enumeratedValues>
-								<enumeratedValue>
-									<name>TRUE</name>
-									<value>1</value>
-								</enumeratedValue>
-								<enumeratedValue>
-									<name>FALSE</name>
-									<value>0</value>
-								</enumeratedValue>								
-							</enumeratedValues>								
-						</field>
-						<field>
-							<name>BUSY</name>
-							<description>Timer Busy</description>
-							<bitOffset>6</bitOffset>
-							<bitWidth>1</bitWidth>
-							<enumeratedValues>
-								<enumeratedValue>
-									<name>TRUE</name>
-									<value>1</value>
-								</enumeratedValue>
-								<enumeratedValue>
-									<name>FALSE</name>
-									<value>0</value>
-								</enumeratedValue>								
-							</enumeratedValues>	
-						</field>	
-						<field>
-							<name>CAP</name>
-							<description>Capture event pending</description>
-							<bitOffset>1</bitOffset>
-							<bitWidth>1</bitWidth>
-							<enumeratedValues>
-								<enumeratedValue>
-									<name>TRUE</name>
-									<value>1</value>
-								</enumeratedValue>
-								<enumeratedValue>
-									<name>FALSE</name>
-									<value>0</value>
-								</enumeratedValue>								
-							</enumeratedValues>							
-						</field>
-						<field>
-							<name>TMOUT</name>
-							<description>Time out event occurred</description>
-							<bitOffset>0</bitOffset>
-							<bitWidth>1</bitWidth>
-							<enumeratedValues>
-								<enumeratedValue>
-									<name>TRUE</name>
-									<value>1</value>
-								</enumeratedValue>
-								<enumeratedValue>
-									<name>FALSE</name>
-									<value>0</value>
-								</enumeratedValue>								
-							</enumeratedValues>								
-						</field>								
-					</fields>
-				</register>
-				<register>
-					<name>PWMCTL</name>
-					<description>PWM Control Register</description>
-					<addressOffset>0x20</addressOffset>
-					<size>16</size>  
-					<fields>
-						<field>
-							<name>IDLE_STATE</name>
-							<description>Idle Hi/Lo</description>
-							<bitOffset>1</bitOffset>
-							<bitWidth>1</bitWidth>
-							<enumeratedValues>
-								<enumeratedValue>
-									<name>TRUE</name>
-									<value>1</value>
-								</enumeratedValue>
-								<enumeratedValue>
-									<name>FALSE</name>
-									<value>0</value>
-								</enumeratedValue>								
-							</enumeratedValues>							
-						</field>
-						<field>
-							<name>MATCH_EN</name>
-							<description>High or Toggle</description>
-							<bitOffset>0</bitOffset>
-							<bitWidth>1</bitWidth>
-							<enumeratedValues>
-								<enumeratedValue>
-									<name>TRUE</name>
-									<value>1</value>
-								</enumeratedValue>
-								<enumeratedValue>
-									<name>FALSE</name>
-									<value>0</value>
-								</enumeratedValue>								
-							</enumeratedValues>								
-						</field>	
-					</fields>
-				</register>
-				<register>
-					<name>PWMMATCH</name>
-					<description>PWM Match Value</description>
-					<addressOffset>0x24</addressOffset>
-					<size>16</size>
-				</register>
-			</registers>
-		</peripheral>
-		<peripheral>
-			<name>ADI_GPT1</name>
-			<description>General Purpose Timer1</description>
-			<groupName>Timer1</groupName>
-			<baseAddress>0x40000400</baseAddress>
-			<addressBlock>
-				<offset>0</offset>
-				<size>0x28</size>
-				<usage>registers</usage>
-			</addressBlock>
-			<interrupt>
-				<description>Timer 1 Interrupt</description>
-				<name>TIMER1</name>
-				<value>12</value>
-			</interrupt>
-			<registers>
-				<register>
-					<name>LOAD</name>
-					<description>16-bit load value</description>
-					<addressOffset>0x00</addressOffset>
-					<size>16</size>
-				</register>
-				<register>
-					<name>CURCNT</name>
-					<description>16-bit timer value</description>
-					<addressOffset>0x04</addressOffset>
-					<size>16</size>					
-				</register>
-				<register>
-					<name>CTL</name>
-					<description>Control Register</description>
-					<addressOffset>0x08</addressOffset>
-					<size>16</size>
-					<fields>
-						<field>
-							<name>EVENTEN</name>
-							<description>Enable time capture of an event</description>
-							<bitOffset>12</bitOffset>
-							<bitWidth>1</bitWidth>
-							<enumeratedValues>
-								<enumeratedValue>
-									<description>Disable</description>								
-									<name>DIS</name>
-									<value>0</value>
-								</enumeratedValue>
-								<enumeratedValue>
-									<description>Enable</description>									
-									<name>EN</name>
-									<value>1</value>
-								</enumeratedValue>
-							</enumeratedValues>
-						</field>
-						<field>
-							<name>EVENT</name>
-							<description>Event Select, selects 1 of the available events.</description>
-							<bitOffset>8</bitOffset>
-							<bitWidth>4</bitWidth>
-							<enumeratedValues>
-								<enumeratedValue>
-									<name>T2</name>
-									<description>- Wakeup Timer</description>
-									<value>0</value>
-								</enumeratedValue>
-								<enumeratedValue>
-									<name>EXT0</name>
-									<description>- External interrupt 0</description>
-									<value>1</value>
-								</enumeratedValue>
-								<enumeratedValue>
-									<name>EXT1</name>
-									<description>- External interrupt 1</description>
-									<value>2</value>
-								</enumeratedValue>
-								<enumeratedValue>
-									<name>EXT2</name>
-									<description>- External interrupt 2</description>
-									<value>3</value>
-								</enumeratedValue>
-								<enumeratedValue>
-									<name>EXT3</name>
-									<description>- External interrupt 3</description>
-									<value>4</value>
-								</enumeratedValue>
-								<enumeratedValue>
-									<name>EXT4</name>
-									<description>- External interrupt 4</description>
-									<value>5</value>
-								</enumeratedValue>
-								<enumeratedValue>
-									<name>EXT5</name>
-									<description>- External interrupt 5</description>
-									<value>6</value>
-								</enumeratedValue>
-								<enumeratedValue>
-									<name>EXT6</name>
-									<description>- External interrupt 6</description>
-									<value>7</value>
-								</enumeratedValue>
-								<enumeratedValue>
-									<name>EXT7</name>
-									<description>- External interrupt 7</description>
-									<value>8</value>
-								</enumeratedValue>
-								<enumeratedValue>
-									<name>T3</name>
-									<description>- Watchdog timer</description>
-									<value>9</value>
-								</enumeratedValue>
-								<enumeratedValue>
-									<name>T1</name>
-									<description>- Timer1</description>
-									<value>10</value>
-								</enumeratedValue>
-								<enumeratedValue>
-									<name>ADC0</name>
-									<description>- ADC0</description>
-									<value>11</value>
-								</enumeratedValue>
-								<enumeratedValue>
-									<name>ADC1</name>
-									<description>- ADC1</description>
-									<value>12</value>
-								</enumeratedValue>
-								<enumeratedValue>
-									<name>STEP</name>
-									<description>- STEP</description>
-									<value>13</value>
-								</enumeratedValue>
-								<enumeratedValue>
-									<name>DMADONE</name>
-									<value>14</value>
-								</enumeratedValue>
-								<enumeratedValue>
-									<name>FEE</name>
-									<description>- Flash controller</description>
-									<value>15</value>
-								</enumeratedValue>
-							</enumeratedValues>
-						</field>
-						<field>
-							<name>RLD</name>
-							<description>Timer reload on write to clear register</description>
-							<bitOffset>7</bitOffset>
-							<bitWidth>1</bitWidth>
-							<enumeratedValues>
-								<enumeratedValue>
-									<description>Disable</description>								
-									<name>DIS</name>
-									<value>0</value>
-								</enumeratedValue>
-								<enumeratedValue>
-									<description>Enable</description>									
-									<name>EN</name>
-									<value>1</value>
-								</enumeratedValue>
-							</enumeratedValues>
-						</field>
-						<field>
-							<name>CLK</name>
-							<description>Clock Select</description>
-							<bitOffset>5</bitOffset>
-							<bitWidth>2</bitWidth>
-							<enumeratedValues>
-								<enumeratedValue>
-									<name>UCLK</name>
-									<description>- System Clock</description>
-									<value>0</value>
-								</enumeratedValue>
-								<enumeratedValue>
-									<name>PCLK</name>
-									<description>- Peripheral clock</description>
-									<value>1</value>
-								</enumeratedValue>
-								<enumeratedValue>
-									<name>LFOSC</name>
-									<description>- Internal 32 kHz Oscillator</description>
-									<value>2</value>
-								</enumeratedValue>
-								<enumeratedValue>
-									<name>LFXTAL</name>
-									<description>- External 32 kHz crystal</description>
-									<value>3</value>
-								</enumeratedValue>
-							</enumeratedValues>
-						</field>
-						<field>
-							<name>ENABLE</name>
-							<description>Enable</description>
-							<bitOffset>4</bitOffset>
-							<bitWidth>1</bitWidth>
-							<enumeratedValues>
-								<enumeratedValue>
-									<description>Disable</description>								
-									<name>DIS</name>
-									<value>0</value>
-								</enumeratedValue>
-								<enumeratedValue>
-									<description>Enable</description>									
-									<name>EN</name>
-									<value>1</value>
-								</enumeratedValue>
-							</enumeratedValues>
-						</field>
-						<field>
-							<name>MOD</name>
-							<description>Mode</description>
-							<bitOffset>3</bitOffset>
-							<bitWidth>1</bitWidth>
-							<enumeratedValues>
-								<enumeratedValue>
-									<name>FREERUN</name>
-									<value>0</value>
-								</enumeratedValue>
-								<enumeratedValue>
-									<name>PERIODIC</name>
-									<value>1</value>
-								</enumeratedValue>
-							</enumeratedValues>
-						</field>
-						<field>
-							<name>UP</name>
-							<description>Count-up</description>
-							<bitOffset>2</bitOffset>
-							<bitWidth>1</bitWidth>
-							<enumeratedValues>
-								<enumeratedValue>
-									<description>Disable</description>								
-									<name>DIS</name>
-									<value>0</value>
-								</enumeratedValue>
-								<enumeratedValue>
-									<description>Enable</description>									
-									<name>EN</name>
-									<value>1</value>
-								</enumeratedValue>
-							</enumeratedValues>
-						</field>
-						<field>
-							<name>PRE</name>
-							<description>Prescaler</description>
-							<bitOffset>0</bitOffset>
-							<bitWidth>2</bitWidth>
-							<enumeratedValues>
-								<enumeratedValue>
-									<name>DIV1</name>
-									<value>0</value>
-								</enumeratedValue>
-								<enumeratedValue>
-									<name>DIV16</name>
-									<value>1</value>
-								</enumeratedValue>
-								<enumeratedValue>
-									<name>DIV256</name>
-									<value>2</value>
-								</enumeratedValue>
-								<enumeratedValue>
-									<name>DIV32768</name>
-									<description>- If the selected clock source is UCLK then this setting results in a prescaler of 4.</description>
-									<value>3</value>
-								</enumeratedValue>
-							</enumeratedValues>
-						</field>
-					</fields>
-				</register>
-				<register>
-					<name>CLRINT</name>
-					<description>Clear interrupt register</description>
-					<addressOffset>0x0C</addressOffset>
-					<size>16</size>
-					<fields>
-						<field>
-							<name>CAP</name>
-							<description>Clear captured event interrupt</description>
-							<bitOffset>1</bitOffset>
-							<bitWidth>1</bitWidth>
-							<enumeratedValues>
-								<enumeratedValue>
-									<name>CLR</name>
-									<value>1</value>
-								</enumeratedValue>
-							</enumeratedValues>
-						</field>
-						<field>
-							<name>TMOUT</name>
-							<description>Clear timeout interrupt</description>
-							<bitOffset>0</bitOffset>
-							<bitWidth>1</bitWidth>
-							<enumeratedValues>
-								<enumeratedValue>
-									<name>CLR</name>
-									<value>1</value>
-								</enumeratedValue>
-							</enumeratedValues>
-						</field>
-					</fields>
-				</register>
-				<register>
-					<name>CAPTURE</name>
-					<description>Capture</description>
-					<addressOffset>0x10</addressOffset>
-					<size>16</size>			
-				</register>
-				<register>
-					<name>ALOAD</name>
-					<description>16-bit load value, asynchronous</description>
-					<addressOffset>0x14</addressOffset>
-					<size>16</size>
-				</register>
-				<register>
-					<name>ACURCNT</name>
-					<description>16-bit timer value, asynchronous</description>
-					<addressOffset>0x18</addressOffset>
-					<size>16</size>
-				</register>
-				<register>
-					<name>STATUS</name>
-					<description>Status Register</description>
-					<addressOffset>0x1C</addressOffset>
-					<size>16</size>				
-					<fields>
-						<field>
-							<name>PDOK</name>
-							<description>GPTI Sync</description>
-							<bitOffset>7</bitOffset>
-							<bitWidth>1</bitWidth>
-							<enumeratedValues>
-								<enumeratedValue>
-									<name>TRUE</name>
-									<value>1</value>
-								</enumeratedValue>
-								<enumeratedValue>
-									<name>FALSE</name>
-									<value>0</value>
-								</enumeratedValue>								
-							</enumeratedValues>	
-							</field>
-						<field>
-							<name>BUSY</name>
-							<description>Timer Busy</description>
-							<bitOffset>6</bitOffset>
-							<bitWidth>1</bitWidth>
-							<enumeratedValues>
-								<enumeratedValue>
-									<name>TRUE</name>
-									<value>1</value>
-								</enumeratedValue>
-								<enumeratedValue>
-									<name>FALSE</name>
-									<value>0</value>
-								</enumeratedValue>								
-							</enumeratedValues>	
-							</field>	
-						<field>
-							<name>CAP</name>
-							<description>Capture event pending</description>
-							<bitOffset>1</bitOffset>
-							<bitWidth>1</bitWidth>
-							<enumeratedValues>
-								<enumeratedValue>
-									<name>TRUE</name>
-									<value>1</value>
-								</enumeratedValue>
-								<enumeratedValue>
-									<name>FALSE</name>
-									<value>0</value>
-								</enumeratedValue>								
-							</enumeratedValues>								
-						</field>
-						<field>
-							<name>TMOUT</name>
-							<description>Timer timeout</description>
-							<bitOffset>0</bitOffset>
-							<bitWidth>1</bitWidth>
-							<enumeratedValues>
-								<enumeratedValue>
-									<name>TRUE</name>
-									<value>1</value>
-								</enumeratedValue>
-								<enumeratedValue>
-									<name>FALSE</name>
-									<value>0</value>
-								</enumeratedValue>								
-							</enumeratedValues>								
-						</field>								
-					</fields>
-				</register>
-				<register>
-					<name>PWMCTL</name>
-					<description>PWM Control Register</description>
-					<addressOffset>0x20</addressOffset>
-					<size>16</size>  
-					<fields>
-						<field>
-							<name>IDLE_STATE</name>
-							<description>Idle Hi/Lo</description>
-							<bitOffset>1</bitOffset>
-							<bitWidth>1</bitWidth>
-							<enumeratedValues>
-								<enumeratedValue>
-									<name>TRUE</name>
-									<value>1</value>
-								</enumeratedValue>
-								<enumeratedValue>
-									<name>FALSE</name>
-									<value>0</value>
-								</enumeratedValue>								
-							</enumeratedValues>								
-						</field>
-						<field>
-							<name>MATCH_EN</name>
-							<description>High or Toggle</description>
-							<bitOffset>0</bitOffset>
-							<bitWidth>1</bitWidth>
-							<enumeratedValues>
-								<enumeratedValue>
-									<name>TRUE</name>
-									<value>1</value>
-								</enumeratedValue>
-								<enumeratedValue>
-									<name>FALSE</name>
-									<value>0</value>
-								</enumeratedValue>								
-							</enumeratedValues>	
-							</field>	
-					</fields>
-				</register>
-				<register>
-					<name>PWMMATCH</name>
-					<description>PWM Match Value</description>
-					<addressOffset>0x24</addressOffset>
-					<size>16</size>
-				</register>
-			</registers>
-		</peripheral>
-		<peripheral>
-			<name>ADI_GPT2</name>
-			<description>General Purpose Timer2 </description>
-			<groupName>T2</groupName>
-			<baseAddress>0x40000800</baseAddress>
-			<addressBlock>
-				<offset>0</offset>
-				<size>0x28</size>
-				<usage>registers</usage>
-			</addressBlock>
-		<interrupt>
-			<name>TIMER2</name>
-			<description>TIMER 2 interrupt</description>
-			<value>40</value>
-		</interrupt>	
-			<registers>
-				<register>
-					<name>LOAD</name>
-					<description>16-bit load value</description>
-					<addressOffset>0x00</addressOffset>
-					<size>16</size>
-				</register>
-				<register>
-					<name>CURCNT</name>
-					<description>16-bit timer value</description>
-					<addressOffset>0x04</addressOffset>
-					<size>16</size>					
-				</register>
-				<register>
-					<name>CTL</name>
-					<description>Control Register</description>
-					<addressOffset>0x08</addressOffset>
-					<size>16</size>
-					<fields>
-						<field>
-							<name>EVENTEN</name>
-							<description>Enable time capture of an event</description>
-							<bitOffset>12</bitOffset>
-							<bitWidth>1</bitWidth>
-							<enumeratedValues>
-								<enumeratedValue>
-									<description>Disable</description>								
-									<name>DIS</name>
-									<value>0</value>
-								</enumeratedValue>
-								<enumeratedValue>
-									<description>Enable</description>									
-									<name>EN</name>
-									<value>1</value>
-								</enumeratedValue>
-							</enumeratedValues>
-						</field>
-						<field>
-							<name>EVENT</name>
-							<description>Event Select, selects 1 of the available events.</description>
-							<bitOffset>8</bitOffset>
-							<bitWidth>4</bitWidth>
-							<enumeratedValues>
-								<enumeratedValue>
-									<name>WUT</name>
-									<description>- Wakeup Timer</description>
-									<value>0</value>
-								</enumeratedValue>
-								<enumeratedValue>
-									<name>EXT0</name>
-									<description>- External interrupt 0</description>
-									<value>1</value>
-								</enumeratedValue>
-								<enumeratedValue>
-									<name>EXT1</name>
-									<description>- External interrupt 1</description>
-									<value>2</value>
-								</enumeratedValue>
-								<enumeratedValue>
-									<name>EXT2</name>
-									<description>- External interrupt 2</description>
-									<value>3</value>
-								</enumeratedValue>
-								<enumeratedValue>
-									<name>EXT3</name>
-									<description>- External interrupt 3</description>
-									<value>4</value>
-								</enumeratedValue>
-								<enumeratedValue>
-									<name>EXT4</name>
-									<description>- External interrupt 4</description>
-									<value>5</value>
-								</enumeratedValue>
-								<enumeratedValue>
-									<name>EXT5</name>
-									<description>- External interrupt 5</description>
-									<value>6</value>
-								</enumeratedValue>
-								<enumeratedValue>
-									<name>EXT6</name>
-									<description>- External interrupt 6</description>
-									<value>7</value>
-								</enumeratedValue>
-								<enumeratedValue>
-									<name>EXT7</name>
-									<description>- External interrupt 7</description>
-									<value>8</value>
-								</enumeratedValue>
-								<enumeratedValue>
-									<name>T3</name>
-									<description>- Watchdog timer</description>
-									<value>9</value>
-								</enumeratedValue>
-								<enumeratedValue>
-									<name>T1</name>
-									<description>- Timer1</description>
-									<value>10</value>
-								</enumeratedValue>
-								<enumeratedValue>
-									<name>ADC0</name>
-									<description>- ADC0</description>
-									<value>11</value>
-								</enumeratedValue>
-								<enumeratedValue>
-									<name>ADC1</name>
-									<description>- ADC1</description>
-									<value>12</value>
-								</enumeratedValue>
-								<enumeratedValue>
-									<name>STEP</name>
-									<description>- STEP</description>
-									<value>13</value>
-								</enumeratedValue>
-								<enumeratedValue>
-									<name>DMADONE</name>
-									<value>14</value>
-								</enumeratedValue>
-								<enumeratedValue>
-									<name>FEE</name>
-									<description>- Flash controller</description>
-									<value>15</value>
-								</enumeratedValue>
-							</enumeratedValues>
-						</field>
-						<field>
-							<name>RLD</name>
-							<description>Timer reload on write to clear register</description>
-							<bitOffset>7</bitOffset>
-							<bitWidth>1</bitWidth>
-							<enumeratedValues>
-								<enumeratedValue>
-									<description>Disable</description>								
-									<name>DIS</name>
-									<value>0</value>
-								</enumeratedValue>
-								<enumeratedValue>
-									<description>Enable</description>									
-									<name>EN</name>
-									<value>1</value>
-								</enumeratedValue>
-							</enumeratedValues>
-						</field>
-						<field>
-							<name>CLK</name>
-							<description>Clock Select</description>
-							<bitOffset>5</bitOffset>
-							<bitWidth>2</bitWidth>
-							<enumeratedValues>
-								<enumeratedValue>
-									<name>UCLK</name>
-									<description>- System Clock</description>
-									<value>0</value>
-								</enumeratedValue>
-								<enumeratedValue>
-									<name>PCLK</name>
-									<description>- Peripheral clock</description>
-									<value>1</value>
-								</enumeratedValue>
-								<enumeratedValue>
-									<name>LFOSC</name>
-									<description>- Internal 32 kHz Oscillator</description>
-									<value>2</value>
-								</enumeratedValue>
-								<enumeratedValue>
-									<name>LFXTAL</name>
-									<description>- External 32 kHz crystal</description>
-									<value>3</value>
-								</enumeratedValue>
-							</enumeratedValues>
-						</field>
-						<field>
-							<name>ENABLE</name>
-							<description>Enable</description>
-							<bitOffset>4</bitOffset>
-							<bitWidth>1</bitWidth>
-							<enumeratedValues>
-								<enumeratedValue>
-									<description>Disable</description>								
-									<name>DIS</name>
-									<value>0</value>
-								</enumeratedValue>
-								<enumeratedValue>
-									<description>Enable</description>									
-									<name>EN</name>
-									<value>1</value>
-								</enumeratedValue>
-							</enumeratedValues>
-						</field>
-						<field>
-							<name>MOD</name>
-							<description>Mode</description>
-							<bitOffset>3</bitOffset>
-							<bitWidth>1</bitWidth>
-							<enumeratedValues>
-								<enumeratedValue>
-									<name>FREERUN</name>
-									<value>0</value>
-								</enumeratedValue>
-								<enumeratedValue>
-									<name>PERIODIC</name>
-									<value>1</value>
-								</enumeratedValue>
-							</enumeratedValues>
-						</field>
-						<field>
-							<name>UP</name>
-							<description>Count-up</description>
-							<bitOffset>2</bitOffset>
-							<bitWidth>1</bitWidth>
-							<enumeratedValues>
-								<enumeratedValue>
-									<description>Disable</description>							
-									<name>DIS</name>
-									<value>0</value>
-								</enumeratedValue>
-								<enumeratedValue>
-									<description>Enable</description>									
-									<name>EN</name>
-									<value>1</value>
-								</enumeratedValue>
-							</enumeratedValues>
-						</field>
-						<field>
-							<name>PRE</name>
-							<description>Prescaler</description>
-							<bitOffset>0</bitOffset>
-							<bitWidth>2</bitWidth>
-							<enumeratedValues>
-								<enumeratedValue>
-									<name>DIV1</name>
-									<value>0</value>
-								</enumeratedValue>
-								<enumeratedValue>
-									<name>DIV16</name>
-									<value>1</value>
-								</enumeratedValue>
-								<enumeratedValue>
-									<name>DIV256</name>
-									<value>2</value>
-								</enumeratedValue>
-								<enumeratedValue>
-									<name>DIV32768</name>
-									<description>- If the selected clock source is UCLK then this setting results in a prescaler of 4.</description>
-									<value>3</value>
-								</enumeratedValue>
-							</enumeratedValues>
-						</field>
-					</fields>
-				</register>
-				<register>
-					<name>CLRINT</name>
-					<description>Clear Interrupt register</description>
-					<addressOffset>0x0C</addressOffset>
-					<size>16</size>
-					<fields>
-						<field>
-							<name>CAP</name>
-							<description>Clear captured event interrupt</description>
-							<bitOffset>1</bitOffset>
-							<bitWidth>1</bitWidth>
-							<enumeratedValues>
-								<enumeratedValue>
-									<name>CLR</name>
-									<value>1</value>
-								</enumeratedValue>
-							</enumeratedValues>
-						</field>
-						<field>
-							<name>TMOUT</name>
-							<description>Clear timeout interrupt</description>
-							<bitOffset>0</bitOffset>
-							<bitWidth>1</bitWidth>
-							<enumeratedValues>
-								<enumeratedValue>
-									<name>CLR</name>
-									<value>1</value>
-								</enumeratedValue>
-							</enumeratedValues>
-						</field>
-					</fields>
-				</register>
-				<register>
-					<name>CAPTURE</name>
-					<description>Capture</description>
 					<addressOffset>0x10</addressOffset>
 					<size>16</size>			
 				</register>
@@ -1333,26 +471,26 @@ In the event that Third Party Software has only been provided to you in object c
 									<name>FALSE</name>
 									<value>0</value>
 								</enumeratedValue>								
-							</enumeratedValues>	
-							</field>
+							</enumeratedValues>							
+						</field>
 						<field>
 							<name>TMOUT</name>
-							<description>Timer timeout</description>
+							<description>Time out event occurred</description>
 							<bitOffset>0</bitOffset>
 							<bitWidth>1</bitWidth>
 							<enumeratedValues>
 								<enumeratedValue>
-									<description>Timeout occured</description>
+									<description>Timeout Event occurred</description>								
 									<name>TRUE</name>
 									<value>1</value>
 								</enumeratedValue>
 								<enumeratedValue>
-									<description>No Timeout</description>								
+									<description>Waiting for Timeout</description>								
 									<name>FALSE</name>
 									<value>0</value>
 								</enumeratedValue>								
-							</enumeratedValues>	
-							</field>								
+							</enumeratedValues>								
+						</field>								
 					</fields>
 				</register>
 				<register>
@@ -1368,17 +506,17 @@ In the event that Third Party Software has only been provided to you in object c
 							<bitWidth>1</bitWidth>
 							<enumeratedValues>
 								<enumeratedValue>
-								    <description>Idle High</description>
-									<name>IDLE_HIGH</name>
+									<description>Idle High</description>								
+									<name>HIGH</name>
 									<value>1</value>
 								</enumeratedValue>
 								<enumeratedValue>
-								    <description>Idle Low</description>
-									<name>IDLE LOW</name>
+									<description>Idle Low</description>								
+									<name>LOW</name>
 									<value>0</value>
 								</enumeratedValue>								
-							</enumeratedValues>	
-							</field>
+							</enumeratedValues>							
+						</field>
 						<field>
 							<name>MATCH_EN</name>
 							<description>High or Toggle</description>
@@ -1386,17 +524,17 @@ In the event that Third Party Software has only been provided to you in object c
 							<bitWidth>1</bitWidth>
 							<enumeratedValues>
 								<enumeratedValue>
-									<description>PWM Match mode</description>
+									<description>PWM in Match Mode</description>
 									<name>MATCH</name>
 									<value>1</value>
 								</enumeratedValue>
 								<enumeratedValue>
-									<description>PWM Toggle mode</description>								
+									<description>PWM in Toggle Mode</description>								
 									<name>TOGGLE</name>
 									<value>0</value>
 								</enumeratedValue>								
-							</enumeratedValues>	
-							</field>	
+							</enumeratedValues>								
+						</field>	
 					</fields>
 				</register>
 				<register>
@@ -1407,6 +545,955 @@ In the event that Third Party Software has only been provided to you in object c
 				</register>
 			</registers>
 		</peripheral>
+	<!--
+		<peripheral derived from ADI_GPT0>
+			<name>Test_GPT</name>
+			<baseAddress>0x80000000</baseAddress>
+		</peripheral>
+-->		
+		<peripheral>
+			<name>ADI_GPT1</name>
+			<description>General Purpose Timer1</description>
+			<groupName>Timer1</groupName>
+			<baseAddress>0x40000400</baseAddress>
+			<addressBlock>
+				<offset>0</offset>
+				<size>0x28</size>
+				<usage>registers</usage>
+			</addressBlock>
+			<interrupt>
+				<description>Timer 1 Interrupt</description>
+				<name>TIMER1</name>
+				<value>12</value>
+			</interrupt>
+			<registers>	
+				<register>
+					<name>LOAD</name>
+					<description>16-bit load value</description>
+					<addressOffset>0x00</addressOffset>
+					<size>16</size>						
+				</register>
+				<register>
+					<name>CURCNT</name>
+					<description>16-bit timer value. read only.</description>
+					<addressOffset>0x04</addressOffset>
+					<size>16</size>					
+				</register>
+				<register>
+					<name>CTL</name>
+					<description>Control Register</description>
+					<addressOffset>0x08</addressOffset>
+					<size>16</size>
+					<fields>
+						<field>
+							<name>EVENTEN</name>
+							<description>Enable/Disable event time capture</description>
+							<bitOffset>12</bitOffset>
+							<bitWidth>1</bitWidth>
+							<enumeratedValues>
+								<enumeratedValue>
+									<description>Disable</description>
+									<name>DIS</name>
+									<value>0</value>
+								</enumeratedValue>
+								<enumeratedValue>
+									<description>Enable</description>								
+									<name>EN</name>
+									<value>1</value>
+								</enumeratedValue>
+							</enumeratedValues>
+						</field>
+						<field>
+							<name>EVENT</name>
+							<description>Event Select, selects 1 of the available events.</description>
+							<bitOffset>8</bitOffset>
+							<bitWidth>4</bitWidth>
+							<enumeratedValues>
+								<enumeratedValue>
+									<name>UART</name>
+									<description>Uart</description>
+									<value>0</value>
+								</enumeratedValue>
+								<enumeratedValue>
+									<name>SPI0</name>
+									<description>SPI 0</description>
+									<value>1</value>
+								</enumeratedValue>
+								<enumeratedValue>
+									<name>SPI1</name>
+									<description>SPI 1</description>
+									<value>2</value>
+								</enumeratedValue>
+								<enumeratedValue>
+									<name>SPIH</name>
+									<description>SPI H</description>
+									<value>3</value>
+								</enumeratedValue>
+								<enumeratedValue>
+									<name>I2CSLAVE</name>
+									<description>I2C Slave</description>
+									<value>4</value>
+								</enumeratedValue>
+								<enumeratedValue>
+									<name>I2CMASTER</name>
+									<description>I2C Master</description>
+									<value>5</value>
+								</enumeratedValue>
+								<enumeratedValue>
+									<name>I2S</name>
+									<description>I2S</description>
+									<value>6</value>
+								</enumeratedValue>
+								<enumeratedValue>
+									<name>USB</name>
+									<description>USB</description>
+									<value>7</value>
+								</enumeratedValue>
+								<enumeratedValue>
+									<name>USBDMA</name>
+									<description>USB DMA</description>
+									<value>8</value>
+								</enumeratedValue>
+								<enumeratedValue>
+									<name>AFECAPT</name>
+									<description>AFE Capture</description>
+									<value>9</value>
+								</enumeratedValue>
+								<enumeratedValue>
+									<name>BEEPER</name>
+									<description>Beeper</description>
+									<value>10</value>
+								</enumeratedValue>
+								<enumeratedValue>
+									<name>DMAERR</name>
+									<description>DMA Error</description>
+									<value>11</value>
+								</enumeratedValue>
+								<enumeratedValue>
+									<name>DMADONE</name>
+									<description>DMA DONE any channel</description>
+									<value>12</value>
+								</enumeratedValue>
+								<enumeratedValue>
+									<name>GPFLASH</name>
+									<description>GP Flash Controller</description>
+									<value>13</value>
+								</enumeratedValue>
+								<enumeratedValue>
+									<name>TIMER0</name>
+									<description>Timer 0</description>
+									<value>14</value>
+								</enumeratedValue>
+								<enumeratedValue>
+									<name>TIMER2</name>
+									<description>Timer 2</description>
+									<value>15</value>
+								</enumeratedValue>
+							</enumeratedValues>
+						</field>
+						<field>
+							<name>RLD</name>
+							<description>Timer reload on write to clear register</description>
+							<bitOffset>7</bitOffset>
+							<bitWidth>1</bitWidth>
+							<enumeratedValues>
+								<enumeratedValue>
+									<description>Disable</description>
+									<name>DIS</name>
+									<value>0</value>
+								</enumeratedValue>
+								<enumeratedValue>
+									<description>Enable</description>									
+									<name>EN</name>
+									<value>1</value>
+								</enumeratedValue>
+							</enumeratedValues>
+						</field>
+						<field>
+							<name>CLK</name>
+							<description>Clock Select</description>
+							<bitOffset>5</bitOffset>
+							<bitWidth>2</bitWidth>
+							<enumeratedValues>
+								<enumeratedValue>
+									<name>UCLK</name>
+									<description>- System Clock</description>
+									<value>0</value>
+								</enumeratedValue>
+								<enumeratedValue>
+									<name>PCLK</name>
+									<description>- Peripheral clock</description>
+									<value>1</value>
+								</enumeratedValue>
+								<enumeratedValue>
+									<name>LFOSC</name>
+									<description>- Internal 32 kHz Oscillator</description>
+									<value>2</value>
+								</enumeratedValue>
+								<enumeratedValue>
+									<name>LFXTAL</name>
+									<description>- External 32 kHz crystal</description>
+									<value>3</value>
+								</enumeratedValue>
+							</enumeratedValues>
+						</field>
+						<field>
+							<name>ENABLE</name>
+							<description>Enable</description>
+							<bitOffset>4</bitOffset>
+							<bitWidth>1</bitWidth>
+							<enumeratedValues>
+								<enumeratedValue>
+									<description>Disable</description>
+									<name>DIS</name>
+									<value>0</value>
+								</enumeratedValue>
+								<enumeratedValue>
+									<description>Enable</description>									
+									<name>EN</name>
+									<value>1</value>
+								</enumeratedValue>
+							</enumeratedValues>
+						</field>
+						<field>
+							<name>MOD</name>
+							<description>Mode</description>
+							<bitOffset>3</bitOffset>
+							<bitWidth>1</bitWidth>
+							<enumeratedValues>
+								<enumeratedValue>
+									<description>Timer runs free</description>																	<description>Enable</description>	<description>Enable</description>	
+									<name>FREERUN</name>
+									<value>0</value>
+								</enumeratedValue>
+								<enumeratedValue>
+									<description>Timer is periodic</description>
+									<name>PERIODIC</name>
+									<value>1</value>
+								</enumeratedValue>
+							</enumeratedValues>
+						</field>
+						<field>
+							<name>UP</name>
+							<description>Count-up</description>
+							<bitOffset>2</bitOffset>
+							<bitWidth>1</bitWidth>
+							<enumeratedValues>
+								<enumeratedValue>
+									<description>Disable</description>								
+									<name>DIS</name>
+									<value>0</value>
+								</enumeratedValue>
+								<enumeratedValue>
+									<description>Enable</description>									
+									<name>EN</name>
+									<value>1</value>
+								</enumeratedValue>
+							</enumeratedValues>
+						</field>
+						<field>
+							<name>PRE</name>
+							<description>Prescaler</description>
+							<bitOffset>0</bitOffset>
+							<bitWidth>2</bitWidth>
+							<enumeratedValues>
+								<enumeratedValue>
+									<description>If CLK source 0 or 1 Divide by 4 otherwise divide by 1</description>
+									<name>DIV1</name>
+									<value>0</value>
+								</enumeratedValue>
+								<enumeratedValue>
+									<description>Divide clock source by 16</description>								
+									<name>DIV16</name>
+									<value>1</value>
+								</enumeratedValue>
+								<enumeratedValue>
+									<description>Divide clock source by 256</description>								
+									<name>DIV256</name>
+									<value>2</value>
+								</enumeratedValue>
+								<enumeratedValue>
+									<description>Divide clock source by 32768</description>								
+									<name>DIV32768</name>
+									<value>3</value>
+								</enumeratedValue>
+							</enumeratedValues>
+						</field>
+					</fields>
+				</register>
+				<register>
+					<name>CLRINT</name>
+					<description>Clear interrupt register</description>
+					<addressOffset>0x0C</addressOffset>
+					<size>16</size>
+					<fields>
+						<field>
+							<name>CAP</name>
+							<description>Captured event interrupt</description>
+							<bitOffset>1</bitOffset>
+							<bitWidth>1</bitWidth>
+							<enumeratedValues>
+								<enumeratedValue>
+									<description>Clear Event interrupt</description>								
+									<name>CLR</name>
+									<value>1</value>
+								</enumeratedValue>
+							</enumeratedValues>
+						</field>
+						<field>
+							<name>TMOUT</name>
+							<description>timeout interrupt</description>
+							<bitOffset>0</bitOffset>
+							<bitWidth>1</bitWidth>
+							<enumeratedValues>
+								<enumeratedValue>
+									<description>Timeout occured</description>
+									<name>TRUE</name>
+									<value>1</value>
+								</enumeratedValue>
+								<enumeratedValue>
+									<description>No Timeout</description>								
+									<name>FALSE</name>
+									<value>0</value>
+								</enumeratedValue>								
+							</enumeratedValues>
+						</field>
+					</fields>
+				</register>
+				<register>
+					<name>CAPTURE</name>
+					<description>Capture Register</description>
+					<addressOffset>0x10</addressOffset>
+					<size>16</size>			
+				</register>
+				<register>
+					<name>ALOAD</name>
+					<description>16-bit load value, asynchronous</description>
+					<addressOffset>0x14</addressOffset>
+					<size>16</size>
+				</register>
+				<register>
+					<name>ACURCNT</name>
+					<description>16-bit timer value, asynchronous</description>
+					<addressOffset>0x18</addressOffset>
+					<size>16</size>
+				</register>
+				<register>
+					<name>STATUS</name>
+					<description>Status</description>
+					<addressOffset>0x1C</addressOffset>
+					<size>16</size>				
+					<fields>
+						<field>
+							<name>PDOK</name>
+							<description>GPTI Sync</description>
+							<bitOffset>7</bitOffset>
+							<bitWidth>1</bitWidth>
+							<enumeratedValues>
+								<enumeratedValue>
+									<description>Update occuring in Timer clock domain</description>							
+									<name>TRUE</name>
+									<value>1</value>
+								</enumeratedValue>
+								<enumeratedValue>
+									<description>Interrupt cleared </description>								
+									<name>FALSE</name>
+									<value>0</value>
+								</enumeratedValue>								
+							</enumeratedValues>								
+						</field>
+						<field>
+							<name>BUSY</name>
+							<description>Timer Busy</description>
+							<bitOffset>6</bitOffset>
+							<bitWidth>1</bitWidth>
+							<enumeratedValues>
+								<enumeratedValue>
+									<description>Not Ready</description>
+									<name>TRUE</name>
+									<value>1</value>
+								</enumeratedValue>
+								<enumeratedValue>
+									<description>Ready for Commands</description>
+									<name>FALSE</name>
+									<value>0</value>
+								</enumeratedValue>								
+							</enumeratedValues>	
+						</field>	
+						<field>
+							<name>CAP</name>
+							<description>Capture event pending</description>
+							<bitOffset>1</bitOffset>
+							<bitWidth>1</bitWidth>
+							<enumeratedValues>
+								<enumeratedValue>
+									<description>Capture Pending</description>
+									<name>TRUE</name>
+									<value>1</value>
+								</enumeratedValue>
+								<enumeratedValue>
+									<description>No Capture</description>
+									<name>FALSE</name>
+									<value>0</value>
+								</enumeratedValue>								
+							</enumeratedValues>							
+						</field>
+						<field>
+							<name>TMOUT</name>
+							<description>Time out event occurred</description>
+							<bitOffset>0</bitOffset>
+							<bitWidth>1</bitWidth>
+							<enumeratedValues>
+								<enumeratedValue>
+									<description>Timeout Event occurred</description>								
+									<name>TRUE</name>
+									<value>1</value>
+								</enumeratedValue>
+								<enumeratedValue>
+									<description>Waiting for Timeout</description>								
+									<name>FALSE</name>
+									<value>0</value>
+								</enumeratedValue>								
+							</enumeratedValues>								
+						</field>								
+					</fields>
+				</register>
+				<register>
+					<name>PWMCTL</name>
+					<description>PWM Control Register</description>
+					<addressOffset>0x20</addressOffset>
+					<size>16</size>  
+					<fields>
+						<field>
+							<name>IDLE_STATE</name>
+							<description>Idle Hi/Lo</description>
+							<bitOffset>1</bitOffset>
+							<bitWidth>1</bitWidth>
+							<enumeratedValues>
+								<enumeratedValue>
+									<description>Idle High</description>								
+									<name>HIGH</name>
+									<value>1</value>
+								</enumeratedValue>
+								<enumeratedValue>
+									<description>Idle Low</description>								
+									<name>LOW</name>
+									<value>0</value>
+								</enumeratedValue>								
+							</enumeratedValues>							
+						</field>
+						<field>
+							<name>MATCH_EN</name>
+							<description>High or Toggle</description>
+							<bitOffset>0</bitOffset>
+							<bitWidth>1</bitWidth>
+							<enumeratedValues>
+								<enumeratedValue>
+									<description>PWM in Match Mode</description>
+									<name>MATCH</name>
+									<value>1</value>
+								</enumeratedValue>
+								<enumeratedValue>
+									<description>PWM in Toggle Mode</description>								
+									<name>TOGGLE</name>
+									<value>0</value>
+								</enumeratedValue>								
+							</enumeratedValues>								
+						</field>	
+					</fields>
+				</register>
+				<register>
+					<name>PWMMATCH</name>
+					<description>PWM Match Value</description>
+					<addressOffset>0x24</addressOffset>
+					<size>16</size>
+				</register>
+			</registers>			
+		</peripheral>
+		<peripheral>
+			<name>ADI_GPT2</name>
+			<description>General Purpose Timer2 </description>
+			<groupName>T2</groupName>
+			<baseAddress>0x40000800</baseAddress>
+			<addressBlock>
+				<offset>0</offset>
+				<size>0x28</size>
+				<usage>registers</usage>
+			</addressBlock>
+		<interrupt>
+			<name>TIMER2</name>
+			<description>TIMER 2 interrupt</description>
+			<value>40</value>
+		</interrupt>	
+			<registers>	
+				<register>
+					<name>LOAD</name>
+					<description>16-bit load value</description>
+					<addressOffset>0x00</addressOffset>
+					<size>16</size>						
+				</register>
+				<register>
+					<name>CURCNT</name>
+					<description>16-bit timer value. read only.</description>
+					<addressOffset>0x04</addressOffset>
+					<size>16</size>					
+				</register>
+				<register>
+					<name>CTL</name>
+					<description>Control Register</description>
+					<addressOffset>0x08</addressOffset>
+					<size>16</size>
+					<fields>
+						<field>
+							<name>EVENTEN</name>
+							<description>Enable/Disable event time capture</description>
+							<bitOffset>12</bitOffset>
+							<bitWidth>1</bitWidth>
+							<enumeratedValues>
+								<enumeratedValue>
+									<description>Disable</description>
+									<name>DIS</name>
+									<value>0</value>
+								</enumeratedValue>
+								<enumeratedValue>
+									<description>Enable</description>								
+									<name>EN</name>
+									<value>1</value>
+								</enumeratedValue>
+							</enumeratedValues>
+						</field>
+						<field>
+							<name>EVENT</name>
+							<description>Event Select, selects 1 of the available events.</description>
+							<bitOffset>8</bitOffset>
+							<bitWidth>4</bitWidth>
+							<enumeratedValues>
+								<enumeratedValue>
+									<name>EXT0</name>
+									<description>- External interrupt 0</description>
+									<value>0</value>
+								</enumeratedValue>
+								<enumeratedValue>
+									<name>EXT1</name>
+									<description>- External interrupt 1</description>
+									<value>1</value>
+								</enumeratedValue>
+								<enumeratedValue>
+									<name>EXT2</name>
+									<description>- External interrupt 2</description>
+									<value>2</value>
+								</enumeratedValue>
+								<enumeratedValue>
+									<name>EXT3</name>
+									<description>- External interrupt 3</description>
+									<value>3</value>
+								</enumeratedValue>
+								<enumeratedValue>
+									<name>EXT4</name>
+									<description>- External interrupt 4</description>
+									<value>4</value>
+								</enumeratedValue>
+								<enumeratedValue>
+									<name>EXT5</name>
+									<description>- External interrupt 5</description>
+									<value>5</value>
+								</enumeratedValue>
+								<enumeratedValue>
+									<name>EXT6</name>
+									<description>- External interrupt 6</description>
+									<value>6</value>
+								</enumeratedValue>
+								<enumeratedValue>
+									<name>EXT7</name>
+									<description>- External interrupt 7</description>
+									<value>7</value>
+								</enumeratedValue>
+								<enumeratedValue>
+									<name>EXT8</name>
+									<description>- External interrupt 8</description>
+									<value>8</value>
+								</enumeratedValue>
+								<enumeratedValue>
+									<name>AFEGEN</name>
+									<description>AFE Generate</description>
+									<value>9</value>
+								</enumeratedValue>
+								<enumeratedValue>
+									<name>CAPTOUCH</name>
+									<description>CapTouch</description>
+									<value>10</value>
+								</enumeratedValue>
+								<enumeratedValue>
+									<name>RTC</name>
+									<description>Real Time Clock</description>
+									<value>11</value>
+								</enumeratedValue>
+								<enumeratedValue>
+									<name>AFECMDFIFO</name>
+									<description>AFE Command Fifo</description>
+									<value>12</value>
+								</enumeratedValue>
+								<enumeratedValue>
+									<name>AFEDATAFIFO</name>
+									<description>AFE Data Fifo</description>
+									<value>13</value>
+								</enumeratedValue>
+								<enumeratedValue>
+									<name>TIMER0</name>
+									<description>Timer 0</description>
+									<value>14</value>
+								</enumeratedValue>
+								<enumeratedValue>
+									<name>TIMER1</name>
+									<description>Timer 1</description>
+									<value>15</value>
+								</enumeratedValue>
+							</enumeratedValues>
+						</field>
+						<field>
+							<name>RLD</name>
+							<description>Timer reload on write to clear register</description>
+							<bitOffset>7</bitOffset>
+							<bitWidth>1</bitWidth>
+							<enumeratedValues>
+								<enumeratedValue>
+									<description>Disable</description>
+									<name>DIS</name>
+									<value>0</value>
+								</enumeratedValue>
+								<enumeratedValue>
+									<description>Enable</description>									
+									<name>EN</name>
+									<value>1</value>
+								</enumeratedValue>
+							</enumeratedValues>
+						</field>
+						<field>
+							<name>CLK</name>
+							<description>Clock Select</description>
+							<bitOffset>5</bitOffset>
+							<bitWidth>2</bitWidth>
+							<enumeratedValues>
+								<enumeratedValue>
+									<name>UCLK</name>
+									<description>- System Clock</description>
+									<value>0</value>
+								</enumeratedValue>
+								<enumeratedValue>
+									<name>PCLK</name>
+									<description>- Peripheral clock</description>
+									<value>1</value>
+								</enumeratedValue>
+								<enumeratedValue>
+									<name>LFOSC</name>
+									<description>- Internal 32 kHz Oscillator</description>
+									<value>2</value>
+								</enumeratedValue>
+								<enumeratedValue>
+									<name>LFXTAL</name>
+									<description>- External 32 kHz crystal</description>
+									<value>3</value>
+								</enumeratedValue>
+							</enumeratedValues>
+						</field>
+						<field>
+							<name>ENABLE</name>
+							<description>Enable</description>
+							<bitOffset>4</bitOffset>
+							<bitWidth>1</bitWidth>
+							<enumeratedValues>
+								<enumeratedValue>
+									<description>Disable</description>
+									<name>DIS</name>
+									<value>0</value>
+								</enumeratedValue>
+								<enumeratedValue>
+									<description>Enable</description>									
+									<name>EN</name>
+									<value>1</value>
+								</enumeratedValue>
+							</enumeratedValues>
+						</field>
+						<field>
+							<name>MOD</name>
+							<description>Mode</description>
+							<bitOffset>3</bitOffset>
+							<bitWidth>1</bitWidth>
+							<enumeratedValues>
+								<enumeratedValue>
+									<description>Timer runs free</description>																	<description>Enable</description>	<description>Enable</description>	
+									<name>FREERUN</name>
+									<value>0</value>
+								</enumeratedValue>
+								<enumeratedValue>
+									<description>Timer is periodic</description>
+									<name>PERIODIC</name>
+									<value>1</value>
+								</enumeratedValue>
+							</enumeratedValues>
+						</field>
+						<field>
+							<name>UP</name>
+							<description>Count-up</description>
+							<bitOffset>2</bitOffset>
+							<bitWidth>1</bitWidth>
+							<enumeratedValues>
+								<enumeratedValue>
+									<description>Disable</description>								
+									<name>DIS</name>
+									<value>0</value>
+								</enumeratedValue>
+								<enumeratedValue>
+									<description>Enable</description>									
+									<name>EN</name>
+									<value>1</value>
+								</enumeratedValue>
+							</enumeratedValues>
+						</field>
+						<field>
+							<name>PRE</name>
+							<description>Prescaler</description>
+							<bitOffset>0</bitOffset>
+							<bitWidth>2</bitWidth>
+							<enumeratedValues>
+								<enumeratedValue>
+									<description>If CLK source 0 or 1 Divide by 4 otherwise divide by 1</description>
+									<name>DIV1</name>
+									<value>0</value>
+								</enumeratedValue>
+								<enumeratedValue>
+									<description>Divide clock source by 16</description>								
+									<name>DIV16</name>
+									<value>1</value>
+								</enumeratedValue>
+								<enumeratedValue>
+									<description>Divide clock source by 256</description>								
+									<name>DIV256</name>
+									<value>2</value>
+								</enumeratedValue>
+								<enumeratedValue>
+									<description>Divide clock source by 32768</description>								
+									<name>DIV32768</name>
+									<value>3</value>
+								</enumeratedValue>
+							</enumeratedValues>
+						</field>
+					</fields>
+				</register>
+				<register>
+					<name>CLRINT</name>
+					<description>Clear interrupt register</description>
+					<addressOffset>0x0C</addressOffset>
+					<size>16</size>
+					<fields>
+						<field>
+							<name>CAP</name>
+							<description>Captured event interrupt</description>
+							<bitOffset>1</bitOffset>
+							<bitWidth>1</bitWidth>
+							<enumeratedValues>
+								<enumeratedValue>
+									<description>Clear Event interrupt</description>								
+									<name>CLR</name>
+									<value>1</value>
+								</enumeratedValue>
+							</enumeratedValues>
+						</field>
+						<field>
+							<name>TMOUT</name>
+							<description>timeout interrupt</description>
+							<bitOffset>0</bitOffset>
+							<bitWidth>1</bitWidth>
+							<enumeratedValues>
+								<enumeratedValue>
+									<description>Timeout occured</description>
+									<name>TRUE</name>
+									<value>1</value>
+								</enumeratedValue>
+								<enumeratedValue>
+									<description>No Timeout</description>								
+									<name>FALSE</name>
+									<value>0</value>
+								</enumeratedValue>								
+							</enumeratedValues>
+						</field>
+					</fields>
+				</register>
+				<register>
+					<name>CAPTURE</name>
+					<description>Capture Register</description>
+					<addressOffset>0x10</addressOffset>
+					<size>16</size>			
+				</register>
+				<register>
+					<name>ALOAD</name>
+					<description>16-bit load value, asynchronous</description>
+					<addressOffset>0x14</addressOffset>
+					<size>16</size>
+				</register>
+				<register>
+					<name>ACURCNT</name>
+					<description>16-bit timer value, asynchronous</description>
+					<addressOffset>0x18</addressOffset>
+					<size>16</size>
+				</register>
+				<register>
+					<name>STATUS</name>
+					<description>Status</description>
+					<addressOffset>0x1C</addressOffset>
+					<size>16</size>				
+					<fields>
+						<field>
+							<name>PDOK</name>
+							<description>GPTI Sync</description>
+							<bitOffset>7</bitOffset>
+							<bitWidth>1</bitWidth>
+							<enumeratedValues>
+								<enumeratedValue>
+									<description>Update occuring in Timer clock domain</description>							
+									<name>TRUE</name>
+									<value>1</value>
+								</enumeratedValue>
+								<enumeratedValue>
+									<description>Interrupt cleared </description>								
+									<name>FALSE</name>
+									<value>0</value>
+								</enumeratedValue>								
+							</enumeratedValues>								
+						</field>
+						<field>
+							<name>BUSY</name>
+							<description>Timer Busy</description>
+							<bitOffset>6</bitOffset>
+							<bitWidth>1</bitWidth>
+							<enumeratedValues>
+								<enumeratedValue>
+									<description>Not Ready</description>
+									<name>TRUE</name>
+									<value>1</value>
+								</enumeratedValue>
+								<enumeratedValue>
+									<description>Ready for Commands</description>
+									<name>FALSE</name>
+									<value>0</value>
+								</enumeratedValue>								
+							</enumeratedValues>	
+						</field>	
+						<field>
+							<name>CAP</name>
+							<description>Capture event pending</description>
+							<bitOffset>1</bitOffset>
+							<bitWidth>1</bitWidth>
+							<enumeratedValues>
+								<enumeratedValue>
+									<description>Capture Pending</description>
+									<name>TRUE</name>
+									<value>1</value>
+								</enumeratedValue>
+								<enumeratedValue>
+									<description>No Capture</description>
+									<name>FALSE</name>
+									<value>0</value>
+								</enumeratedValue>								
+							</enumeratedValues>							
+						</field>
+						<field>
+							<name>TMOUT</name>
+							<description>Time out event occurred</description>
+							<bitOffset>0</bitOffset>
+							<bitWidth>1</bitWidth>
+							<enumeratedValues>
+								<enumeratedValue>
+									<description>Timeout Event occurred</description>								
+									<name>TRUE</name>
+									<value>1</value>
+								</enumeratedValue>
+								<enumeratedValue>
+									<description>Waiting for Timeout</description>								
+									<name>FALSE</name>
+									<value>0</value>
+								</enumeratedValue>								
+							</enumeratedValues>								
+						</field>								
+					</fields>
+				</register>
+				<register>
+					<name>PWMCTL</name>
+					<description>PWM Control Register</description>
+					<addressOffset>0x20</addressOffset>
+					<size>16</size>  
+					<fields>
+						<field>
+							<name>IDLE_STATE</name>
+							<description>Idle Hi/Lo</description>
+							<bitOffset>1</bitOffset>
+							<bitWidth>1</bitWidth>
+							<enumeratedValues>
+								<enumeratedValue>
+									<description>Idle High</description>								
+									<name>HIGH</name>
+									<value>1</value>
+								</enumeratedValue>
+								<enumeratedValue>
+									<description>Idle Low</description>								
+									<name>LOW</name>
+									<value>0</value>
+								</enumeratedValue>								
+							</enumeratedValues>							
+						</field>
+						<field>
+							<name>MATCH_EN</name>
+							<description>High or Toggle</description>
+							<bitOffset>0</bitOffset>
+							<bitWidth>1</bitWidth>
+							<enumeratedValues>
+								<enumeratedValue>
+									<description>PWM in Match Mode</description>
+									<name>MATCH</name>
+									<value>1</value>
+								</enumeratedValue>
+								<enumeratedValue>
+									<description>PWM in Toggle Mode</description>								
+									<name>TOGGLE</name>
+									<value>0</value>
+								</enumeratedValue>								
+							</enumeratedValues>								
+						</field>	
+					</fields>
+				</register>
+				<register>
+					<name>PWMMATCH</name>
+					<description>PWM Match Value</description>
+					<addressOffset>0x24</addressOffset>
+					<size>16</size>
+				</register>
+			</registers>
+		</peripheral>
+		<peripheral>
+			<name>ADI_ID</name>
+			<description>ID </description>
+			<groupName>PWRCTL</groupName>
+			<baseAddress>0x40002020</baseAddress>
+			<addressBlock>
+				<offset>0</offset>
+				<size>0x8</size>
+				<usage>registers</usage>
+			</addressBlock>
+			<registers>
+				<register>
+					<name>ADIID</name>
+					<description>Analog Devices ID Register</description>
+					<addressOffset>0</addressOffset>
+					<size>16</size>				
+				</register>
+				<register>
+					<name>CHIPID</name>
+					<description>Chip ID Register</description>
+					<addressOffset>4</addressOffset>
+					<size>16</size>				
+				</register>				
+			</registers>
+		</peripheral>			
 		<peripheral>
 		<name>ADI_PWR</name>
 		<description>Power Management Unit</description>
@@ -1530,36 +1617,108 @@ In the event that Third Party Software has only been provided to you in object c
 					<description> VCCM PSM current status</description>
 					<bitOffset>7</bitOffset>
 					<bitWidth>1</bitWidth>
+					<enumeratedValues>
+							<enumeratedValue>
+								<description>VCCM Power Level is Good</description>
+								<name>GOOD</name>
+								<value>0</value>
+							</enumeratedValue>
+							<enumeratedValue>
+								<description>VCCM Power Level is LOW</description>
+								<name>LOW</name>
+								<value>1</value>
+							</enumeratedValue>
+						</enumeratedValues>					
 				</field>
 				<field>
 					<name>VCCMPSMFLG</name>
 					<description> VCCM PSM sticky flag</description>
 					<bitOffset>6</bitOffset>
 					<bitWidth>1</bitWidth>
+					<enumeratedValues>
+							<enumeratedValue>
+								<description>VCCM Power Level is Good</description>
+								<name>GOOD</name>
+								<value>0</value>
+							</enumeratedValue>
+							<enumeratedValue>
+								<description>VCCM Power Level is LOW</description>
+								<name>LOW</name>
+								<value>1</value>
+							</enumeratedValue>
+						</enumeratedValues>						
 				</field>
 				<field>
 					<name>VCCMPSMIRQ</name>
-					<description> disable VCCM PSM to generate NMI interrupt</description>
+					<description>VCCM PSM generate NMI interrupt</description>
 					<bitOffset>4</bitOffset>
 					<bitWidth>1</bitWidth>
+					<enumeratedValues>
+							<enumeratedValue>
+								<description>VCCM PSM Generate NMI </description>
+								<name>ENABLE</name>
+								<value>0</value>
+							</enumeratedValue>
+							<enumeratedValue>
+								<description>VCMM PSM no interrrupt</description>
+								<name>DISABLE</name>
+								<value>1</value>
+							</enumeratedValue>
+						</enumeratedValues>	
 				</field>
 				<field>
 				<name>DVDDPSMSTAT</name>
 					<description> DVDD PSM current status</description>
 					<bitOffset>3</bitOffset>
 					<bitWidth>1</bitWidth>
+					<enumeratedValues>
+							<enumeratedValue>
+								<description>DVDD Power Level is Good</description>
+								<name>GOOD</name>
+								<value>0</value>
+							</enumeratedValue>
+							<enumeratedValue>
+								<description>DVDD Power Level is LOW</description>
+								<name>LOW</name>
+								<value>1</value>
+							</enumeratedValue>
+						</enumeratedValues>						
 				</field>
 				<field>
 					<name>DVDDPSMFLG</name>
 					<description> DVDD PSM sticky flag.</description>
 					<bitOffset>2</bitOffset>
 					<bitWidth>1</bitWidth>
+					<enumeratedValues>
+							<enumeratedValue>
+								<description>DVDD Power Level is Good</description>
+								<name>GOOD</name>
+								<value>0</value>
+							</enumeratedValue>
+							<enumeratedValue>
+								<description>DVDD Power Level is LOW</description>
+								<name>LOW</name>
+								<value>1</value>
+							</enumeratedValue>
+						</enumeratedValues>						
 				</field>
 				<field>
 					<name>DVDDPSMIRQ</name>
 					<description> disable DVDD PSM to generate NMI interrupt</description>
 					<bitOffset>0</bitOffset>
 					<bitWidth>1</bitWidth>
+					<enumeratedValues>
+							<enumeratedValue>
+								<description>DVDD PSM Generate NMI </description>
+								<name>ENABLE</name>
+								<value>0</value>
+							</enumeratedValue>
+							<enumeratedValue>
+								<description>DVDD PSM no interrrupt</description>
+								<name>DISABLE</name>
+								<value>1</value>
+							</enumeratedValue>
+						</enumeratedValues>						
 				</field>
 			</fields>
 		</register>
@@ -1663,12 +1822,42 @@ In the event that Third Party Software has only been provided to you in object c
 					<description> External Interrupt 3 enable bit</description>
 					<bitOffset>15</bitOffset>
 					<bitWidth>1</bitWidth>
+						<writeConstraint>
+						<useEnumeratedValues>true</useEnumeratedValues>
+						</writeConstraint>
+						<enumeratedValues>
+							<enumeratedValue>
+								<description>Enable</description>
+								<name>ENABLE</name>
+								<value>1</value>
+							</enumeratedValue>
+							<enumeratedValue>
+								<description>Disable</description>							
+								<name>DISABLE</name>
+								<value>0</value>
+							</enumeratedValue>
+						</enumeratedValues>						
 				</field>
 				<field>
 					<name>IRQ3MDE</name>
 					<description> External Interrupt 3 Mode registers</description>
 					<bitOffset>12</bitOffset>
-					<bitWidth>1</bitWidth>
+					<bitWidth>3</bitWidth>
+						<writeConstraint>
+						<useEnumeratedValues>true</useEnumeratedValues>
+						</writeConstraint>
+						<enumeratedValues>
+							<enumeratedValue>
+								<description>Rising Edge</description>
+								<name>EDGE mE</name>
+								<value>1</value>
+							</enumeratedValue>
+							<enumeratedValue>
+								<description>Disable</description>							
+								<name>DISABLE</name>
+								<value>0</value>
+							</enumeratedValue>
+						</enumeratedValues>						
 				</field>
 				<field>
 					<name>IRQ2EN</name>
@@ -5192,6 +5381,21 @@ In the event that Third Party Software has only been provided to you in object c
                         <description> Enable status of the controller</description>
                         <bitOffset>0</bitOffset>
                         <bitWidth>1</bitWidth>
+						<writeConstraint>
+						<useEnumeratedValues>true</useEnumeratedValues>
+						</writeConstraint>
+						<enumeratedValues>
+							<enumeratedValue>
+								<description>Enable</description>
+								<name>ENABLE</name>
+								<value>1</value>
+							</enumeratedValue>
+							<enumeratedValue>
+								<description>Disable</description>							
+								<name>DISABLE</name>
+								<value>0</value>
+							</enumeratedValue>
+						</enumeratedValues>						
                     </field>
 		</fields>
 	</register>
@@ -5206,6 +5410,21 @@ In the event that Third Party Software has only been provided to you in object c
                         <description> Controller enable</description>
                         <bitOffset>0</bitOffset>
                         <bitWidth>1</bitWidth>
+						<writeConstraint>
+						<useEnumeratedValues>true</useEnumeratedValues>
+						</writeConstraint>
+						<enumeratedValues>
+							<enumeratedValue>
+								<description>Enable</description>
+								<name>ENABLE</name>
+								<value>1</value>
+							</enumeratedValue>
+							<enumeratedValue>
+								<description>Disable</description>							
+								<name>DISABLE</name>
+								<value>0</value>
+							</enumeratedValue>
+						</enumeratedValues>							
                     </field>
 		</fields>
 	</register>
@@ -5214,14 +5433,14 @@ In the event that Third Party Software has only been provided to you in object c
 		<name>DMAPDBPTR</name>
 		<description>DMA DMA channel primary control data base pointer</description>
 		<addressOffset>0x08</addressOffset>
-		<size>16</size>
+		<size>32</size>
 	</register>
 
 	<register>
 		<name>DMAADBPTR</name>
 		<description>DMA DMA channel alternate control data base pointer</description>
 		<addressOffset>0x0C</addressOffset>
-		<size>16</size>
+		<size>32</size>
 	</register>
 
 	<register>
@@ -5234,7 +5453,7 @@ In the event that Third Party Software has only been provided to you in object c
                         <name>CHSWREQ</name>
                         <description> Generate software request</description>
                         <bitOffset>0</bitOffset>
-                        <bitWidth>1</bitWidth>
+                        <bitWidth>16</bitWidth>
                     </field>
 		</fields>
 	</register>
@@ -5249,7 +5468,7 @@ In the event that Third Party Software has only been provided to you in object c
                         <name>CHREQMSET</name>
                         <description> Mask requests from DMA channels</description>
                         <bitOffset>0</bitOffset>
-                        <bitWidth>1</bitWidth>
+                        <bitWidth>16</bitWidth>
                     </field>
 		</fields>
 	</register>
@@ -5264,7 +5483,7 @@ In the event that Third Party Software has only been provided to you in object c
                         <name>CHREQMCLR</name>
                         <description> Clear REQ_MASK_SET bits in DMARMSKSET</description>
                         <bitOffset>0</bitOffset>
-                        <bitWidth>1</bitWidth>
+                        <bitWidth>16</bitWidth>
                     </field>
 		</fields>
 	</register>
@@ -5279,7 +5498,7 @@ In the event that Third Party Software has only been provided to you in object c
                         <name>CHENSET</name>
                         <description> Enable DMA channels</description>
                         <bitOffset>0</bitOffset>
-                        <bitWidth>1</bitWidth>
+                        <bitWidth>16</bitWidth>
                     </field>
 		</fields>
 	</register>
@@ -5294,7 +5513,7 @@ In the event that Third Party Software has only been provided to you in object c
                         <name>CHENCLR</name>
                         <description> Disable DMA channels</description>
                         <bitOffset>0</bitOffset>
-                        <bitWidth>1</bitWidth>
+                        <bitWidth>16</bitWidth>
                     </field>
 		</fields>
 	</register>
@@ -5309,7 +5528,7 @@ In the event that Third Party Software has only been provided to you in object c
                         <name>CHPRIALTSET</name>
                         <description> Control struct status / select alt struct</description>
                         <bitOffset>0</bitOffset>
-                        <bitWidth>1</bitWidth>
+                        <bitWidth>16</bitWidth>
                     </field>
 		</fields>
 	</register>
@@ -5324,7 +5543,7 @@ In the event that Third Party Software has only been provided to you in object c
                         <name>CHPRIALTCLR</name>
                         <description> Select primary data struct</description>
                         <bitOffset>0</bitOffset>
-                        <bitWidth>1</bitWidth>
+                        <bitWidth>16</bitWidth>
                     </field>
 		</fields>
 	</register>
@@ -5339,7 +5558,7 @@ In the event that Third Party Software has only been provided to you in object c
                         <name>CHPRISET</name>
                         <description> Configure channel for high priority</description>
                         <bitOffset>0</bitOffset>
-                        <bitWidth>1</bitWidth>
+                        <bitWidth>16</bitWidth>
                     </field>
 		</fields>
 	</register>
@@ -5354,7 +5573,7 @@ In the event that Third Party Software has only been provided to you in object c
                         <name>CHPRICLR</name>
                         <description> Configure channel for default priority level</description>
                         <bitOffset>0</bitOffset>
-                        <bitWidth>1</bitWidth>
+                        <bitWidth>16</bitWidth>
                     </field>
 		</fields>
 	</register>
@@ -5369,7 +5588,7 @@ In the event that Third Party Software has only been provided to you in object c
                         <name>CHNL</name>
                         <description> Per channel Bus error status/ Per channel bus error clear</description>
                         <bitOffset>0</bitOffset>
-                        <bitWidth>1</bitWidth>
+                        <bitWidth>16</bitWidth>
                     </field>
 		</fields>
 	</register>
@@ -5384,7 +5603,7 @@ In the event that Third Party Software has only been provided to you in object c
                         <name>ERRCLR</name>
                         <description> Bus error status</description>
                         <bitOffset>0</bitOffset>
-                        <bitWidth>1</bitWidth>
+                        <bitWidth>16</bitWidth>
                     </field>
 		</fields>
 	</register>
@@ -5399,7 +5618,7 @@ In the event that Third Party Software has only been provided to you in object c
                         <name>CHNL</name>
                         <description> Per channel Invalid Descriptor status/ Per channel Invalid descriptor status clear</description>
                         <bitOffset>0</bitOffset>
-                        <bitWidth>1</bitWidth>
+                        <bitWidth>16</bitWidth>
                     </field>
 		</fields>
 	</register>
@@ -5414,7 +5633,7 @@ In the event that Third Party Software has only been provided to you in object c
                         <name>CHBSWAPSET</name>
                         <description> Byte swap status</description>
                         <bitOffset>0</bitOffset>
-                        <bitWidth>1</bitWidth>
+                        <bitWidth>16</bitWidth>
                     </field>
 		</fields>
 	</register>
@@ -5429,7 +5648,7 @@ In the event that Third Party Software has only been provided to you in object c
                         <name>CHBSWAPCLR</name>
                         <description> Disable byte swap</description>
                         <bitOffset>0</bitOffset>
-                        <bitWidth>1</bitWidth>
+                        <bitWidth>16</bitWidth>
                     </field>
 		</fields>
 	</register>
@@ -5444,7 +5663,7 @@ In the event that Third Party Software has only been provided to you in object c
                         <name>CHSRCADRDECSET</name>
                         <description> Source Address decrement status / configure Source address decrement</description>
                         <bitOffset>0</bitOffset>
-                        <bitWidth>1</bitWidth>
+                        <bitWidth>16</bitWidth>
                     </field>
 		</fields>
 	</register>
@@ -5459,7 +5678,7 @@ In the event that Third Party Software has only been provided to you in object c
                         <name>CHADRDECCLR</name>
                         <description> Disable source address decrement</description>
                         <bitOffset>0</bitOffset>
-                        <bitWidth>1</bitWidth>
+                        <bitWidth>16</bitWidth>
                     </field>
 		</fields>
 	</register>
@@ -5474,7 +5693,7 @@ In the event that Third Party Software has only been provided to you in object c
                         <name>CHDSTADRDECSET</name>
                         <description> Destination Address decrement status / configure destination address decrement</description>
                         <bitOffset>0</bitOffset>
-                        <bitWidth>1</bitWidth>
+                        <bitWidth>16</bitWidth>
                     </field>
 		</fields>
 	</register>
@@ -5489,7 +5708,7 @@ In the event that Third Party Software has only been provided to you in object c
                         <name>CHADRDECCLR</name>
                         <description> Disable destination address decrement</description>
                         <bitOffset>0</bitOffset>
-                        <bitWidth>1</bitWidth>
+                        <bitWidth>16</bitWidth>
                     </field>
 		</fields>
 	</register>
@@ -5498,15 +5717,7 @@ In the event that Third Party Software has only been provided to you in object c
 					<name>DMAREVID</name>
 					<description>DMA DMA Controller Revision ID</description>
 					<addressOffset>0x0FE0</addressOffset>
-					<size>16</size>
-					<fields>
-                    <field>
-                        <name>DMAREVID</name>
-                        <description> DMA Controller revision ID</description>
-                        <bitOffset>0</bitOffset>
-                        <bitWidth>1</bitWidth>
-                    </field>
-					</fields>
+					<size>8</size>
 				</register>
 			</registers>
 		</peripheral>
@@ -5610,7 +5821,7 @@ In the event that Third Party Software has only been provided to you in object c
 								<name>KEY2</name>
 								<value>0xF123</value>
 							</enumeratedValue>
-						</enumeratedValues>
+					</enumeratedValues>
 				</field>
 		</fields>
 	</register>
