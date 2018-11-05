@@ -85,8 +85,8 @@ In the event that Third Party Software has only been provided to you in object c
 	<width>32</width>
 	<!-- Register Default Properties -->
 	<!-- the size of the registers is set to a bit width of 32. This can be overruled for individual peripherals and/or registers -->
-	<size>32</size>
-	<!-- the access to all registers is set to be readable and writeable. This can be overruled for individual peripherals and/or registers -->
+	<size>16</size>
+	<access>read-write</access> <!-- the access to all registers is set to be readable and writeable. This can be overruled for individual peripherals and/or registers -->
 	<!-- for demonstration purposes the resetValue for all registers of the device is set to be 0. This can be overruled within the description -->
 	<!-- the resetMask = 0 specifies that by default no register of this device has a defined reset value -->
 	<peripherals>
@@ -2476,8 +2476,6 @@ In the event that Third Party Software has only been provided to you in object c
 			<description>Wake-up timer</description>
 			<groupName>WUT</groupName>
 			<baseAddress>0x40002500</baseAddress>
-			<size>16</size>
-
 			<addressBlock>
 				<offset>0</offset>
 				<size>0x44</size>
@@ -2820,8 +2818,6 @@ In the event that Third Party Software has only been provided to you in object c
 			<description>WatchDog Timer</description>
 			<groupName>WDT</groupName>
 			<baseAddress>0x40002580</baseAddress>
-			<size>16</size>
-
 			<addressBlock>
 				<offset>0</offset>
 				<size>0x1c</size>
@@ -2964,8 +2960,6 @@ In the event that Third Party Software has only been provided to you in object c
 		<description>RealTimeClock</description>
 	<groupName>RTC</groupName>
 	<baseAddress>0x40002600</baseAddress>
-	<size>32</size>
-
 	<addressBlock>
 		<offset>0</offset>
 		<size>0x24</size>
@@ -3273,8 +3267,6 @@ In the event that Third Party Software has only been provided to you in object c
 			<description>I2C Master/Slave</description>
 			<groupName>I2C</groupName>
 			<baseAddress>0x40003000</baseAddress>
-			<size>32</size>
-
 			<addressBlock>
 				<offset>0</offset>
 				<size>0x58</size>
@@ -3990,8 +3982,6 @@ In the event that Third Party Software has only been provided to you in object c
 			<description>SPI0 Maste/Slave</description>
 			<groupName>SPI0</groupName>
 			<baseAddress>0x40004000</baseAddress>
-			<size>32</size>
-
 			<addressBlock>
 				<offset>0</offset>
 				<size>0x1c</size>
@@ -4383,8 +4373,6 @@ In the event that Third Party Software has only been provided to you in object c
 			<description>SPI1 Master/Slave</description>
 			<groupName>SPI1</groupName>
 			<baseAddress>0x40004400</baseAddress>
-			<size>32</size>
-
 			<addressBlock>
 				<offset>0</offset>
 				<size>0x1c</size>
@@ -4776,8 +4764,6 @@ In the event that Third Party Software has only been provided to you in object c
 			<description>Uart</description>
 			<groupName>UART</groupName>
 			<baseAddress>0x40005000</baseAddress>
-			<size>32</size>
-
 			<addressBlock>
 				<offset>0</offset>
 				<size>0x34</size>
@@ -5133,8 +5119,6 @@ In the event that Third Party Software has only been provided to you in object c
 		<description>I2S Master/Slave</description>
 		<groupName>I2S</groupName>
 		<baseAddress>0x40005800</baseAddress>
-		<size>32</size>
-
 		<addressBlock>
 			<offset>0</offset>
 			<size>0x24</size>
@@ -5250,8 +5234,6 @@ In the event that Third Party Software has only been provided to you in object c
 			<description>Beeper</description>
 			<groupName>BEEP</groupName>
 			<baseAddress>0x40005C00</baseAddress>
-			<size>0x10</size>
-
 			<addressBlock>
 				<offset>0</offset>
 				<size>0x10</size>
@@ -5301,8 +5283,6 @@ In the event that Third Party Software has only been provided to you in object c
 			<description>Random Bit Generator</description>
 			<groupName>RBG</groupName>
 			<baseAddress>0x40006000</baseAddress>
-			<size>32</size>
-
 			<addressBlock>
 				<offset>0</offset>
 				<size>0x18</size>
@@ -5417,8 +5397,6 @@ In the event that Third Party Software has only been provided to you in object c
 			<description>LCD Controller</description>
 			<groupName>LCD</groupName>
 			<baseAddress>0x40008000</baseAddress>
-			<size>32</size>
-
 			<addressBlock>
 				<offset>0</offset>
 				<size>0x50</size>
@@ -5719,8 +5697,6 @@ In the event that Third Party Software has only been provided to you in object c
 		<description>DMA</description>
 		<groupName>DMAC</groupName>
 		<baseAddress>0x40010000</baseAddress>
-		<size>32</size>
-
 		<addressBlock>
 			<offset>0</offset>
 			<size>0x1000</size>
@@ -6183,12 +6159,10 @@ In the event that Third Party Software has only been provided to you in object c
 	<description>Instruction Flash Controller</description>
 	<groupName>IFC</groupName>
 	<baseAddress>0x40018000</baseAddress>
-	<size>32</size>
-
 	<addressBlock>
-	<offset>0</offset>
-	<size>0x88</size>
-	<usage>registers</usage>
+		<offset>0</offset>
+		<size>0x88</size>
+		<usage>registers</usage>
 	</addressBlock>
 	<interrupt>
 		<name>FLASH0</name>
@@ -6373,12 +6347,10 @@ In the event that Third Party Software has only been provided to you in object c
 	<description>General Purpose Flash Controller</description>
 	<groupName>GPFC</groupName>
 	<baseAddress>0x4001C000</baseAddress>
-	<size>0x88</size>
-
 	<addressBlock>
-	<offset>0</offset>
-	<size>0x88</size>
-	<usage>registers</usage>
+		<offset>0</offset>
+		<size>0x88</size>
+		<usage>registers</usage>
 	</addressBlock>
 
 	<registers>
@@ -6489,12 +6461,10 @@ In the event that Third Party Software has only been provided to you in object c
 	<description>GPIO</description>
 	<groupName>GPIO</groupName>
 	<baseAddress>0x40020000</baseAddress>
-	<size>0x32</size>
-
 	<addressBlock>
-	<offset>0</offset>
-	<size>0x32</size>
-	<usage>registers</usage>
+		<offset>0</offset>
+		<size>0x32</size>
+		<usage>registers</usage>
 	</addressBlock>
 
 	<interrupt>
@@ -6622,12 +6592,10 @@ In the event that Third Party Software has only been provided to you in object c
 	<description>SPIH Master/Slave</description>
 	<groupName>SPIH</groupName>
 	<baseAddress>0x40024000</baseAddress>
-	<size>32</size>
-
 	<addressBlock>
-	<offset>0</offset>
-	<size>0x1c</size>
-	<usage>registers</usage>
+		<offset>0</offset>
+		<size>0x1c</size>
+		<usage>registers</usage>
 	</addressBlock>
 
 	<interrupt>
@@ -7074,12 +7042,10 @@ In the event that Third Party Software has only been provided to you in object c
 	<description>System Clocking</description>
 	<groupName>SYSCLK</groupName>
 	<baseAddress>0x40028000</baseAddress>
-	<size>32</size>
-
 	<addressBlock>
-	<offset>0</offset>
-	<size>32</size>
-	<usage>registers</usage>
+		<offset>0</offset>
+		<size>32</size>
+		<usage>registers</usage>
 	</addressBlock>
 
 	<registers>
@@ -7313,12 +7279,10 @@ In the event that Third Party Software has only been provided to you in object c
 	<description>CRC Engine</description>
 	<groupName>CRCENG</groupName>
 	<baseAddress>0x4002C000</baseAddress>
-	<size>32</size>
-
 	<addressBlock>
-	<offset>0</offset>
-	<size>0x36</size>
-	<usage>registers</usage>
+		<offset>0</offset>
+		<size>0x36</size>
+		<usage>registers</usage>
 	</addressBlock>
 
 	<registers>
@@ -7352,12 +7316,10 @@ In the event that Third Party Software has only been provided to you in object c
 	<description>Parallel Display Interface</description>
 	<groupName>PDIC</groupName>
 	<baseAddress>0x40030000</baseAddress>
-	<size>32</size>
-
 	<addressBlock>
-	<offset>0</offset>
-	<size>0x4c</size>
-	<usage>registers</usage>
+		<offset>0</offset>
+		<size>0x4c</size>
+		<usage>registers</usage>
 	</addressBlock>
 
 	<interrupt>
@@ -7432,12 +7394,10 @@ In the event that Third Party Software has only been provided to you in object c
 	<description>Analog Front End</description>
 	<groupName>Analog Front End</groupName>
 	<baseAddress>0x40080000</baseAddress>
-	<size>32</size>
-
 	<addressBlock>
-	<offset>0</offset>
-	<size>0x148</size>
-	<usage>registers</usage>
+		<offset>0</offset>
+		<size>0x148</size>
+		<usage>registers</usage>
 	</addressBlock>
 
 	<interrupt>
@@ -7861,12 +7821,10 @@ In the event that Third Party Software has only been provided to you in object c
 		<description>Cap Touch Controller</description>
 		<groupName>CT</groupName>
 		<baseAddress>0x40084000</baseAddress>
-		<size>32</size>
-
 		<addressBlock>
-		<offset>0</offset>
-		<size>0x12c</size>
-		<usage>registers</usage>
+			<offset>0</offset>
+			<size>0x12c</size>
+			<usage>registers</usage>
 		</addressBlock>		
 	<registers>
 	<register>
@@ -7903,8 +7861,6 @@ In the event that Third Party Software has only been provided to you in object c
 		<description>USB Controller</description>
 		<groupName>USB</groupName>
 		<baseAddress>0x400A0000</baseAddress>
-		<size>32</size>
-
 		<addressBlock>
 			<offset>0</offset>
 			<size>0x3B8</size>
